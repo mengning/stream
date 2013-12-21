@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <config.h>
+
 #include "stream-fd.h"
 #include <errno.h>
 #include <poll.h>
@@ -23,7 +23,8 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include "fatal-signal.h"
+/*#include <config.h>
+#include "fatal-signal.h"*/
 #include "poll-loop.h"
 #include "socket-util.h"
 #include "util.h"
@@ -199,7 +200,7 @@ pfd_close(struct pstream *pstream)
 {
     struct fd_pstream *ps = fd_pstream_cast(pstream);
     close(ps->fd);
-    maybe_unlink_and_free(ps->unlink_path);
+    /*maybe_unlink_and_free(ps->unlink_path);*/
     free(ps);
 }
 
@@ -216,7 +217,7 @@ pfd_accept(struct pstream *pstream, struct stream **new_streamp)
     if (new_fd < 0) {
         retval = errno;
         if (retval != EAGAIN) {
-            VLOG_DBG_RL(&rl, "accept: %s", ovs_strerror(retval));
+          /*  VLOG_DBG_RL(&rl, "accept: %s", ovs_strerror(retval));*/
         }
         return retval;
     }
@@ -259,6 +260,7 @@ static const struct pstream_class fd_pstream_class = {
 };
 
 /* Helper functions. */
+/*
 static void
 maybe_unlink_and_free(char *path)
 {
@@ -266,4 +268,4 @@ maybe_unlink_and_free(char *path)
         fatal_signal_unlink_file_now(path);
         free(path);
     }
-}
+}*/

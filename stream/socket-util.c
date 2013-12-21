@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <config.h>
+
 #include "socket-util.h"
 #include <arpa/inet.h>
 #include <errno.h>
@@ -33,9 +33,11 @@
 #include <sys/uio.h>
 #include <sys/un.h>
 #include <unistd.h>
+#include <inttypes.h>
+/*#include <config.h>
 #include "dynamic-string.h"
 #include "fatal-signal.h"
-#include "packets.h"
+#include "packets.h"*/
 #include "poll-loop.h"
 #include "util.h"
 #include "vlog.h"
@@ -73,11 +75,11 @@ set_nonblocking(int fd)
         if (fcntl(fd, F_SETFL, flags | O_NONBLOCK) != -1) {
             return 0;
         } else {
-            VLOG_ERR("fcntl(F_SETFL) failed: %s", ovs_strerror(errno));
+           /* VLOG_ERR("fcntl(F_SETFL) failed: %s", ovs_strerror(errno));*/
             return errno;
         }
     } else {
-        VLOG_ERR("fcntl(F_GETFL) failed: %s", ovs_strerror(errno));
+/*        VLOG_ERR("fcntl(F_GETFL) failed: %s", ovs_strerror(errno));  */
         return errno;
     }
 }
@@ -130,6 +132,7 @@ rlim_is_finite(rlim_t limit)
 }
 
 /* Returns the maximum valid FD value, plus 1. */
+/*
 int
 get_max_fds(void)
 {
@@ -149,7 +152,7 @@ get_max_fds(void)
 
     return max_fds;
 }
-
+*/
 /* Translates 'host_name', which must be a string representation of an IP
  * address, into a numeric IP address in '*addr'.  Returns 0 if successful,
  * otherwise a positive errno value. */
@@ -157,8 +160,8 @@ int
 lookup_ip(const char *host_name, struct in_addr *addr)
 {
     if (!inet_aton(host_name, addr)) {
-        static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(1, 5);
-        VLOG_ERR_RL(&rl, "\"%s\" is not a valid IP address", host_name);
+        /*   static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(1, 5);
+        VLOG_ERR_RL(&rl, "\"%s\" is not a valid IP address", host_name);*/
         return ENOENT;
     }
     return 0;
@@ -171,8 +174,8 @@ int
 lookup_ipv6(const char *host_name, struct in6_addr *addr)
 {
     if (inet_pton(AF_INET6, host_name, addr) != 1) {
-        static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(1, 5);
-        VLOG_ERR_RL(&rl, "\"%s\" is not a valid IPv6 address", host_name);
+     /*    static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(1, 5);
+       VLOG_ERR_RL(&rl, "\"%s\" is not a valid IPv6 address", host_name);*/
         return ENOENT;
     }
     return 0;
@@ -187,6 +190,7 @@ lookup_ipv6(const char *host_name, struct in6_addr *addr)
  * OVS must set up a flow, but it can't because it's waiting for a DNS reply.
  * The synchronous lookup also delays other activity.  (Of course we can solve
  * this but it doesn't seem worthwhile quite yet.)  */
+/*
 int
 lookup_hostname(const char *host_name, struct in_addr *addr)
 {
@@ -240,11 +244,11 @@ lookup_hostname(const char *host_name, struct in_addr *addr)
         return EPROTO;
     }
 }
-
+*/
 int
 check_connection_completion(int fd)
 {
-    static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(5, 10);
+   /* static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(5, 10);*/
     struct pollfd pfd;
     int retval;
 
@@ -259,13 +263,13 @@ check_connection_completion(int fd)
             if (n < 0) {
                 return errno;
             } else {
-                VLOG_ERR_RL(&rl, "poll return POLLERR but send succeeded");
+    /*            VLOG_ERR_RL(&rl, "poll return POLLERR but send succeeded");  */
                 return EPROTO;
             }
         }
         return 0;
     } else if (retval < 0) {
-        VLOG_ERR_RL(&rl, "poll: %s", ovs_strerror(errno));
+ /*       VLOG_ERR_RL(&rl, "poll: %s", ovs_strerror(errno));    */
         return errno;
     } else {
         return EAGAIN;
@@ -363,7 +367,7 @@ make_sockaddr_un(const char *name, struct sockaddr_un *un, socklen_t *un_len,
 
     *dirfdp = -1;
     if (strlen(name) > MAX_UN_LEN) {
-        static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(1, 1);
+     /*   static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(1, 1);*/
 
         if (LINUX_DATAPATH) {
             /* 'name' is too long to fit in a sockaddr_un, but we have a
@@ -397,12 +401,13 @@ make_sockaddr_un(const char *name, struct sockaddr_un *un, socklen_t *un_len,
             free(short_name);
             close(dirfd);
 
-            VLOG_WARN_RL(&rl, "Unix socket name %s is longer than maximum "
-                         "%d bytes (even shortened)", name, MAX_UN_LEN);
+ /*           VLOG_WARN_RL(&rl, "Unix socket name %s is longer than maximum "
+                         "%d bytes (even shortened)", name, MAX_UN_LEN);*/
         } else {
             /* 'name' is too long and we have no workaround. */
+/*
             VLOG_WARN_RL(&rl, "Unix socket name %s is longer than maximum "
-                         "%d bytes", name, MAX_UN_LEN);
+                         "%d bytes", name, MAX_UN_LEN);*/
         }
 
         return ENAMETOOLONG;
@@ -457,11 +462,12 @@ make_unix_socket(int style, bool nonblock,
         socklen_t un_len;
         int dirfd;
 
-        if (unlink(bind_path) && errno != ENOENT) {
+ /*       if (unlink(bind_path) && errno != ENOENT) {
             VLOG_WARN("unlinking \"%s\": %s\n",
                       bind_path, ovs_strerror(errno));
         }
-        fatal_signal_add_file_to_unlink(bind_path);
+*/  
+     /* fatal_signal_add_file_to_unlink(bind_path);*/
 
         error = make_sockaddr_un(bind_path, &un, &un_len, &dirfd);
         if (!error) {
@@ -501,7 +507,7 @@ error:
         error = EPROTO;
     }
     if (bind_path) {
-        fatal_signal_unlink_file_now(bind_path);
+        /*fatal_signal_unlink_file_now(bind_path);  */
     }
     close(fd);
     return -error;
@@ -549,7 +555,7 @@ inet_parse_active(const char *target_, uint16_t default_port,
     host_name = strtok_r(target, ":", &save_ptr);
     port_string = strtok_r(NULL, ":", &save_ptr);
     if (!host_name) {
-        VLOG_ERR("%s: bad peer name format", target_);
+      /*  VLOG_ERR("%s: bad peer name format", target_);*/
         goto exit;
     }
 
@@ -560,7 +566,7 @@ inet_parse_active(const char *target_, uint16_t default_port,
     if (port_string && atoi(port_string)) {
         sinp->sin_port = htons(atoi(port_string));
     } else if (!default_port) {
-        VLOG_ERR("%s: port number must be specified", target_);
+   /*     VLOG_ERR("%s: port number must be specified", target_);*/
         goto exit;
     }
 
@@ -609,7 +615,7 @@ inet_open_active(int style, const char *target, uint16_t default_port,
     /* Create non-blocking socket. */
     fd = socket(AF_INET, style, 0);
     if (fd < 0) {
-        VLOG_ERR("%s: socket: %s", target, ovs_strerror(errno));
+ /*       VLOG_ERR("%s: socket: %s", target, ovs_strerror(errno));*/
         error = errno;
         goto exit;
     }
@@ -623,7 +629,7 @@ inet_open_active(int style, const char *target, uint16_t default_port,
      * connect(), the handshake SYN frames will be sent with a TOS of 0. */
     error = set_dscp(fd, dscp);
     if (error) {
-        VLOG_ERR("%s: socket: %s", target, ovs_strerror(error));
+ /*       VLOG_ERR("%s: socket: %s", target, ovs_strerror(error));*/
         goto exit;
     }
 
@@ -680,7 +686,7 @@ inet_parse_passive(const char *target_, int default_port,
     if (port_string && str_to_int(port_string, 10, &port)) {
         sinp->sin_port = htons(port);
     } else if (default_port < 0) {
-        VLOG_ERR("%s: port number must be specified", target_);
+/*        VLOG_ERR("%s: port number must be specified", target_);*/
         goto exit;
     }
 
@@ -735,7 +741,7 @@ inet_open_passive(int style, const char *target, int default_port,
     fd = socket(AF_INET, style, 0);
     if (fd < 0) {
         error = errno;
-        VLOG_ERR("%s: socket: %s", target, ovs_strerror(error));
+/*        VLOG_ERR("%s: socket: %s", target, ovs_strerror(error));*/
         return -error;
     }
     error = set_nonblocking(fd);
@@ -745,15 +751,15 @@ inet_open_passive(int style, const char *target, int default_port,
     if (style == SOCK_STREAM
         && setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof yes) < 0) {
         error = errno;
-        VLOG_ERR("%s: setsockopt(SO_REUSEADDR): %s",
-                 target, ovs_strerror(error));
+/*        VLOG_ERR("%s: setsockopt(SO_REUSEADDR): %s",
+                 target, ovs_strerror(error));*/
         goto error;
     }
 
     /* Bind. */
     if (bind(fd, (struct sockaddr *) &sin, sizeof sin) < 0) {
         error = errno;
-        VLOG_ERR("%s: bind: %s", target, ovs_strerror(error));
+ /*       VLOG_ERR("%s: bind: %s", target, ovs_strerror(error));*/
         goto error;
     }
 
@@ -762,14 +768,14 @@ inet_open_passive(int style, const char *target, int default_port,
      * connect(), the handshake SYN frames will be sent with a TOS of 0. */
     error = set_dscp(fd, dscp);
     if (error) {
-        VLOG_ERR("%s: socket: %s", target, ovs_strerror(error));
+  /*      VLOG_ERR("%s: socket: %s", target, ovs_strerror(error));*/
         goto error;
     }
 
     /* Listen. */
     if (style == SOCK_STREAM && listen(fd, 10) < 0) {
         error = errno;
-        VLOG_ERR("%s: listen: %s", target, ovs_strerror(error));
+/*        VLOG_ERR("%s: listen: %s", target, ovs_strerror(error));*/
         goto error;
     }
 
@@ -778,21 +784,21 @@ inet_open_passive(int style, const char *target, int default_port,
         socklen_t sin_len = sizeof sin;
         if (getsockname(fd, (struct sockaddr *) &sin, &sin_len) < 0) {
             error = errno;
-            VLOG_ERR("%s: getsockname: %s", target, ovs_strerror(error));
+     /*       VLOG_ERR("%s: getsockname: %s", target, ovs_strerror(error));*/
             goto error;
         }
         if (sin.sin_family != AF_INET || sin_len != sizeof sin) {
             error = EAFNOSUPPORT;
-            VLOG_ERR("%s: getsockname: invalid socket name", target);
+         /*   VLOG_ERR("%s: getsockname: invalid socket name", target);*/
             goto error;
         }
         if (sinp) {
             *sinp = sin;
         }
-        if (kernel_chooses_port) {
+       /* if (kernel_chooses_port) {
             VLOG_INFO("%s: listening on port %"PRIu16,
                       target, ntohs(sin.sin_port));
-        }
+        }*/
     }
 
     return fd;
@@ -805,6 +811,7 @@ error:
 /* Returns a readable and writable fd for /dev/null, if successful, otherwise
  * a negative errno value.  The caller must not close the returned fd (because
  * the same fd will be handed out to subsequent callers). */
+/*
 int
 get_null_fd(void)
 {
@@ -823,7 +830,7 @@ get_null_fd(void)
 
     return null_fd;
 }
-
+*/
 int
 read_fully(int fd, void *p_, size_t size, size_t *bytes_read)
 {
@@ -858,7 +865,7 @@ write_fully(int fd, const void *p_, size_t size, size_t *bytes_written)
             size -= retval;
             p += retval;
         } else if (retval == 0) {
-            VLOG_WARN("write returned 0");
+         /*   VLOG_WARN("write returned 0");*/
             return EPROTO;
         } else if (errno != EINTR) {
             return errno;
@@ -885,13 +892,13 @@ fsync_parent_dir(const char *file_name)
                  * really an error. */
             } else {
                 error = errno;
-                VLOG_ERR("%s: fsync failed (%s)", dir, ovs_strerror(error));
+             /*   VLOG_ERR("%s: fsync failed (%s)", dir, ovs_strerror(error));*/
             }
         }
         close(fd);
     } else {
         error = errno;
-        VLOG_ERR("%s: open failed (%s)", dir, ovs_strerror(error));
+     /*   VLOG_ERR("%s: open failed (%s)", dir, ovs_strerror(error)); */
     }
     free(dir);
 
@@ -929,7 +936,7 @@ void
 xpipe(int fds[2])
 {
     if (pipe(fds)) {
-        VLOG_FATAL("failed to create pipe (%s)", ovs_strerror(errno));
+ /*       VLOG_FATAL("failed to create pipe (%s)", ovs_strerror(errno));  */
     }
 }
 
@@ -945,14 +952,14 @@ void
 xsocketpair(int domain, int type, int protocol, int fds[2])
 {
     if (socketpair(domain, type, protocol, fds)) {
-        VLOG_FATAL("failed to create socketpair (%s)", ovs_strerror(errno));
+/*        VLOG_FATAL("failed to create socketpair (%s)", ovs_strerror(errno));*/
     }
 }
 
 static int
 getsockopt_int(int fd, int level, int option, const char *optname, int *valuep)
 {
-    static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(5, 10);
+  /*  static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(5, 10);*/
     socklen_t len;
     int value;
     int error;
@@ -960,11 +967,11 @@ getsockopt_int(int fd, int level, int option, const char *optname, int *valuep)
     len = sizeof value;
     if (getsockopt(fd, level, option, &value, &len)) {
         error = errno;
-        VLOG_ERR_RL(&rl, "getsockopt(%s): %s", optname, ovs_strerror(error));
+      /*  VLOG_ERR_RL(&rl, "getsockopt(%s): %s", optname, ovs_strerror(error));*/
     } else if (len != sizeof value) {
         error = EINVAL;
-        VLOG_ERR_RL(&rl, "getsockopt(%s): value is %u bytes (expected %zu)",
-                    optname, (unsigned int) len, sizeof value);
+      /*  VLOG_ERR_RL(&rl, "getsockopt(%s): value is %u bytes (expected %zu)",
+                    optname, (unsigned int) len, sizeof value);*/
     } else {
         error = 0;
     }
@@ -985,8 +992,8 @@ describe_sockaddr(struct ds *string, int fd,
             struct sockaddr_in sin;
 
             memcpy(&sin, &ss, sizeof sin);
-            ds_put_format(string, IP_FMT":%"PRIu16,
-                          IP_ARGS(sin.sin_addr.s_addr), ntohs(sin.sin_port));
+            /*ds_put_format(string, IP_FMT":%"PRIu16,
+                          IP_ARGS(sin.sin_addr.s_addr), ntohs(sin.sin_port));*/
         } else if (ss.ss_family == AF_UNIX) {
             struct sockaddr_un sun;
             const char *null;
@@ -1080,6 +1087,7 @@ put_fd_filename(struct ds *string, int fd)
 #endif
 
 /* Returns a malloc()'d string describing 'fd', for use in logging. */
+/*
 char *
 describe_fd(int fd)
 {
@@ -1108,7 +1116,7 @@ describe_fd(int fd)
     }
     return ds_steal_cstr(&string);
 }
-
+*/
 /* Returns the total of the 'iov_len' members of the 'n_iovs' in 'iovs'.
  * The caller must ensure that the total does not exceed SIZE_MAX. */
 size_t
@@ -1234,7 +1242,7 @@ send_iovec_and_fds_fully(int sock,
             if (iovec_is_empty(iovs, n_iovs)) {
                 break;
             }
-            VLOG_WARN("send returned 0");
+     /*       VLOG_WARN("send returned 0");  */
             return EPROTO;
         } else if (errno != EINTR) {
             return errno;
@@ -1320,11 +1328,11 @@ recv_data_and_fds(int sock,
 
     for (p = CMSG_FIRSTHDR(&msg); p; p = CMSG_NXTHDR(&msg, p)) {
         if (p->cmsg_level != SOL_SOCKET || p->cmsg_type != SCM_RIGHTS) {
-            VLOG_ERR("unexpected control message %d:%d",
-                     p->cmsg_level, p->cmsg_type);
+      /*      VLOG_ERR("unexpected control message %d:%d",
+                     p->cmsg_level, p->cmsg_type);*/
             goto error;
         } else if (*n_fdsp) {
-            VLOG_ERR("multiple SCM_RIGHTS received");
+/*            VLOG_ERR("multiple SCM_RIGHTS received");*/
             goto error;
         } else {
             size_t n_fds = (p->cmsg_len - CMSG_LEN(0)) / sizeof *fds;
@@ -1332,8 +1340,8 @@ recv_data_and_fds(int sock,
 
             ovs_assert(n_fds > 0);
             if (n_fds > SOUTIL_MAX_FDS) {
-                VLOG_ERR("%zu fds received but only %d supported",
-                         n_fds, SOUTIL_MAX_FDS);
+            /*    VLOG_ERR("%zu fds received but only %d supported",
+                         n_fds, SOUTIL_MAX_FDS);*/
                 for (i = 0; i < n_fds; i++) {
                     close(fds_data[i]);
                 }
@@ -1357,6 +1365,7 @@ error:
 
 /* Calls ioctl() on an AF_INET sock, passing the specified 'command' and
  * 'arg'.  Returns 0 if successful, otherwise a positive errno value. */
+/*
 int
 af_inet_ioctl(unsigned long int command, const void *arg)
 {
@@ -1367,7 +1376,7 @@ af_inet_ioctl(unsigned long int command, const void *arg)
         sock = socket(AF_INET, SOCK_DGRAM, 0);
         if (sock < 0) {
             sock = -errno;
-            VLOG_ERR("failed to create inet socket: %s", ovs_strerror(errno));
+           VLOG_ERR("failed to create inet socket: %s", ovs_strerror(errno));
         }
         ovsthread_once_done(&once);
     }
@@ -1376,7 +1385,8 @@ af_inet_ioctl(unsigned long int command, const void *arg)
             : ioctl(sock, command, arg) == -1 ? errno
             : 0);
 }
-
+*/
+/*
 int
 af_inet_ifreq_ioctl(const char *name, struct ifreq *ifr, unsigned long int cmd,
                     const char *cmd_name)
@@ -1392,4 +1402,4 @@ af_inet_ifreq_ioctl(const char *name, struct ifreq *ifr, unsigned long int cmd,
     }
     return error;
 }
-
+*/

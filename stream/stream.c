@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <config.h>
+/*#include <config.h>*/
 #include "stream-provider.h"
 #include <errno.h>
 #include <inttypes.h>
@@ -22,6 +22,7 @@
 #include <poll.h>
 #include <stdlib.h>
 #include <string.h>
+/*
 #include "coverage.h"
 #include "dynamic-string.h"
 #include "fatal-signal.h"
@@ -30,9 +31,9 @@
 #include "ofpbuf.h"
 #include "openflow/nicira-ext.h"
 #include "openflow/openflow.h"
-#include "packets.h"
+#include "packets.h"*/
 #include "poll-loop.h"
-#include "random.h"
+/*#include "random.h"*/
 #include "util.h"
 #include "vlog.h"
 
@@ -50,21 +51,22 @@ enum stream_state {
 
 static const struct stream_class *stream_classes[] = {
     &tcp_stream_class,
-    &unix_stream_class,
+   /* &unix_stream_class,
 #ifdef HAVE_OPENSSL
     &ssl_stream_class,
-#endif
+#endif*/
 };
 
 static const struct pstream_class *pstream_classes[] = {
     &ptcp_pstream_class,
-    &punix_pstream_class,
+    /*&punix_pstream_class,
 #ifdef HAVE_OPENSSL
     &pssl_pstream_class,
-#endif
+#endif*/
 };
 
 /* Check the validity of the stream class structures. */
+/*
 static void
 check_stream_classes(void)
 {
@@ -82,7 +84,7 @@ check_stream_classes(void)
             ovs_assert(class->send != NULL);
             ovs_assert(class->wait != NULL);
         } else {
-            /* This class delegates to another one. */
+            / This class delegates to another one. 
         }
     }
 
@@ -95,11 +97,11 @@ check_stream_classes(void)
             ovs_assert(class->accept != NULL);
             ovs_assert(class->wait != NULL);
         } else {
-            /* This class delegates to another one. */
+            / This class delegates to another one. 
         }
     }
 #endif
-}
+}*/
 
 /* Prints information on active (if 'active') and passive (if 'passive')
  * connection methods supported by the stream. */
@@ -158,7 +160,7 @@ stream_lookup_class(const char *name, const struct stream_class **classp)
     size_t prefix_len;
     size_t i;
 
-    check_stream_classes();
+   /* check_stream_classes();*/
 
     *classp = NULL;
     prefix_len = strcspn(name, ":");
@@ -200,7 +202,7 @@ stream_open(const char *name, struct stream **streamp, uint8_t dscp)
     char *suffix_copy;
     int error;
 
-    COVERAGE_INC(stream_open);
+    /*COVERAGE_INC(stream_open);*/
 
     /* Look up the class. */
     error = stream_lookup_class(name, &class);
@@ -240,7 +242,7 @@ stream_open_block(int error, struct stream **streamp)
 {
     struct stream *stream = *streamp;
 
-    fatal_signal_run();
+   /* fatal_signal_run();*/
 
     if (!error) {
         while ((error = stream_connect(stream)) == EAGAIN) {
@@ -461,7 +463,7 @@ pstream_lookup_class(const char *name, const struct pstream_class **classp)
     size_t prefix_len;
     size_t i;
 
-    check_stream_classes();
+    /*check_stream_classes();*/
 
     *classp = NULL;
     prefix_len = strcspn(name, ":");
@@ -522,7 +524,7 @@ pstream_open(const char *name, struct pstream **pstreamp, uint8_t dscp)
     char *suffix_copy;
     int error;
 
-    COVERAGE_INC(pstream_open);
+    /*COVERAGE_INC(pstream_open);*/
 
     /* Look up the class. */
     error = pstream_lookup_class(name, &class);
@@ -596,7 +598,7 @@ pstream_accept_block(struct pstream *pstream, struct stream **new_stream)
 {
     int error;
 
-    fatal_signal_run();
+   /* fatal_signal_run();   */
     while ((error = pstream_accept(pstream, new_stream)) == EAGAIN) {
         pstream_wait(pstream);
         poll_block();
@@ -801,8 +803,8 @@ stream_guess_content(const uint8_t *data, ssize_t size)
             return STREAM_SSL;
         case PAIR('{', '"'):
             return STREAM_JSONRPC;
-        case PAIR(OFP10_VERSION, 0 /* OFPT_HELLO */):
-            return STREAM_OPENFLOW;
+        /*case PAIR(OFP10_VERSION, 0 *//* OFPT_HELLO *//*):
+            return STREAM_OPENFLOW;*/
         }
     }
 
@@ -834,6 +836,8 @@ stream_content_type_to_string(enum stream_content_type type)
  * content type is other than 'expected_type', then log a message in vlog
  * module 'module', naming 'stream_name' as the source, explaining what
  * content was expected and what was actually received. */
+
+/*
 void
 stream_report_content(const void *data, ssize_t size,
                       enum stream_content_type expected_type,
@@ -850,4 +854,4 @@ stream_report_content(const void *data, ssize_t size,
                         stream_content_type_to_string(actual_type),
                         stream_content_type_to_string(expected_type));
     }
-}
+}*/

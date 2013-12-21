@@ -30,10 +30,11 @@
 #include <stdarg.h>
 #include <stdbool.h>
 #include <time.h>
+/*
 #include "compiler.h"
 #include "ovs-thread.h"
 #include "sat-math.h"
-#include "token-bucket.h"
+#include "token-bucket.h"*/
 #include "util.h"
 
 #ifdef  __cplusplus
@@ -100,11 +101,11 @@ struct vlog_module *vlog_module_from_name(const char *name);
 
 /* Rate-limiter for log messages. */
 struct vlog_rate_limit {
-    struct token_bucket token_bucket;
+    /*struct token_bucket token_bucket;*/
     time_t first_dropped;       /* Time first message was dropped. */
     time_t last_dropped;        /* Time of most recent message drop. */
     unsigned int n_dropped;     /* Number of messages dropped. */
-    struct ovs_mutex mutex;     /* Mutual exclusion for rate limit. */
+  /*  struct ovs_mutex mutex;    */ /* Mutual exclusion for rate limit. */
 };
 
 /* Number of tokens to emit a message.  We add 'rate' tokens per millisecond,
@@ -115,11 +116,11 @@ struct vlog_rate_limit {
  * messages per minute and a maximum burst size of BURST messages. */
 #define VLOG_RATE_LIMIT_INIT(RATE, BURST)                               \
         {                                                               \
-            TOKEN_BUCKET_INIT(RATE, SAT_MUL(BURST, VLOG_MSG_TOKENS)),   \
+            /*TOKEN_BUCKET_INIT(RATE, SAT_MUL(BURST, VLOG_MSG_TOKENS)),*/   \
             0,                              /* first_dropped */         \
             0,                              /* last_dropped */          \
             0,                              /* n_dropped */             \
-            OVS_MUTEX_INITIALIZER           /* mutex */                 \
+       /*     OVS_MUTEX_INITIALIZER     */      /* mutex */                 \
         }
 
 /* Configuring how each module logs messages. */

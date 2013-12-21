@@ -4,7 +4,7 @@
 include ../make.h
 
 
-OBJS =	stream.o
+OBJS =	poll-loop.o stream.o stream-tcp.o stream-fd.o socket-util.o util.o 
 
 all:	$(OBJS) 
 	$(AR) $(AR_FLAGS) $(STREAM_LIB) $(OBJS) 
@@ -15,6 +15,6 @@ all:	$(OBJS)
 
 clean:
 
-	$(RM) -f  $(OBJS) $(STREAM_LIB) *.bak
+	$(RM) -f  $(OBJS) $(STREAM_LIB) *.bak *~
 
 

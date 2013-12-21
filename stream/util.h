@@ -102,7 +102,7 @@ extern const char *program_name;
 /* Returns true if X is a power of 2, otherwise false. */
 #define IS_POW2(X) ((X) && !((X) & ((X) - 1)))
 
-static inline bool
+static bool
 is_pow2(uintmax_t x)
 {
     return IS_POW2(x);
@@ -274,7 +274,7 @@ void ignore(bool x OVS_UNUSED);
 #if !defined(UINT_MAX) || !defined(UINT32_MAX)
 #error "Someone screwed up the #includes."
 #elif __GNUC__ >= 4 && UINT_MAX == UINT32_MAX
-static inline int
+static int
 raw_ctz(uint32_t n)
 {
     return __builtin_ctz(n);
@@ -285,7 +285,7 @@ int raw_ctz(uint32_t n);
 #endif
 
 /* Returns the number of trailing 0-bits in 'n', or 32 if 'n' is 0. */
-static inline int
+static int
 ctz(uint32_t n)
 {
     return n ? raw_ctz(n) : 32;
@@ -297,7 +297,7 @@ unsigned int popcount(uint32_t);
 
 /* Returns the rightmost 1-bit in 'x' (e.g. 01011000 => 00001000), or 0 if 'x'
  * is 0. */
-static inline uintmax_t
+static uintmax_t
 rightmost_1bit(uintmax_t x)
 {
     return x & -x;
@@ -305,7 +305,7 @@ rightmost_1bit(uintmax_t x)
 
 /* Returns 'x' with its rightmost 1-bit changed to a zero (e.g. 01011000 =>
  * 01010000), or 0 if 'x' is 0. */
-static inline uintmax_t
+static uintmax_t
 zero_rightmost_1bit(uintmax_t x)
 {
     return x & (x - 1);
@@ -316,7 +316,7 @@ zero_rightmost_1bit(uintmax_t x)
  *
  * Unlike the other functions for rightmost 1-bits, this function only works
  * with 32-bit integers. */
-static inline uint32_t
+static uint32_t
 rightmost_1bit_idx(uint32_t x)
 {
     return x ? ctz(x) : 32;
@@ -326,7 +326,7 @@ rightmost_1bit_idx(uint32_t x)
  * if 'x' is 0.
  *
  * This function only works with 32-bit integers. */
-static inline uint32_t
+static uint32_t
 leftmost_1bit_idx(uint32_t x)
 {
     return x ? log_2_floor(x) : 32;

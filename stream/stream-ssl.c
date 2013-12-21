@@ -217,20 +217,20 @@ new_ssl_stream(const char *name, int fd, enum session_type type,
     /* Check for all the needful configuration. */
     retval = 0;
     if (!private_key.read) {
-        VLOG_ERR("Private key must be configured to use SSL");
+  /*      VLOG_ERR("Private key must be configured to use SSL");*/
         retval = ENOPROTOOPT;
     }
     if (!certificate.read) {
-        VLOG_ERR("Certificate must be configured to use SSL");
+  /*      VLOG_ERR("Certificate must be configured to use SSL");*/
         retval = ENOPROTOOPT;
     }
     if (!ca_cert.read && verify_peer_cert && !bootstrap_ca_cert) {
-        VLOG_ERR("CA certificate must be configured to use SSL");
+  /*      VLOG_ERR("CA certificate must be configured to use SSL");*/
         retval = ENOPROTOOPT;
     }
     if (!retval && !SSL_CTX_check_private_key(ctx)) {
-        VLOG_ERR("Private key does not match certificate public key: %s",
-                 ERR_error_string(ERR_get_error(), NULL));
+  /*      VLOG_ERR("Private key does not match certificate public key: %s",
+                 ERR_error_string(ERR_get_error(), NULL));*/
         retval = ENOPROTOOPT;
     }
     if (retval) {
@@ -254,7 +254,7 @@ new_ssl_stream(const char *name, int fd, enum session_type type,
     /* Create and configure OpenSSL stream. */
     ssl = SSL_new(ctx);
     if (ssl == NULL) {
-        VLOG_ERR("SSL_new: %s", ERR_error_string(ERR_get_error(), NULL));
+      /*  VLOG_ERR("SSL_new: %s", ERR_error_string(ERR_get_error(), NULL));*/
         retval = ENOPROTOOPT;
         goto error;
     }

@@ -42,7 +42,7 @@ void stream_set_remote_ip(struct stream *, ovs_be32 remote_ip);
 void stream_set_remote_port(struct stream *, ovs_be16 remote_port);
 void stream_set_local_ip(struct stream *, ovs_be32 local_ip);
 void stream_set_local_port(struct stream *, ovs_be16 local_port);
-static inline void stream_assert_class(const struct stream *stream,
+static void stream_assert_class(const struct stream *stream,
                                        const struct stream_class *class)
 {
     ovs_assert(stream->class == class);
@@ -144,7 +144,7 @@ struct pstream {
 
 void pstream_init(struct pstream *, const struct pstream_class *, const char *name);
 void pstream_set_bound_port(struct pstream *, ovs_be16 bound_port);
-static inline void pstream_assert_class(const struct pstream *pstream,
+static void pstream_assert_class(const struct pstream *pstream,
                                         const struct pstream_class *class)
 {
     ovs_assert(pstream->class == class);

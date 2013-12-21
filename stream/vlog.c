@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <config.h>
+
 #include "vlog.h"
 #include <assert.h>
 #include <ctype.h>
@@ -28,6 +28,8 @@
 #include <syslog.h>
 #include <time.h>
 #include <unistd.h>
+#include <stddef.h>
+/*#include <config.h>
 #include "async-append.h"
 #include "coverage.h"
 #include "dirs.h"
@@ -37,7 +39,7 @@
 #include "sat-math.h"
 #include "svec.h"
 #include "timeval.h"
-#include "unixctl.h"
+#include "unixctl.h"*/
 #include "util.h"
 
 VLOG_DEFINE_THIS_MODULE(vlog);
@@ -58,7 +60,7 @@ static const char *const level_names[VLL_N_LEVELS] = {
 
 /* Syslog value for each logging level. */
 static const int syslog_levels[VLL_N_LEVELS] = {
-#define VLOG_LEVEL(NAME, SYSLOG_LEVEL) SYSLOG_LEVEL,
+#define VLOG_LEVEL(NAME, SYSLOG_LEVEL) SYSLOG_LEVEL,\
     VLOG_LEVELS
 #undef VLOG_LEVEL
 };

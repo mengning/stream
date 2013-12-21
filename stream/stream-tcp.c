@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <config.h>
+
 #include "stream.h"
 #include <errno.h>
 #include <inttypes.h>
@@ -25,7 +25,8 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
-#include "packets.h"
+/*#include <config.h>
+#include "packets.h"*/
 #include "socket-util.h"
 #include "util.h"
 #include "stream-provider.h"
@@ -53,7 +54,7 @@ new_tcp_stream(const char *name, int fd, int connect_status,
 
     retval = setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, &on, sizeof on);
     if (retval) {
-        VLOG_ERR("%s: setsockopt(TCP_NODELAY): %s", name, ovs_strerror(errno));
+ /*       VLOG_ERR("%s: setsockopt(TCP_NODELAY): %s", name, ovs_strerror(errno));*/
         close(fd);
         return errno;
     }
@@ -79,7 +80,7 @@ tcp_open(const char *name, char *suffix, struct stream **streamp, uint8_t dscp)
     if (fd >= 0) {
         return new_tcp_stream(name, fd, error, &sin, streamp);
     } else {
-        VLOG_ERR("%s: connect: %s", name, ovs_strerror(error));
+  /*      VLOG_ERR("%s: connect: %s", name, ovs_strerror(error)); */
         return error;
     }
 }
@@ -116,8 +117,8 @@ ptcp_open(const char *name OVS_UNUSED, char *suffix, struct pstream **pstreamp,
         return -fd;
     }
 
-    sprintf(bound_name, "ptcp:%"PRIu16":"IP_FMT,
-            ntohs(sin.sin_port), IP_ARGS(sin.sin_addr.s_addr));
+    /*sprintf(bound_name, "ptcp:%"PRIu16":"IP_FMT,
+	ntohs(sin.sin_port), IP_ARGS(sin.sin_addr.s_addr));*/
     error = new_fd_pstream(bound_name, fd, ptcp_accept, set_dscp, NULL,
                            pstreamp);
     if (!error) {
@@ -135,9 +136,9 @@ ptcp_accept(int fd, const struct sockaddr *sa, size_t sa_len,
     char name[128];
 
     if (sa_len == sizeof(struct sockaddr_in) && sin->sin_family == AF_INET) {
-        sprintf(name, "tcp:"IP_FMT, IP_ARGS(sin->sin_addr.s_addr));
+       /* sprintf(name, "tcp:"IP_FMT, IP_ARGS(sin->sin_addr.s_addr));
         sprintf(strchr(name, '\0'), ":%"PRIu16, ntohs(sin->sin_port));
-    } else {
+   */ } else {
         strcpy(name, "tcp");
     }
     return new_tcp_stream(name, fd, 0, sin, streamp);

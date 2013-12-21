@@ -14,22 +14,54 @@
  * limitations under the License.
  */
 
-#include <config.h>
+
 #include "poll-loop.h"
 #include <errno.h>
-#include <inttypes.h>
+#include <stddef.h>/
+#include <sys/types.h>/
+#include <inttypes.h>/
 #include <poll.h>
 #include <stdlib.h>
 #include <string.h>
+#include <linux/limits.h>
+#include <pthread.h>/
+/*#include <config.h>
 #include "coverage.h"
 #include "dynamic-string.h"
 #include "fatal-signal.h"
 #include "list.h"
 #include "ovs-thread.h"
 #include "seq.h"
-#include "socket-util.h"
-#include "timeval.h"
+#include "timeval.h"*/
 #include "vlog.h"
+#include "socket-util.h"
+#   define LLONG_MAX    9223372036854775807LL
+#   define LLONG_MIN    (-LLONG_MAX - 1LL)
+
+
+/*ovsthread.h*/
+/*typedef _Atomic(_Bool)atomic_bool;*/
+#define ATOMIC_VAR_INIT(VALUE)(VALUE)
+struct OVS_LOCKABLE ovs_mutex{
+	pthread_mutex_t lock;
+	const char *where;
+};
+/*
+#ifdef PTHREAD_ERRORCHECK_MUTEX_INITIALIZER_NP
+#define OVS_MUTEX_INITIALIZER{PTHREAD_ERRORCHECK_MUTEX_INITIALIZER_NP,NULL}
+#else*/
+#define OVS_MUTEX_INITIALIZER{PTHREAD_MUTEX_INITIALIZER,NULL}
+/*#endif  */
+
+struct ovsthread_once{
+	_Bool done;
+	struct ovs_mutex nutex;
+};
+#define OVSTHREAD_ONCE_INITIALIZER                 \
+	{                                     \
+		ATOMIC_VAR_INIT(false),        \
+		OVS_MUTEX_INITIALIZER,            \
+	}
 
 VLOG_DEFINE_THIS_MODULE(poll_loop);
 
@@ -65,9 +97,9 @@ static struct poll_loop *poll_loop(void);
 void
 poll_fd_wait_at(int fd, short int events, const char *where)
 {
-    struct poll_loop *loop = poll_loop();
+   /* struct poll_loop *loop = poll_loop();
 
-    COVERAGE_INC(poll_fd_wait);
+   / COVERAGE_INC(poll_fd_wait);
     if (loop->n_waiters >= loop->allocated_waiters) {
         loop->where = x2nrealloc(loop->where, &loop->allocated_waiters,
                                  sizeof *loop->where);
@@ -79,7 +111,7 @@ poll_fd_wait_at(int fd, short int events, const char *where)
     loop->where[loop->n_waiters] = where;
     loop->pollfds[loop->n_waiters].fd = fd;
     loop->pollfds[loop->n_waiters].events = events;
-    loop->n_waiters++;
+    loop->n_waiters++;*/
 }
 
 /* Causes the following call to poll_block() to block for no more than 'msec'
@@ -96,21 +128,21 @@ poll_fd_wait_at(int fd, short int events, const char *where)
 void
 poll_timer_wait_at(long long int msec, const char *where)
 {
-    long long int now = time_msec();
+   /* long long int now = time_msec();
     long long int when;
 
     if (msec <= 0) {
-        /* Wake up immediately. */
+        /  Wake up immediately. 
         when = LLONG_MIN;
     } else if ((unsigned long long int) now + msec <= LLONG_MAX) {
-        /* Normal case. */
+        / Normal case. 
         when = now + msec;
     } else {
-        /* now + msec would overflow. */
+        /  now + msec would overflow. 
         when = LLONG_MAX;
     }
 
-    poll_timer_wait_until_at(when, where);
+    poll_timer_wait_until_at(when, where);*/
 }
 
 /* Causes the following call to poll_block() to wake up when the current time,
@@ -128,11 +160,11 @@ poll_timer_wait_at(long long int msec, const char *where)
 void
 poll_timer_wait_until_at(long long int when, const char *where)
 {
-    struct poll_loop *loop = poll_loop();
+   /* struct poll_loop *loop = poll_loop();
     if (when < loop->timeout_when) {
         loop->timeout_when = when;
         loop->timeout_where = where;
-    }
+    }*/
 }
 
 /* Causes the following call to poll_block() to wake up immediately, without
@@ -157,9 +189,10 @@ poll_immediate_wake_at(const char *where)
  *   - If 'pollfd' is NULL then 'timeout' is the number of milliseconds after
  *     which the poll loop woke up.
  */
+
 static void
 log_wakeup(const char *where, const struct pollfd *pollfd, int timeout)
-{
+{/*
     static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(10, 10);
     enum vlog_level level;
     int cpu_usage;
@@ -205,7 +238,7 @@ log_wakeup(const char *where, const struct pollfd *pollfd, int timeout)
         ds_put_format(&s, " (%d%% CPU usage)", cpu_usage);
     }
     VLOG(level, "%s", ds_cstr(&s));
-    ds_destroy(&s);
+    ds_destroy(&s);*/
 }
 
 /* Blocks until one or more of the events registered with poll_fd_wait()
@@ -214,16 +247,16 @@ log_wakeup(const char *where, const struct pollfd *pollfd, int timeout)
 void
 poll_block(void)
 {
-    struct poll_loop *loop = poll_loop();
+    /*  struct poll_loop *loop = poll_loop();
     int elapsed;
     int retval;
 
-    /* Register fatal signal events before actually doing any real work for
-     * poll_block. */
+    / Register fatal signal events before actually doing any real work for
+     * poll_block. 
     fatal_signal_wait();
-
+ 
     if (loop->timeout_when == LLONG_MIN) {
-        COVERAGE_INC(poll_zero_timeout);
+       COVERAGE_INC(poll_zero_timeout);
     }
 
     retval = time_poll(loop->pollfds, loop->n_waiters,
@@ -247,12 +280,12 @@ poll_block(void)
     loop->timeout_where = NULL;
     loop->n_waiters = 0;
 
-    /* Handle any pending signals before doing anything else. */
-    fatal_signal_run();
+    /Handle any pending signals before doing anything else. 
+     fatal_signal_run();
 
-    seq_woke();
+    seq_woke();*/
 }
-
+/*
 static void
 free_poll_loop(void *loop_)
 {
@@ -281,5 +314,5 @@ poll_loop(void)
         xpthread_setspecific(key, loop);
     }
     return loop;
-}
+}*/
 
