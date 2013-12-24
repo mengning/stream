@@ -33,6 +33,13 @@
 #include "stream-fd.h"
 #include "vlog.h"
 
+#define IP_FMT "%"PRIu32".%"PRIu32".%"PRIu32".%"PRIu32
+#define IP_ARGS(ip)\
+	ntohl(ip)>>24,\
+	(ntohl(ip)>>16) & 0Xff,\
+	(ntohl(ip)>>8) & 0Xff,\
+	ntohl(ip)>>24 & 0xff
+
 VLOG_DEFINE_THIS_MODULE(stream_tcp);
 
 /* Active TCP. */
@@ -117,8 +124,8 @@ ptcp_open(const char *name OVS_UNUSED, char *suffix, struct pstream **pstreamp,
         return -fd;
     }
 
-    /*sprintf(bound_name, "ptcp:%"PRIu16":"IP_FMT,
-	ntohs(sin.sin_port), IP_ARGS(sin.sin_addr.s_addr));*/
+       sprintf(bound_name, "ptcp:%"PRIu16":"IP_FMT,
+	ntohs(sin.sin_port), IP_ARGS(sin.sin_addr.s_addr));
     error = new_fd_pstream(bound_name, fd, ptcp_accept, set_dscp, NULL,
                            pstreamp);
     if (!error) {
@@ -136,9 +143,9 @@ ptcp_accept(int fd, const struct sockaddr *sa, size_t sa_len,
     char name[128];
 
     if (sa_len == sizeof(struct sockaddr_in) && sin->sin_family == AF_INET) {
-       /* sprintf(name, "tcp:"IP_FMT, IP_ARGS(sin->sin_addr.s_addr));
+        sprintf(name, "tcp:"IP_FMT, IP_ARGS(sin->sin_addr.s_addr));
         sprintf(strchr(name, '\0'), ":%"PRIu16, ntohs(sin->sin_port));
-   */ } else {
+        } else {
         strcpy(name, "tcp");
     }
     return new_tcp_stream(name, fd, 0, sin, streamp);
