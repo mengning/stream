@@ -1,3 +1,20 @@
+/*
+ * Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013 Nicira, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at:
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*#include <config.h>*/
 #include "stream-provider.h"
 #include <errno.h>
 #include <inttypes.h>
@@ -5,12 +22,25 @@
 #include <poll.h>
 #include <stdlib.h>
 #include <string.h>
+/*
+#include "coverage.h"
+#include "dynamic-string.h"
+#include "fatal-signal.h"
+#include "flow.h"
+#include "ofp-print.h"
+#include "ofpbuf.h"
+#include "openflow/nicira-ext.h"
+#include "openflow/openflow.h"
+#include "packets.h"*/
 #include "poll-loop.h"
+/*#include "random.h"*/
+#include "util.h"
+#include "vlog.h"
 
 VLOG_DEFINE_THIS_MODULE(stream);
 
-/*COVERAGE_DEFINE(pstream_open);
-COVERAGE_DEFINE(stream_open);*/
+COVERAGE_DEFINE(pstream_open);
+COVERAGE_DEFINE(stream_open);
 
 /* State of an active stream.*/
 enum stream_state {
@@ -763,24 +793,26 @@ stream_parse_target_with_default_ports(const char *target,
 
 /* Attempts to guess the content type of a stream whose first few bytes were
  * the 'size' bytes of 'data'. */
-/*static enum stream_content_type
+static enum stream_content_type
 stream_guess_content(const uint8_t *data, ssize_t size)
 {
     if (size >= 2) {
 #define PAIR(A, B) (((A) << 8) | (B))
         switch (PAIR(data[0], data[1])) {
-        case PAIR(0x16, 0x03):  
+        case PAIR(0x16, 0x03):  /* Handshake, version 3. */
             return STREAM_SSL;
         case PAIR('{', '"'):
             return STREAM_JSONRPC;
+        /*case PAIR(OFP10_VERSION, 0 *//* OFPT_HELLO *//*):
+            return STREAM_OPENFLOW;*/
         }
     }
 
     return STREAM_UNKNOWN;
-}*/
+}
 
 /* Returns a string represenation of 'type'. */
-/*static const char *
+static const char *
 stream_content_type_to_string(enum stream_content_type type)
 {
     switch (type) {
@@ -797,7 +829,7 @@ stream_content_type_to_string(enum stream_content_type type)
     case STREAM_SSL:
         return "SSL";
     }
-}*/
+}
 
 /* Attempts to guess the content type of a stream whose first few bytes were
  * the 'size' bytes of 'data'.  If this is done successfully, and the guessed

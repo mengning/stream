@@ -1,3 +1,20 @@
+/*
+ * Copyright (c) 2008, 2009, 2010, 2012, 2013 Nicira, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at:
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
 #include "stream-fd.h"
 #include <errno.h>
 #include <poll.h>
@@ -6,10 +23,14 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <unistd.h>
+/*#include <config.h>
+#include "fatal-signal.h"*/
 #include "poll-loop.h"
 #include "socket-util.h"
+#include "util.h"
 #include "stream-provider.h"
 #include "stream.h"
+#include "vlog.h"
 
 VLOG_DEFINE_THIS_MODULE(stream_fd);
 
@@ -23,9 +44,9 @@ struct stream_fd
 
 static const struct stream_class stream_fd_class;
 
-/*static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(10, 25);*/
+static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(10, 25);
 
-/*static void maybe_unlink_and_free(char *path);*/
+static void maybe_unlink_and_free(char *path);
 
 /* Creates a new stream named 'name' that will send and receive data on 'fd'
  * and stores a pointer to the stream in '*streamp'.  Initial connection status
@@ -179,7 +200,7 @@ pfd_close(struct pstream *pstream)
 {
     struct fd_pstream *ps = fd_pstream_cast(pstream);
     close(ps->fd);
-    /*maybe_unlink_and_free(ps->unlink_path);*/
+    maybe_unlink_and_free(ps->unlink_path);
     free(ps);
 }
 

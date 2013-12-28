@@ -25,9 +25,13 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
+/*#include <config.h>
+#include "packets.h"*/
 #include "socket-util.h"
+#include "util.h"
 #include "stream-provider.h"
 #include "stream-fd.h"
+#include "vlog.h"
 
 #define IP_FMT "%"PRIu32".%"PRIu32".%"PRIu32".%"PRIu32
 #define IP_ARGS(ip)\
@@ -79,7 +83,7 @@ tcp_open(const char *name, char *suffix, struct stream **streamp, uint8_t dscp)
     struct sockaddr_in sin;
     int fd, error;
 
-    error = inet_open_active(SOCK_STREAM, suffix, 0, &sin, &fd, dscp);
+    error = inet_open_active(SOCK_STREAM, suffix, -1, &sin, &fd, dscp);
     if (fd >= 0) {
         return new_tcp_stream(name, fd, error, &sin, streamp);
     } else {
