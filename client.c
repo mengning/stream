@@ -1,4 +1,3 @@
-
 #include<stdio.h> 			/* perror */
 #include<stdlib.h>			/* exit	*/
 #include<sys/types.h>		/* WNOHANG */
@@ -19,7 +18,8 @@ int main()
 	uint8_t dscp = 1;
         /*size_t n = 28;*/
 	const char *buffer = "Hello,this is client,thanks!";
-	size_t n = sizeof(*buffer);
+	//size_t n = sizeof(*buffer);
+	size_t n = strlen(buffer);//new
 	const char* name = "tcp:127.0.0.1:1234";	
 	error = stream_open(name,&streamp,dscp);
 	if(error != 0)printf("stream open failure!\n");
@@ -34,7 +34,8 @@ int main()
 		}
 		printf("connect success!\n");
 		snd = stream_send(streamp,buffer,n);
-		if(snd < 1 && snd > n){
+		//if(snd < 1 && snd > n){
+		if(snd != n){//new
 			printf("snd failure!\n");
 			stream_close(streamp);
 		}
