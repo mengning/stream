@@ -1,20 +1,3 @@
-/*
- * Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013 Nicira, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at:
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/*#include <config.h>*/
 #include "stream-provider.h"
 #include <errno.h>
 #include <inttypes.h>
@@ -22,25 +5,11 @@
 #include <poll.h>
 #include <stdlib.h>
 #include <string.h>
-/*
-#include "coverage.h"
-#include "dynamic-string.h"
-#include "fatal-signal.h"
-#include "flow.h"
-#include "ofp-print.h"
-#include "ofpbuf.h"
-#include "openflow/nicira-ext.h"
-#include "openflow/openflow.h"
-#include "packets.h"*/
-#include "poll-loop.h"
-/*#include "random.h"*/
-#include "util.h"
-#include "vlog.h"
 
 VLOG_DEFINE_THIS_MODULE(stream);
 
-COVERAGE_DEFINE(pstream_open);
-COVERAGE_DEFINE(stream_open);
+/*COVERAGE_DEFINE(pstream_open);
+COVERAGE_DEFINE(stream_open);*/
 
 /* State of an active stream.*/
 enum stream_state {
@@ -237,12 +206,11 @@ error:
  * Typical usage:
  *   error = stream_open_block(stream_open("tcp:1.2.3.4:5", &stream), &stream);
  */
-int
+/*int
 stream_open_block(int error, struct stream **streamp)
 {
     struct stream *stream = *streamp;
 
-   /* fatal_signal_run();*/
 
     if (!error) {
         while ((error = stream_connect(stream)) == EAGAIN) {
@@ -261,7 +229,7 @@ stream_open_block(int error, struct stream **streamp)
         *streamp = stream;
     }
     return error;
-}
+}*/
 
 /* Closes 'stream'. */
 void
@@ -352,7 +320,7 @@ stream_connect(struct stream *stream)
         default:
             NOT_REACHED();
         }
-    } while (stream->state != last_state);
+    } while ((unsigned)stream->state != last_state);
 
     return EAGAIN;
 }
@@ -417,7 +385,7 @@ stream_run_wait(struct stream *stream)
 
 /* Arranges for the poll loop to wake up when 'stream' is ready to take an
  * action of the given 'type'. */
-void
+/*void
 stream_wait(struct stream *stream, enum stream_wait_type wait)
 {
     ovs_assert(wait == STREAM_CONNECT || wait == STREAM_RECV
@@ -434,13 +402,15 @@ stream_wait(struct stream *stream, enum stream_wait_type wait)
     }
     (stream->class->wait)(stream, wait);
 }
-
+*/
+/*
 void
 stream_connect_wait(struct stream *stream)
 {
     stream_wait(stream, STREAM_CONNECT);
 }
-
+*/
+/*
 void
 stream_recv_wait(struct stream *stream)
 {
@@ -452,7 +422,7 @@ stream_send_wait(struct stream *stream)
 {
     stream_wait(stream, STREAM_SEND);
 }
-
+*/
 /* Given 'name', a pstream name in the form "TYPE:ARGS", stores the class
  * named "TYPE" into '*classp' and returns 0.  Returns EAFNOSUPPORT and stores
  * a null pointer into '*classp' if 'name' is in the wrong form or if no such
@@ -593,12 +563,11 @@ pstream_accept(struct pstream *pstream, struct stream **new_stream)
  *
  * pstream_accept_block() blocks until a connection is ready or until an error
  * occurs.  It will not return EAGAIN. */
-int
+/*int
 pstream_accept_block(struct pstream *pstream, struct stream **new_stream)
 {
     int error;
 
-   /* fatal_signal_run();   */
     while ((error = pstream_accept(pstream, new_stream)) == EAGAIN) {
         pstream_wait(pstream);
         poll_block();
@@ -607,7 +576,7 @@ pstream_accept_block(struct pstream *pstream, struct stream **new_stream)
         *new_stream = NULL;
     }
     return error;
-}
+}*/
 
 void
 pstream_wait(struct pstream *pstream)
@@ -701,7 +670,8 @@ pstream_set_bound_port(struct pstream *pstream, ovs_be16 port)
 {
     pstream->bound_port = port;
 }
-
+
+char* strtok_r(char*,char *,char **);
 static int
 count_fields(const char *s_)
 {
@@ -710,8 +680,8 @@ count_fields(const char *s_)
 
     save_ptr = NULL;
     s = xstrdup(s_);
-    for (field = strtok_r(s, ":", &save_ptr); field != NULL;
-         field = strtok_r(NULL, ":", &save_ptr)) {
+    for (field = (char *)strtok_r(s, ":", &save_ptr); field != NULL;
+         field = (char *)strtok_r(NULL, ":", &save_ptr)) {
         n++;
     }
     free(s);
@@ -793,26 +763,24 @@ stream_parse_target_with_default_ports(const char *target,
 
 /* Attempts to guess the content type of a stream whose first few bytes were
  * the 'size' bytes of 'data'. */
-static enum stream_content_type
+/*static enum stream_content_type
 stream_guess_content(const uint8_t *data, ssize_t size)
 {
     if (size >= 2) {
 #define PAIR(A, B) (((A) << 8) | (B))
         switch (PAIR(data[0], data[1])) {
-        case PAIR(0x16, 0x03):  /* Handshake, version 3. */
+        case PAIR(0x16, 0x03):  
             return STREAM_SSL;
         case PAIR('{', '"'):
             return STREAM_JSONRPC;
-        /*case PAIR(OFP10_VERSION, 0 *//* OFPT_HELLO *//*):
-            return STREAM_OPENFLOW;*/
         }
     }
 
     return STREAM_UNKNOWN;
-}
+}*/
 
 /* Returns a string represenation of 'type'. */
-static const char *
+/*static const char *
 stream_content_type_to_string(enum stream_content_type type)
 {
     switch (type) {
@@ -829,7 +797,7 @@ stream_content_type_to_string(enum stream_content_type type)
     case STREAM_SSL:
         return "SSL";
     }
-}
+}*/
 
 /* Attempts to guess the content type of a stream whose first few bytes were
  * the 'size' bytes of 'data'.  If this is done successfully, and the guessed

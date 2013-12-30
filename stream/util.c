@@ -1,76 +1,30 @@
-/*
- * Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013 Nicira, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at:
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-
 #include "util.h"
 #include <errno.h>
-#include <limits.h>
 #include <pthread.h>
-#include <stdarg.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <sys/stat.h>
 #include <unistd.h>
-/*#include <config.h>
-#include "byte-order.h"
-#include "coverage.h"
-#include "ovs-thread.h"*/
-#include "vlog.h"
+
 #ifdef HAVE_PTHREAD_SET_NAME_NP
 #include <pthread_np.h>
 #endif
+
 #define ntohll(value)(value)
 #define htonll(value)(value)
-VLOG_DEFINE_THIS_MODULE(util);
 
-COVERAGE_DEFINE(util_xalloc);
-
-/* argv[0] without directory names. */
 const char *program_name;
 
-/* Name for the currently running thread or process, for log messages, process
- * listings, and debuggers. */
-
-/*//DEFINE_PER_THREAD_MALLOCED_DATA(char *, subprogram_name);*/
-
-/* --version option output. */
 static char *program_version;
-
-/* Buffer used by ovs_strerror(). */
-
-/*//DEFINE_STATIC_PER_THREAD_DATA(struct { char s[128]; },
-                              strerror_buffer,
-                              { "" });
-*/
-
 
 void
 ovs_assert_failure(const char *where, const char *function,
                    const char *condition)
 {
-  /* Prevent an infinite loop (or stack overflow) in case VLOG_ABORT happens
-     * to trigger an assertion failure of its own. */
     static int reentry = 0;
 
     switch (reentry++) {
     case 0:
-       /* VLOG_ABORT("%s: assertion %s failed in %s()",
-                   where, condition, function);*/
         NOT_REACHED();
 
     case 1:
@@ -83,17 +37,21 @@ ovs_assert_failure(const char *where, const char *function,
     }
 }
 
+int vsnprintf(char*,size_t,const char* , va_list);
+int strnlen(const char*, int);
+long int strtoll(const char*,char**,int);
+size_t readlink(const char*, char*,size_t);
+int lstat(const char*,struct stat*);
+
 void
-out_of_memory(void)
+out_of_memory()
 {
-   /* ovs_abort(0, "virtual memory exhausted");*/
 }
 
 void *
 xcalloc(size_t count, size_t size)
 {
     void *p = count && size ? calloc(count, size) : malloc(1);
-    /*COVERAGE_INC(util_xalloc);*/
     if (p == NULL) {
         out_of_memory();
     }
@@ -201,18 +159,6 @@ ovs_strlcpy(char *dst, const char *src, size_t size)
     }
 }
 
-/* Copies 'src' to 'dst'.  Reads no more than 'size - 1' bytes from 'src'.
- * Always null-terminates 'dst' (if 'size' is nonzero), and writes a zero byte
- * to every otherwise unused byte in 'dst'.
- *
- * Except for performance, the following call:
- *     ovs_strzcpy(dst, src, size);
- * is equivalent to these two calls:
- *     memset(dst, '\0', size);
- *     ovs_strlcpy(dst, src, size);
- *
- * (Thus, ovs_strzcpy() is similar to strncpy() without some of the pitfalls.)
- */
 void
 ovs_strzcpy(char *dst, const char *src, size_t size)
 {
@@ -223,219 +169,6 @@ ovs_strzcpy(char *dst, const char *src, size_t size)
     }
 }
 
-/* Prints 'format' on stderr, formatting it like printf() does.  If 'err_no' is
- * nonzero, then it is formatted with ovs_retval_to_string() and appended to
- * the message inside parentheses.  Then, terminates with abort().
- *
- * This function is preferred to ovs_fatal() in a situation where it would make
- * sense for a monitoring process to restart the daemon.
- *
- * 'format' should not end with a new-line, because this function will add one
- * itself. */
-/*
-void
-ovs_abort(int err_no, const char *format, ...)
-{
-    va_list args;
-
-    va_start(args, format);
-    ovs_abort_valist(err_no, format, args);
-}*/
-
-/* Same as ovs_abort() except that the arguments are supplied as a va_list. */
-/*
-void
-ovs_abort_valist(int err_no, const char *format, va_list args)
-{
-    ovs_error_valist(err_no, format, args);
-    abort();
-}
-*/
-/* Prints 'format' on stderr, formatting it like printf() does.  If 'err_no' is
- * nonzero, then it is formatted with ovs_retval_to_string() and appended to
- * the message inside parentheses.  Then, terminates with EXIT_FAILURE.
- *
- * 'format' should not end with a new-line, because this function will add one
- * itself. */
-/*
-void
-ovs_fatal(int err_no, const char *format, ...)
-{
-    va_list args;
-
-    va_start(args, format);
-    ovs_fatal_valist(err_no, format, args);
-}*/
-
-/* Same as ovs_fatal() except that the arguments are supplied as a va_list. */
-/*
-void
-ovs_fatal_valist(int err_no, const char *format, va_list args)
-{
-    ovs_error_valist(err_no, format, args);
-    exit(EXIT_FAILURE);
-}*/
-
-/* Prints 'format' on stderr, formatting it like printf() does.  If 'err_no' is
- * nonzero, then it is formatted with ovs_retval_to_string() and appended to
- * the message inside parentheses.
- *
- * 'format' should not end with a new-line, because this function will add one
- * itself. */
-/*
-void
-ovs_error(int err_no, const char *format, ...)
-{
-    va_list args;
-
-    va_start(args, format);
-    ovs_error_valist(err_no, format, args);
-    va_end(args);
-}*/
-
-/* Same as ovs_error() except that the arguments are supplied as a va_list. */
-/*
-void
-ovs_error_valist(int err_no, const char *format, va_list args)
-{
-    const char *subprogram_name = get_subprogram_name();
-    int save_errno = errno;
-
-    if (subprogram_name[0]) {
-        fprintf(stderr, "%s(%s): ", program_name, subprogram_name);
-    } else {
-        fprintf(stderr, "%s: ", program_name);
-    }
-
-    vfprintf(stderr, format, args);
-    if (err_no != 0) {
-      fprintf(stderr, " (%s)", ovs_retval_to_string(err_no));
-    }
-    putc('\n', stderr);
-
-    errno = save_errno;
-}
-*/
-/* Many OVS functions return an int which is one of:
- * - 0: no error yet
- * - >0: errno value
- * - EOF: end of file (not necessarily an error; depends on the function called)
- *
- * Returns the appropriate human-readable string. The caller must copy the
- * string if it wants to hold onto it, as the storage may be overwritten on
- * subsequent function calls.
- */
-
-/*
-const char *
-ovs_retval_to_string(int retval)
-{
-    return (!retval ? ""
-            : retval == EOF ? "End of file"
-            : ovs_strerror(retval));
-}*/
-/*
-const char *
-ovs_strerror(int error)
-{
-    enum { BUFSIZE = sizeof strerror_buffer_get()->s };
-    int save_errno;
-    char *buffer;
-    char *s;
-
-    save_errno = errno;
-    buffer = strerror_buffer_get()->s;
-
-#if STRERROR_R_CHAR_P                            */
-    /* GNU style strerror_r() might return an immutable static string, or it
-     * might write and return 'buffer', but in either case we can pass the
-     * returned string directly to the caller. */
-/*    s = strerror_r(error, buffer, BUFSIZE);   
-#else      */ /* strerror_r() returns an int. */
-    /*s = buffer;
-    if (strerror_r(error, buffer, BUFSIZE)) {
-   */     /* strerror_r() is only allowed to fail on ERANGE (because the buffer
-         * is too short).  We don't check the actual failure reason because
-         * POSIX requires strerror_r() to return the error but old glibc
-         * (before 2.13) returns -1 and sets errno. */
-   /*     snprintf(buffer, BUFSIZE, "Unknown error %d", error);
-    }
-#endif
-
-    errno = save_errno;
-
-    return s;
-}*/
-
-/* Sets global "program_name" and "program_version" variables.  Should
- * be called at the beginning of main() with "argv[0]" as the argument
- * to 'argv0'.
- *
- * 'version' should contain the version of the caller's program.  If 'version'
- * is the same as the VERSION #define, the caller is assumed to be part of Open
- * vSwitch.  Otherwise, it is assumed to be an external program linking against
- * the Open vSwitch libraries.
- *
- * The 'date' and 'time' arguments should likely be called with
- * "__DATE__" and "__TIME__" to use the time the binary was built.
- * Alternatively, the "set_program_name" macro may be called to do this
- * automatically.
- */
-/*
-void
-set_program_name__(const char *argv0, const char *version, const char *date,
-                   const char *time)
-{
-    const char *slash = strrchr(argv0, '/');
-
-    assert_single_threaded();
-
-    program_name = slash ? slash + 1 : argv0;
-
-    free(program_version);
-
-    if (!strcmp(version, VERSION)) {
-        program_version = xasprintf("%s (Open vSwitch) "VERSION"\n"
-                                    "Compiled %s %s\n",
-                                    program_name, date, time);
-    } else {
-        program_version = xasprintf("%s %s\n"
-                                    "Open vSwitch Library "VERSION"\n"
-                                    "Compiled %s %s\n",
-                                    program_name, version, date, time);
-    }
-}*/
-
-/* Returns the name of the currently running thread or process. */
-/*
-const char *
-get_subprogram_name(void)
-{
-    const char *name = subprogram_name_get();
-    return name ? name : "";
-}
-*/
-/* Sets 'name' as the name of the currently running thread or process.  (This
- * appears in log messages and may also be visible in system process listings
- * and debuggers.) */
-/*
-void
-set_subprogram_name(const char *name)
-{
-    const char *pname = name[0] ? name : program_name;
-    free(subprogram_name_set(xstrdup(name)));
-#if HAVE_GLIBC_PTHREAD_SETNAME_NP
-    pthread_setname_np(pthread_self(), pname);
-#elif HAVE_NETBSD_PTHREAD_SETNAME_NP
-    pthread_setname_np(pthread_self(), "%s", pname);
-#elif HAVE_PTHREAD_SET_NAME_NP
-    pthread_set_name_np(pthread_self(), pname);
-#endif
-}
-*/
-/* Returns a pointer to a string describing the program version.  The
- * caller must not modify or free the returned string.
- */
 const char *
 get_program_version(void)
 {
@@ -558,12 +291,6 @@ str_to_ullong(const char *s, int base, unsigned long long *ull)
     return str_to_llong(s, base, (long long *) ull);
 }
 
-/* Converts floating-point string 's' into a double.  If successful, stores
- * the double in '*d' and returns true; on failure, stores 0 in '*d' and
- * returns false.
- *
- * Underflow (e.g. "1e-9999") is not considered an error, but overflow
- * (e.g. "1e9999)" is. */
 bool
 str_to_double(const char *s, double *d)
 {
@@ -582,7 +309,6 @@ str_to_double(const char *s, double *d)
     }
 }
 
-/* Returns the value of 'c' as a hexadecimal digit. */
 int
 hexit_value(int c)
 {
@@ -614,10 +340,6 @@ hexit_value(int c)
     }
 }
 
-/* Returns the integer value of the 'n' hexadecimal digits starting at 's', or
- * UINT_MAX if one of those "digits" is not really a hex digit.  If 'ok' is
- * nonnull, '*ok' is set to true if the conversion succeeds or to false if a
- * non-hex digit is detected. */
 unsigned int
 hexits_value(const char *s, size_t n, bool *ok)
 {
@@ -748,9 +470,6 @@ abs_file_name(const char *dir, const char *file_name)
     }
 }
 
-/* Like readlink(), but returns the link name as a null-terminated string in
- * allocated memory that the caller must eventually free (with free()).
- * Returns NULL on error, in which case errno is set appropriately. */
 char *
 xreadlink(const char *filename)
 {
@@ -761,7 +480,7 @@ xreadlink(const char *filename)
         ssize_t retval = readlink(filename, buf, size);
         int error = errno;
 
-        if (retval >= 0 && retval < size) {
+        if (retval >= 0 && (unsigned)retval < size) {
             buf[retval] = '\0';
             return buf;
         }
@@ -774,16 +493,6 @@ xreadlink(const char *filename)
     }
 }
 
-/* Returns a version of 'filename' with symlinks in the final component
- * dereferenced.  This differs from realpath() in that:
- *
- *     - 'filename' need not exist.
- *
- *     - If 'filename' does exist as a symlink, its referent need not exist.
- *
- *     - Only symlinks in the final component of 'filename' are dereferenced.
- *
- * The caller must eventually free the returned string (with free()). */
 char *
 follow_symlinks(const char *filename)
 {
@@ -802,8 +511,6 @@ follow_symlinks(const char *filename)
 
         linkname = xreadlink(fn);
         if (!linkname) {
-         /*   VLOG_WARN("%s: readlink failed (%s)",
-                      filename, ovs_strerror(errno));*/
             return fn;
         }
 
@@ -834,14 +541,8 @@ follow_symlinks(const char *filename)
     return xstrdup(filename);
 }
 
-/* Pass a value to this function if it is marked with
- * __attribute__((warn_unused_result)) and you genuinely want to ignore
- * its return value.  (Note that every scalar type can be implicitly
- * converted to bool.) */
 void ignore(bool x OVS_UNUSED) { }
 
-/* Returns an appropriate delimiter for inserting just before the 0-based item
- * 'index' in a list that has 'total' items in it. */
 const char *
 english_list_delimiter(size_t index, size_t total)
 {
@@ -851,9 +552,6 @@ english_list_delimiter(size_t index, size_t total)
             : " and ");
 }
 
-/* Given a 32 bit word 'n', calculates floor(log_2('n')).  This is equivalent
- * to finding the bit position of the most significant one bit in 'n'.  It is
- * an error to call this function with 'n' == 0. */
 int
 log_2_floor(uint32_t n)
 {
@@ -882,15 +580,13 @@ log_2_floor(uint32_t n)
     }
 #endif
 }
-
-/* Given a 32 bit word 'n', calculates ceil(log_2('n')).  It is an error to
- * call this function with 'n' == 0. */
+/*
 int
 log_2_ceil(uint32_t n)
 {
     return log_2_floor(n) + !is_pow2(n);
 }
-
+*/
 /* Returns the number of trailing 0-bits in 'n'.  Undefined if 'n' == 0. */
 #if !defined(UINT_MAX) || !defined(UINT32_MAX)
 #error "Someone screwed up the #includes."

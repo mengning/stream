@@ -28,7 +28,7 @@ $(CLIENT_TARGET):$(CLIENT_OBJS)
 clean:
 	make -w -C $(STREAM_DIR) -f Makefile clean
 	$(RM) $(RM_FLAGS) $(OBJS) $(TARGETS)
-	$(RM) $(RM_FLAGS) *.lib *.bak *.a *~
+	$(RM) $(RM_FLAGS) *.lib *.bak *.a
 # Make for stream
 # Output STREAM_LIB - stream.a
 $(STREAM_LIB):

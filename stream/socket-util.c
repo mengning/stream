@@ -1,20 +1,3 @@
-/*
- * Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013 Nicira, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at:
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-
 #include "socket-util.h"
 #include <arpa/inet.h>
 #include <errno.h>
@@ -34,12 +17,6 @@
 #include <sys/un.h>
 #include <unistd.h>
 #include <inttypes.h>
-/*#include <config.h>
-#include "dynamic-string.h"
-#include "fatal-signal.h"
-#include "packets.h"*/
-#include "poll-loop.h"
-#include "util.h"
 #include "vlog.h"
 #if AF_PACKET && LINUX_DATAPATH
 #include <linux/if_packet.h>
@@ -51,9 +28,6 @@
 
 VLOG_DEFINE_THIS_MODULE(socket_util);
 
-/* #ifdefs make it a pain to maintain code: you have to try to build both ways.
- * Thus, this file compiles all of the code regardless of the target, by
- * writing "if (LINUX_DATAPATH)" instead of "#ifdef __linux__". */
 #ifndef LINUX_DATAPATH
 #define LINUX_DATAPATH 0
 #endif
@@ -62,7 +36,7 @@ VLOG_DEFINE_THIS_MODULE(socket_util);
 #define O_DIRECTORY 0
 #endif
 
-static int getsockopt_int(int fd, int level, int option, const char *optname,
+static int getsockopt_int(int fd, int level, int option,
                           int *valuep);
 
 /* Sets 'fd' to non-blocking mode.  Returns 0 if successful, otherwise a
@@ -108,7 +82,7 @@ set_dscp(int fd, uint8_t dscp)
 
     return 0;
 }
-
+/*
 static bool
 rlim_is_finite(rlim_t limit)
 {
@@ -116,20 +90,20 @@ rlim_is_finite(rlim_t limit)
         return false;
     }
 
-#ifdef RLIM_SAVED_CUR           /* FreeBSD 8.0 lacks RLIM_SAVED_CUR. */
+#ifdef RLIM_SAVED_CUR           
     if (limit == RLIM_SAVED_CUR) {
         return false;
     }
 #endif
 
-#ifdef RLIM_SAVED_MAX           /* FreeBSD 8.0 lacks RLIM_SAVED_MAX. */
+#ifdef RLIM_SAVED_MAX       
     if (limit == RLIM_SAVED_MAX) {
         return false;
     }
 #endif
 
     return true;
-}
+}*/
 
 /* Returns the maximum valid FD value, plus 1. */
 /*
@@ -156,6 +130,10 @@ get_max_fds(void)
 /* Translates 'host_name', which must be a string representation of an IP
  * address, into a numeric IP address in '*addr'.  Returns 0 if successful,
  * otherwise a positive errno value. */
+int fsync(int);
+char* strsep(char**,const char *);
+char* strtok_r(char*,char *,char **);
+int inet_aton(const char *, struct in_addr*);
 int
 lookup_ip(const char *host_name, struct in_addr *addr)
 {
@@ -319,7 +297,7 @@ get_socket_rcvbuf(int sock)
     int rcvbuf;
     int error;
 
-    error = getsockopt_int(sock, SOL_SOCKET, SO_RCVBUF, "SO_RCVBUF", &rcvbuf);
+    error = getsockopt_int(sock, SOL_SOCKET, SO_RCVBUF,&rcvbuf);
     return error ? -error : rcvbuf;
 }
 
@@ -537,6 +515,7 @@ guess_netmask(ovs_be32 ip_)
  *
  * On success, returns true and stores the parsed remote address into '*sinp'.
  * On failure, logs an error, stores zeros into '*sinp', and returns false. */
+
 bool
 inet_parse_active(const char *target_, uint16_t default_port,
                   struct sockaddr_in *sinp)
@@ -552,8 +531,8 @@ inet_parse_active(const char *target_, uint16_t default_port,
     sinp->sin_port = htons(default_port);
 
     /* Tokenize. */
-    host_name = strtok_r(target, ":", &save_ptr);
-    port_string = strtok_r(NULL, ":", &save_ptr);
+    host_name = (char *)strtok_r(target, ":", &save_ptr);
+    port_string = (char *)strtok_r(NULL, ":", &save_ptr);
     if (!host_name) {
       /*  VLOG_ERR("%s: bad peer name format", target_);*/
         goto exit;
@@ -652,18 +631,6 @@ exit:
     return error;
 }
 
-/* Parses 'target', which should be a string in the format "[<port>][:<ip>]":
- *
- *      - If 'default_port' is -1, then <port> is required.  Otherwise, if
- *        <port> is omitted, then 'default_port' is used instead.
- *
- *      - If <port> (or 'default_port', if used) is 0, then no port is bound
- *        and the TCP/IP stack will select a port.
- *
- *      - If <ip> is omitted then the IP address is wildcarded.
- *
- * If successful, stores the address into '*sinp' and returns true; otherwise
- * zeros '*sinp' and returns false. */
 bool
 inet_parse_passive(const char *target_, int default_port,
                    struct sockaddr_in *sinp)
@@ -681,17 +648,15 @@ inet_parse_passive(const char *target_, int default_port,
     sinp->sin_addr.s_addr = htonl(INADDR_ANY);
     sinp->sin_port = htons(default_port);
 
-    /* Parse optional port number. */
-    port_string = strsep(&string_ptr, ":");
+    port_string = (char *)strsep(&string_ptr, ":");
     if (port_string && str_to_int(port_string, 10, &port)) {
         sinp->sin_port = htons(port);
     } else if (default_port < 0) {
-/*        VLOG_ERR("%s: port number must be specified", target_);*/
         goto exit;
     }
 
     /* Parse optional bind IP. */
-    host_name = strsep(&string_ptr, ":");
+    host_name = (char *)strsep(&string_ptr, ":");
     if (host_name && host_name[0] && lookup_ip(host_name, &sinp->sin_addr)) {
         goto exit;
     }
@@ -706,24 +671,6 @@ exit:
     return ok;
 }
 
-
-/* Opens a non-blocking IPv4 socket of the specified 'style', binds to
- * 'target', and listens for incoming connections.  Parses 'target' in the same
- * way was inet_parse_passive().
- *
- * 'style' should be SOCK_STREAM (for TCP) or SOCK_DGRAM (for UDP).
- *
- * For TCP, the socket will have SO_REUSEADDR turned on.
- *
- * On success, returns a non-negative file descriptor.  On failure, returns a
- * negative errno value.
- *
- * If 'sinp' is non-null, then on success the bound address is stored into
- * '*sinp'.
- *
- * 'dscp' becomes the DSCP bits in the IP headers for the new connection.  It
- * should be in the range [0, 63] and will automatically be shifted to the
- * appropriately place in the IP tos field. */
 int
 inet_open_passive(int style, const char *target, int default_port,
                   struct sockaddr_in *sinp, uint8_t dscp)
@@ -795,10 +742,6 @@ inet_open_passive(int style, const char *target, int default_port,
         if (sinp) {
             *sinp = sin;
         }
-       /* if (kernel_chooses_port) {
-            VLOG_INFO("%s: listening on port %"PRIu16,
-                      target, ntohs(sin.sin_port));
-        }*/
     }
 
     return fd;
@@ -808,29 +751,6 @@ error:
     return -error;
 }
 
-/* Returns a readable and writable fd for /dev/null, if successful, otherwise
- * a negative errno value.  The caller must not close the returned fd (because
- * the same fd will be handed out to subsequent callers). */
-/*
-int
-get_null_fd(void)
-{
-    static struct ovsthread_once once = OVSTHREAD_ONCE_INITIALIZER;
-    static int null_fd;
-
-    if (ovsthread_once_start(&once)) {
-        null_fd = open("/dev/null", O_RDWR);
-        if (null_fd < 0) {
-            int error = errno;
-            VLOG_ERR("could not open /dev/null: %s", ovs_strerror(error));
-            null_fd = -error;
-        }
-        ovsthread_once_done(&once);
-    }
-
-    return null_fd;
-}
-*/
 int
 read_fully(int fd, void *p_, size_t size, size_t *bytes_read)
 {
@@ -874,8 +794,6 @@ write_fully(int fd, const void *p_, size_t size, size_t *bytes_written)
     return 0;
 }
 
-/* Given file name 'file_name', fsyncs the directory in which it is contained.
- * Returns 0 if successful, otherwise a positive errno value. */
 int
 fsync_parent_dir(const char *file_name)
 {
@@ -898,45 +816,16 @@ fsync_parent_dir(const char *file_name)
         close(fd);
     } else {
         error = errno;
-     /*   VLOG_ERR("%s: open failed (%s)", dir, ovs_strerror(error)); */
     }
     free(dir);
 
     return error;
 }
 
-/* Obtains the modification time of the file named 'file_name' to the greatest
- * supported precision.  If successful, stores the mtime in '*mtime' and
- * returns 0.  On error, returns a positive errno value and stores zeros in
- * '*mtime'. */
-int
-get_mtime(const char *file_name, struct timespec *mtime)
-{
-    struct stat s;
-
-    if (!stat(file_name, &s)) {
-        mtime->tv_sec = s.st_mtime;
-
-#if HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC
-        mtime->tv_nsec = s.st_mtim.tv_nsec;
-#elif HAVE_STRUCT_STAT_ST_MTIMENSEC
-        mtime->tv_nsec = s.st_mtimensec;
-#else
-        mtime->tv_nsec = 0;
-#endif
-
-        return 0;
-    } else {
-        mtime->tv_sec = mtime->tv_nsec = 0;
-        return errno;
-    }
-}
-
 void
 xpipe(int fds[2])
 {
     if (pipe(fds)) {
- /*       VLOG_FATAL("failed to create pipe (%s)", ovs_strerror(errno));  */
     }
 }
 
@@ -952,14 +841,12 @@ void
 xsocketpair(int domain, int type, int protocol, int fds[2])
 {
     if (socketpair(domain, type, protocol, fds)) {
-/*        VLOG_FATAL("failed to create socketpair (%s)", ovs_strerror(errno));*/
     }
 }
 
 static int
-getsockopt_int(int fd, int level, int option, const char *optname, int *valuep)
+getsockopt_int(int fd, int level, int option,int *valuep)
 {
-  /*  static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(5, 10);*/
     socklen_t len;
     int value;
     int error;
@@ -967,11 +854,8 @@ getsockopt_int(int fd, int level, int option, const char *optname, int *valuep)
     len = sizeof value;
     if (getsockopt(fd, level, option, &value, &len)) {
         error = errno;
-      /*  VLOG_ERR_RL(&rl, "getsockopt(%s): %s", optname, ovs_strerror(error));*/
     } else if (len != sizeof value) {
         error = EINVAL;
-      /*  VLOG_ERR_RL(&rl, "getsockopt(%s): value is %u bytes (expected %zu)",
-                    optname, (unsigned int) len, sizeof value);*/
     } else {
         error = 0;
     }
@@ -980,145 +864,6 @@ getsockopt_int(int fd, int level, int option, const char *optname, int *valuep)
     return error;
 }
 
-static void
-describe_sockaddr(struct ds *string, int fd,
-                  int (*getaddr)(int, struct sockaddr *, socklen_t *))
-{
-    struct sockaddr_storage ss;
-    socklen_t len = sizeof ss;
-
-    if (!getaddr(fd, (struct sockaddr *) &ss, &len)) {
-        if (ss.ss_family == AF_INET) {
-            struct sockaddr_in sin;
-
-            memcpy(&sin, &ss, sizeof sin);
-            /*ds_put_format(string, IP_FMT":%"PRIu16,
-                          IP_ARGS(sin.sin_addr.s_addr), ntohs(sin.sin_port));*/
-        } else if (ss.ss_family == AF_UNIX) {
-            struct sockaddr_un sun;
-            const char *null;
-            size_t maxlen;
-
-            memcpy(&sun, &ss, sizeof sun);
-            maxlen = len - offsetof(struct sockaddr_un, sun_path);
-            null = memchr(sun.sun_path, '\0', maxlen);
-            ds_put_buffer(string, sun.sun_path,
-                          null ? null - sun.sun_path : maxlen);
-        }
-#ifdef HAVE_NETLINK
-        else if (ss.ss_family == AF_NETLINK) {
-            int protocol;
-
-/* SO_PROTOCOL was introduced in 2.6.32.  Support it regardless of the version
- * of the Linux kernel headers in use at build time. */
-#ifndef SO_PROTOCOL
-#define SO_PROTOCOL 38
-#endif
-
-            if (!getsockopt_int(fd, SOL_SOCKET, SO_PROTOCOL, "SO_PROTOCOL",
-                                &protocol)) {
-                switch (protocol) {
-                case NETLINK_ROUTE:
-                    ds_put_cstr(string, "NETLINK_ROUTE");
-                    break;
-
-                case NETLINK_GENERIC:
-                    ds_put_cstr(string, "NETLINK_GENERIC");
-                    break;
-
-                default:
-                    ds_put_format(string, "AF_NETLINK family %d", protocol);
-                    break;
-                }
-            } else {
-                ds_put_cstr(string, "AF_NETLINK");
-            }
-        }
-#endif
-#if AF_PACKET && LINUX_DATAPATH
-        else if (ss.ss_family == AF_PACKET) {
-            struct sockaddr_ll sll;
-
-            memcpy(&sll, &ss, sizeof sll);
-            ds_put_cstr(string, "AF_PACKET");
-            if (sll.sll_ifindex) {
-                char name[IFNAMSIZ];
-
-                if (if_indextoname(sll.sll_ifindex, name)) {
-                    ds_put_format(string, "(%s)", name);
-                } else {
-                    ds_put_format(string, "(ifindex=%d)", sll.sll_ifindex);
-                }
-            }
-            if (sll.sll_protocol) {
-                ds_put_format(string, "(protocol=0x%"PRIu16")",
-                              ntohs(sll.sll_protocol));
-            }
-        }
-#endif
-        else if (ss.ss_family == AF_UNSPEC) {
-            ds_put_cstr(string, "AF_UNSPEC");
-        } else {
-            ds_put_format(string, "AF_%d", (int) ss.ss_family);
-        }
-    }
-}
-
-
-#ifdef LINUX_DATAPATH
-static void
-put_fd_filename(struct ds *string, int fd)
-{
-    char buf[1024];
-    char *linkname;
-    int n;
-
-    linkname = xasprintf("/proc/self/fd/%d", fd);
-    n = readlink(linkname, buf, sizeof buf);
-    if (n > 0) {
-        ds_put_char(string, ' ');
-        ds_put_buffer(string, buf, n);
-        if (n > sizeof buf) {
-            ds_put_cstr(string, "...");
-        }
-    }
-    free(linkname);
-}
-#endif
-
-/* Returns a malloc()'d string describing 'fd', for use in logging. */
-/*
-char *
-describe_fd(int fd)
-{
-    struct ds string;
-    struct stat s;
-
-    ds_init(&string);
-    if (fstat(fd, &s)) {
-        ds_put_format(&string, "fstat failed (%s)", ovs_strerror(errno));
-    } else if (S_ISSOCK(s.st_mode)) {
-        describe_sockaddr(&string, fd, getsockname);
-        ds_put_cstr(&string, "<->");
-        describe_sockaddr(&string, fd, getpeername);
-    } else {
-        ds_put_cstr(&string, (isatty(fd) ? "tty"
-                              : S_ISDIR(s.st_mode) ? "directory"
-                              : S_ISCHR(s.st_mode) ? "character device"
-                              : S_ISBLK(s.st_mode) ? "block device"
-                              : S_ISREG(s.st_mode) ? "file"
-                              : S_ISFIFO(s.st_mode) ? "FIFO"
-                              : S_ISLNK(s.st_mode) ? "symbolic link"
-                              : "unknown"));
-#ifdef LINUX_DATAPATH
-        put_fd_filename(&string, fd);
-#endif
-    }
-    return ds_steal_cstr(&string);
-}
-*/
-/* Returns the total of the 'iov_len' members of the 'n_iovs' in 'iovs'.
- * The caller must ensure that the total does not exceed SIZE_MAX. */
 size_t
 iovec_len(const struct iovec iovs[], size_t n_iovs)
 {
@@ -1131,7 +876,6 @@ iovec_len(const struct iovec iovs[], size_t n_iovs)
     return len;
 }
 
-/* Returns true if all of the 'n_iovs' iovecs in 'iovs' have length zero. */
 bool
 iovec_is_empty(const struct iovec iovs[], size_t n_iovs)
 {
@@ -1145,10 +889,6 @@ iovec_is_empty(const struct iovec iovs[], size_t n_iovs)
     return true;
 }
 
-/* Sends the 'n_iovs' iovecs of data in 'iovs' and the 'n_fds' file descriptors
- * in 'fds' on Unix domain socket 'sock'.  Returns the number of bytes
- * successfully sent or -1 if an error occurred.  On error, sets errno
- * appropriately.  */
 int
 send_iovec_and_fds(int sock,
                    const struct iovec *iovs, size_t n_iovs,
@@ -1185,18 +925,6 @@ send_iovec_and_fds(int sock,
     }
 }
 
-/* Sends the 'n_iovs' iovecs of data in 'iovs' and the 'n_fds' file descriptors
- * in 'fds' on Unix domain socket 'sock'.  If 'skip_bytes' is nonzero, then the
- * first 'skip_bytes' of data in the iovecs are not sent, and none of the file
- * descriptors are sent.  The function continues to retry sending until an
- * error (other than EINTR) occurs or all the data and fds are sent.
- *
- * Returns 0 if all the data and fds were successfully sent, otherwise a
- * positive errno value.  Regardless of success, stores the number of bytes
- * sent (always at least 'skip_bytes') in '*bytes_sent'.  (If at least one byte
- * is sent, then all the fds have been sent.)
- *
- * 'skip_bytes' must be less than or equal to iovec_len(iovs, n_iovs). */
 int
 send_iovec_and_fds_fully(int sock,
                          const struct iovec iovs[], size_t n_iovs,
@@ -1222,7 +950,7 @@ send_iovec_and_fds_fully(int sock,
                 const uint8_t *base = iovs->iov_base;
                 size_t len = iovs->iov_len;
 
-                if (retval < len) {
+                if ((unsigned)retval < len) {
                     size_t sent;
                     int error;
 
@@ -1242,7 +970,6 @@ send_iovec_and_fds_fully(int sock,
             if (iovec_is_empty(iovs, n_iovs)) {
                 break;
             }
-     /*       VLOG_WARN("send returned 0");  */
             return EPROTO;
         } else if (errno != EINTR) {
             return errno;
@@ -1251,15 +978,7 @@ send_iovec_and_fds_fully(int sock,
 
     return 0;
 }
-
-/* Sends the 'n_iovs' iovecs of data in 'iovs' and the 'n_fds' file descriptors
- * in 'fds' on Unix domain socket 'sock'.  The function continues to retry
- * sending until an error (other than EAGAIN or EINTR) occurs or all the data
- * and fds are sent.  Upon EAGAIN, the function blocks until the socket is
- * ready for more data.
- *
- * Returns 0 if all the data and fds were successfully sent, otherwise a
- * positive errno value. */
+/*
 int
 send_iovec_and_fds_fully_block(int sock,
                                const struct iovec iovs[], size_t n_iovs,
@@ -1278,18 +997,8 @@ send_iovec_and_fds_fully_block(int sock,
         poll_fd_wait(sock, POLLOUT);
         poll_block();
     }
-}
+}*/
 
-/* Attempts to receive from Unix domain socket 'sock' up to 'size' bytes of
- * data into 'data' and up to SOUTIL_MAX_FDS file descriptors into 'fds'.
- *
- *      - Upon success, returns the number of bytes of data copied into 'data'
- *        and stores the number of received file descriptors into '*n_fdsp'.
- *
- *      - On failure, returns a negative errno value and stores 0 in
- *        '*n_fdsp'.
- *
- *      - On EOF, returns 0 and stores 0 in '*n_fdsp'. */
 int
 recv_data_and_fds(int sock,
                   void *data, size_t size,
@@ -1328,11 +1037,8 @@ recv_data_and_fds(int sock,
 
     for (p = CMSG_FIRSTHDR(&msg); p; p = CMSG_NXTHDR(&msg, p)) {
         if (p->cmsg_level != SOL_SOCKET || p->cmsg_type != SCM_RIGHTS) {
-      /*      VLOG_ERR("unexpected control message %d:%d",
-                     p->cmsg_level, p->cmsg_type);*/
             goto error;
         } else if (*n_fdsp) {
-/*            VLOG_ERR("multiple SCM_RIGHTS received");*/
             goto error;
         } else {
             size_t n_fds = (p->cmsg_len - CMSG_LEN(0)) / sizeof *fds;
@@ -1340,8 +1046,6 @@ recv_data_and_fds(int sock,
 
             ovs_assert(n_fds > 0);
             if (n_fds > SOUTIL_MAX_FDS) {
-            /*    VLOG_ERR("%zu fds received but only %d supported",
-                         n_fds, SOUTIL_MAX_FDS);*/
                 for (i = 0; i < n_fds; i++) {
                     close(fds_data[i]);
                 }
@@ -1362,44 +1066,3 @@ error:
     *n_fdsp = 0;
     return EPROTO;
 }
-
-/* Calls ioctl() on an AF_INET sock, passing the specified 'command' and
- * 'arg'.  Returns 0 if successful, otherwise a positive errno value. */
-/*
-int
-af_inet_ioctl(unsigned long int command, const void *arg)
-{
-    static struct ovsthread_once once = OVSTHREAD_ONCE_INITIALIZER;
-    static int sock;
-
-    if (ovsthread_once_start(&once)) {
-        sock = socket(AF_INET, SOCK_DGRAM, 0);
-        if (sock < 0) {
-            sock = -errno;
-           VLOG_ERR("failed to create inet socket: %s", ovs_strerror(errno));
-        }
-        ovsthread_once_done(&once);
-    }
-
-    return (sock < 0 ? -sock
-            : ioctl(sock, command, arg) == -1 ? errno
-            : 0);
-}
-*/
-/*
-int
-af_inet_ifreq_ioctl(const char *name, struct ifreq *ifr, unsigned long int cmd,
-                    const char *cmd_name)
-{
-    int error;
-
-    ovs_strzcpy(ifr->ifr_name, name, sizeof ifr->ifr_name);
-    error = af_inet_ioctl(cmd, ifr);
-    if (error) {
-        static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(5, 20);
-        VLOG_DBG_RL(&rl, "%s: ioctl(%s) failed: %s", name, cmd_name,
-                    ovs_strerror(error));
-    }
-    return error;
-}
-*/

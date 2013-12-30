@@ -25,13 +25,9 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
-/*#include <config.h>
-#include "packets.h"*/
 #include "socket-util.h"
-#include "util.h"
 #include "stream-provider.h"
 #include "stream-fd.h"
-#include "vlog.h"
 
 #define IP_FMT "%"PRIu32".%"PRIu32".%"PRIu32".%"PRIu32
 #define IP_ARGS(ip)\
@@ -104,7 +100,7 @@ const struct stream_class tcp_stream_class = {
     NULL,                       /* run_wait */
     NULL,                       /* wait */
 };
-
+
 /* Passive TCP. */
 
 static int ptcp_accept(int fd, const struct sockaddr *sa, size_t sa_len,
