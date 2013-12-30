@@ -5,7 +5,6 @@
 #include <poll.h>
 #include <stdlib.h>
 #include <string.h>
-#include "poll-loop.h"
 
 VLOG_DEFINE_THIS_MODULE(stream);
 
@@ -207,12 +206,11 @@ error:
  * Typical usage:
  *   error = stream_open_block(stream_open("tcp:1.2.3.4:5", &stream), &stream);
  */
-int
+/*int
 stream_open_block(int error, struct stream **streamp)
 {
     struct stream *stream = *streamp;
 
-   /* fatal_signal_run();*/
 
     if (!error) {
         while ((error = stream_connect(stream)) == EAGAIN) {
@@ -231,7 +229,7 @@ stream_open_block(int error, struct stream **streamp)
         *streamp = stream;
     }
     return error;
-}
+}*/
 
 /* Closes 'stream'. */
 void
@@ -387,7 +385,7 @@ stream_run_wait(struct stream *stream)
 
 /* Arranges for the poll loop to wake up when 'stream' is ready to take an
  * action of the given 'type'. */
-void
+/*void
 stream_wait(struct stream *stream, enum stream_wait_type wait)
 {
     ovs_assert(wait == STREAM_CONNECT || wait == STREAM_RECV
@@ -404,13 +402,15 @@ stream_wait(struct stream *stream, enum stream_wait_type wait)
     }
     (stream->class->wait)(stream, wait);
 }
-
+*/
+/*
 void
 stream_connect_wait(struct stream *stream)
 {
     stream_wait(stream, STREAM_CONNECT);
 }
-
+*/
+/*
 void
 stream_recv_wait(struct stream *stream)
 {
@@ -422,7 +422,7 @@ stream_send_wait(struct stream *stream)
 {
     stream_wait(stream, STREAM_SEND);
 }
-
+*/
 /* Given 'name', a pstream name in the form "TYPE:ARGS", stores the class
  * named "TYPE" into '*classp' and returns 0.  Returns EAFNOSUPPORT and stores
  * a null pointer into '*classp' if 'name' is in the wrong form or if no such
@@ -563,12 +563,11 @@ pstream_accept(struct pstream *pstream, struct stream **new_stream)
  *
  * pstream_accept_block() blocks until a connection is ready or until an error
  * occurs.  It will not return EAGAIN. */
-int
+/*int
 pstream_accept_block(struct pstream *pstream, struct stream **new_stream)
 {
     int error;
 
-   /* fatal_signal_run();   */
     while ((error = pstream_accept(pstream, new_stream)) == EAGAIN) {
         pstream_wait(pstream);
         poll_block();
@@ -577,7 +576,7 @@ pstream_accept_block(struct pstream *pstream, struct stream **new_stream)
         *new_stream = NULL;
     }
     return error;
-}
+}*/
 
 void
 pstream_wait(struct pstream *pstream)

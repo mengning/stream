@@ -17,7 +17,6 @@
 #include <sys/un.h>
 #include <unistd.h>
 #include <inttypes.h>
-#include "poll-loop.h"
 #include "vlog.h"
 #if AF_PACKET && LINUX_DATAPATH
 #include <linux/if_packet.h>
@@ -979,7 +978,7 @@ send_iovec_and_fds_fully(int sock,
 
     return 0;
 }
-
+/*
 int
 send_iovec_and_fds_fully_block(int sock,
                                const struct iovec iovs[], size_t n_iovs,
@@ -998,7 +997,7 @@ send_iovec_and_fds_fully_block(int sock,
         poll_fd_wait(sock, POLLOUT);
         poll_block();
     }
-}
+}*/
 
 int
 recv_data_and_fds(int sock,
