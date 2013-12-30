@@ -6,13 +6,11 @@
 #include<string.h>			/* memset */
 #include<pthread.h>
 
-#include "poll-loop.h"
 #include "stream.h"
-#include "stream-provider.h"
 
 int main() 
 {	
-	int snd;
+	unsigned int snd;
 	int error;
 	int erro;
 	struct stream *streamp;

@@ -44,7 +44,7 @@ ifeq (${TARGET_OS}, OS_PTHREADS)
 CC_DEBUG_FLAGS               = -g
 CC_OPTIMIZATION_FLAGS         = -O2
 CC_WARNING_FLAGS             = -ansi                         \
-                               -Wall                         \
+			       -Wall                         \
                                -Wunused                      \
                                -Wmissing-declarations        \
                                -Wimplicit                    \
