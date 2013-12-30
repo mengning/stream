@@ -37,7 +37,7 @@ VLOG_DEFINE_THIS_MODULE(socket_util);
 #define O_DIRECTORY 0
 #endif
 
-static int getsockopt_int(int fd, int level, int option, const char *optname,
+static int getsockopt_int(int fd, int level, int option,
                           int *valuep);
 
 /* Sets 'fd' to non-blocking mode.  Returns 0 if successful, otherwise a
@@ -131,6 +131,10 @@ get_max_fds(void)
 /* Translates 'host_name', which must be a string representation of an IP
  * address, into a numeric IP address in '*addr'.  Returns 0 if successful,
  * otherwise a positive errno value. */
+int fsync(int);
+char* strsep(char**,const char *);
+char* strtok_r(char*,char *,char **);
+int inet_aton(const char *, struct in_addr*);
 int
 lookup_ip(const char *host_name, struct in_addr *addr)
 {
@@ -294,7 +298,7 @@ get_socket_rcvbuf(int sock)
     int rcvbuf;
     int error;
 
-    error = getsockopt_int(sock, SOL_SOCKET, SO_RCVBUF, "SO_RCVBUF", &rcvbuf);
+    error = getsockopt_int(sock, SOL_SOCKET, SO_RCVBUF,&rcvbuf);
     return error ? -error : rcvbuf;
 }
 
@@ -512,6 +516,7 @@ guess_netmask(ovs_be32 ip_)
  *
  * On success, returns true and stores the parsed remote address into '*sinp'.
  * On failure, logs an error, stores zeros into '*sinp', and returns false. */
+
 bool
 inet_parse_active(const char *target_, uint16_t default_port,
                   struct sockaddr_in *sinp)
@@ -527,8 +532,8 @@ inet_parse_active(const char *target_, uint16_t default_port,
     sinp->sin_port = htons(default_port);
 
     /* Tokenize. */
-    host_name = strtok_r(target, ":", &save_ptr);
-    port_string = strtok_r(NULL, ":", &save_ptr);
+    host_name = (char *)strtok_r(target, ":", &save_ptr);
+    port_string = (char *)strtok_r(NULL, ":", &save_ptr);
     if (!host_name) {
       /*  VLOG_ERR("%s: bad peer name format", target_);*/
         goto exit;
@@ -644,17 +649,15 @@ inet_parse_passive(const char *target_, int default_port,
     sinp->sin_addr.s_addr = htonl(INADDR_ANY);
     sinp->sin_port = htons(default_port);
 
-    /* Parse optional port number. */
-    port_string = strsep(&string_ptr, ":");
+    port_string = (char *)strsep(&string_ptr, ":");
     if (port_string && str_to_int(port_string, 10, &port)) {
         sinp->sin_port = htons(port);
     } else if (default_port < 0) {
-/*        VLOG_ERR("%s: port number must be specified", target_);*/
         goto exit;
     }
 
     /* Parse optional bind IP. */
-    host_name = strsep(&string_ptr, ":");
+    host_name = (char *)strsep(&string_ptr, ":");
     if (host_name && host_name[0] && lookup_ip(host_name, &sinp->sin_addr)) {
         goto exit;
     }
@@ -843,7 +846,7 @@ xsocketpair(int domain, int type, int protocol, int fds[2])
 }
 
 static int
-getsockopt_int(int fd, int level, int option, const char *optname, int *valuep)
+getsockopt_int(int fd, int level, int option,int *valuep)
 {
     socklen_t len;
     int value;
@@ -948,7 +951,7 @@ send_iovec_and_fds_fully(int sock,
                 const uint8_t *base = iovs->iov_base;
                 size_t len = iovs->iov_len;
 
-                if (retval < len) {
+                if ((unsigned)retval < len) {
                     size_t sent;
                     int error;
 

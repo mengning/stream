@@ -37,6 +37,12 @@ ovs_assert_failure(const char *where, const char *function,
     }
 }
 
+int vsnprintf(char*,size_t,const char* , va_list);
+int strnlen(const char*, int);
+long int strtoll(const char*,char**,int);
+size_t readlink(const char*, char*,size_t);
+int lstat(const char*,struct stat*);
+
 void
 out_of_memory()
 {
@@ -474,7 +480,7 @@ xreadlink(const char *filename)
         ssize_t retval = readlink(filename, buf, size);
         int error = errno;
 
-        if (retval >= 0 && retval < size) {
+        if (retval >= 0 && (unsigned)retval < size) {
             buf[retval] = '\0';
             return buf;
         }
@@ -574,13 +580,13 @@ log_2_floor(uint32_t n)
     }
 #endif
 }
-
+/*
 int
 log_2_ceil(uint32_t n)
 {
     return log_2_floor(n) + !is_pow2(n);
 }
-
+*/
 /* Returns the number of trailing 0-bits in 'n'.  Undefined if 'n' == 0. */
 #if !defined(UINT_MAX) || !defined(UINT32_MAX)
 #error "Someone screwed up the #includes."

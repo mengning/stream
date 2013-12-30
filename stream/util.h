@@ -101,13 +101,13 @@ extern const char *program_name;
 
 /* Returns true if X is a power of 2, otherwise false. */
 #define IS_POW2(X) ((X) && !((X) & ((X) - 1)))
-
+/*
 static bool
 is_pow2(uintmax_t x)
 {
     return IS_POW2(x);
 }
-
+*/
 /* Returns X rounded up to a power of 2.  X must be a constant expression. */
 #define ROUND_UP_POW2(X) RUP2__(X)
 #define RUP2__(X) (RUP2_1(X) + 1)

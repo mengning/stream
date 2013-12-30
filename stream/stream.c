@@ -322,7 +322,7 @@ stream_connect(struct stream *stream)
         default:
             NOT_REACHED();
         }
-    } while (stream->state != last_state);
+    } while ((unsigned)stream->state != last_state);
 
     return EAGAIN;
 }
@@ -671,7 +671,8 @@ pstream_set_bound_port(struct pstream *pstream, ovs_be16 port)
 {
     pstream->bound_port = port;
 }
-
+
+char* strtok_r(char*,char *,char **);
 static int
 count_fields(const char *s_)
 {
@@ -680,8 +681,8 @@ count_fields(const char *s_)
 
     save_ptr = NULL;
     s = xstrdup(s_);
-    for (field = strtok_r(s, ":", &save_ptr); field != NULL;
-         field = strtok_r(NULL, ":", &save_ptr)) {
+    for (field = (char *)strtok_r(s, ":", &save_ptr); field != NULL;
+         field = (char *)strtok_r(NULL, ":", &save_ptr)) {
         n++;
     }
     free(s);

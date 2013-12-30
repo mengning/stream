@@ -100,7 +100,7 @@ const struct stream_class tcp_stream_class = {
     NULL,                       /* run_wait */
     NULL,                       /* wait */
 };
-
+
 /* Passive TCP. */
 
 static int ptcp_accept(int fd, const struct sockaddr *sa, size_t sa_len,
