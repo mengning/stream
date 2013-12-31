@@ -196,7 +196,7 @@ is_pow2(uintmax_t x)
 /* Given ATTR, and TYPE, cast the ATTR to TYPE by first casting ATTR to
  * (void *). This is to suppress the alignment warning issued by clang. */
 #define ALIGNED_CAST(TYPE, ATTR) ((TYPE) (void *) (ATTR))
-
+#define ALIGNED_CAST_CONST(TYPE,ATTR) ((TYPE)(const void *)(ATTR))
 #ifdef  __cplusplus
 extern "C" {
 #endif
@@ -212,7 +212,7 @@ void set_subprogram_name(const char *name);
 const char *get_program_version(void);
 void ovs_print_version(uint8_t min_ofp, uint8_t max_ofp);
 
-void out_of_memory(void) NO_RETURN;
+void out_of_memory(void);
 void *xmalloc(size_t) MALLOC_LIKE;
 void *xcalloc(size_t, size_t) MALLOC_LIKE;
 void *xzalloc(size_t) MALLOC_LIKE;
