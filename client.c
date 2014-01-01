@@ -5,7 +5,6 @@
 #include<string.h>			/* memset */
 #include<pthread.h>
 
-#include "poll-loop.h"
 #include "stream.h"
 #include "stream-provider.h"
 
@@ -41,7 +40,7 @@ while(1)
             printf("stream connect successed!\n");
          
             sprintf(pnum,"%d",index);
-            actualsend = stream_send(p_stream,pnum,30);
+            actualsend = stream_send(p_stream,pnum,sizeof(pnum));
             index++;
 
             if(actualsend < 0)

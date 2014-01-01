@@ -6,7 +6,7 @@
 #include<string.h>			/* memset */
 #include<pthread.h>
 
-#include "poll-loop.h"
+
 #include "stream.h"
 #include "stream-provider.h"
 
@@ -28,7 +28,9 @@ int main(int argc,char** argv)
     {
 while(1)
 {  
-	pstream_accept_block(p_pstream, &p_stream);
+    
+	while(pstream_accept(p_pstream, &p_stream))
+            ;
         printf("\nget one steam connect success!\n");
 
         printf("p_pstream name:%s\n", pstream_get_name(p_pstream));
@@ -49,7 +51,7 @@ while(1)
            printf("pstream receive 0 bytes!\n");
        else
            printf("pstream actual receive %d bytes,buffer:%s\n\n",actualrecv,buffer);
-sleep(1);
+
 }
 
 
