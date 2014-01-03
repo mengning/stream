@@ -5,7 +5,7 @@ a wrapper of socket interface
 
 ## User Manuals
 
-* [User Manuals html docs](https://raw.github.com/mengning/stream/master/doc/manual.html)
+* User Manuals html docs ¼ûÔ´´úÂë/doc/manual.html
 * [tips for stream using - compared with socket programming](https://raw.github.com/mengning/stream/master/doc/tips_for_stream_using.pdf)
 
 ## Setup
