@@ -1,0 +1,1711 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Stream: C:/Users/kang/Desktop/SSE/SDN/stream-master/stream/stream.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Stream
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('stream_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>宏定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">stream.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="stream-provider_8h_source.html">stream-provider.h</a>&quot;</code><br/>
+<code>#include &lt;errno.h&gt;</code><br/>
+<code>#include &lt;inttypes.h&gt;</code><br/>
+<code>#include &lt;netinet/in.h&gt;</code><br/>
+<code>#include &lt;poll.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+stream.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c__incl.jpg" border="0" usemap="#_c_1_2_users_2kang_2_desktop_2_s_s_e_2_s_d_n_2stream-master_2stream_2stream_8c" alt=""/></div>
+<map name="_c_1_2_users_2kang_2_desktop_2_s_s_e_2_s_d_n_2stream-master_2stream_2stream_8c" id="_c_1_2_users_2kang_2_desktop_2_s_s_e_2_s_d_n_2stream-master_2stream_2stream_8c">
+<area shape="rect" id="node2" href="stream-provider_8h.html" title="stream&#45;provider.h" alt="" coords="849,123,999,154"/><area shape="rect" id="node4" href="stream_8h.html" title="stream.h" alt="" coords="881,203,967,234"/><area shape="rect" id="node8" href="types_8h.html" title="openvswitch/types.h" alt="" coords="992,443,1160,474"/><area shape="rect" id="node10" href="vlog_8h.html" title="vlog.h" alt="" coords="584,283,648,314"/><area shape="rect" id="node19" href="socket-util_8h.html" title="socket&#45;util.h" alt="" coords="1232,363,1341,394"/><area shape="rect" id="node14" href="util_8h.html" title="util.h" alt="" coords="545,363,601,394"/><area shape="rect" id="node18" href="compiler_8h.html" title="compiler.h" alt="" coords="603,443,701,474"/></map>
+</div>
+</div>
+<p><a href="stream_8c_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ae71ce4452d78bfb55e2c0727413bf6fa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6fa">stream_state</a> { <a class="el" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a>, 
+<a class="el" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a>, 
+<a class="el" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a>
+ }</td></tr>
+<tr class="separator:ae71ce4452d78bfb55e2c0727413bf6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:add2c2e406c5dbf228d58d02dab9e1aa4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#add2c2e406c5dbf228d58d02dab9e1aa4">VLOG_DEFINE_THIS_MODULE</a> (<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:add2c2e406c5dbf228d58d02dab9e1aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b3ba44b0dbb81bcdb344f52471f553"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a54b3ba44b0dbb81bcdb344f52471f553">stream_usage</a> (const char *name, bool active, bool passive, bool bootstrap <a class="el" href="compiler_8h.html#a7bfc1f0481145b9308b2e58e84e8dacb">OVS_UNUSED</a>)</td></tr>
+<tr class="separator:a54b3ba44b0dbb81bcdb344f52471f553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ec80e7710bee749736cc14f60ed6d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a59ec80e7710bee749736cc14f60ed6d5">stream_verify_name</a> (const char *name)</td></tr>
+<tr class="separator:a59ec80e7710bee749736cc14f60ed6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62685a321134f86fbe4c1d4b3c87203"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#ab62685a321134f86fbe4c1d4b3c87203">stream_open</a> (const char *name, struct <a class="el" href="structstream.html">stream</a> **streamp, uint8_t dscp)</td></tr>
+<tr class="separator:ab62685a321134f86fbe4c1d4b3c87203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da7d7c3d9a573ae9cf1dab1be38e623"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a8da7d7c3d9a573ae9cf1dab1be38e623">stream_close</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:a8da7d7c3d9a573ae9cf1dab1be38e623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce77dd1f56bc192c6019e4fddadfddf"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a5ce77dd1f56bc192c6019e4fddadfddf">stream_get_name</a> (const struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:a5ce77dd1f56bc192c6019e4fddadfddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcfc5d66e2a475bed966e506f6c8e8b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#adcfc5d66e2a475bed966e506f6c8e8b3">stream_get_remote_ip</a> (const struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:adcfc5d66e2a475bed966e506f6c8e8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d7c22a9637ba4dddca9cb235a3933d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a02d7c22a9637ba4dddca9cb235a3933d">stream_get_remote_port</a> (const struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:a02d7c22a9637ba4dddca9cb235a3933d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c0f72e02eb1be98d59521a246ce29c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a10c0f72e02eb1be98d59521a246ce29c">stream_get_local_ip</a> (const struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:a10c0f72e02eb1be98d59521a246ce29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc351b538b82c9934713b8fd72dc617"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a6dc351b538b82c9934713b8fd72dc617">stream_get_local_port</a> (const struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:a6dc351b538b82c9934713b8fd72dc617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f64ecaa7cde96ecc6f7bc491f5b83f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f">stream_connect</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:aa7f64ecaa7cde96ecc6f7bc491f5b83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecca5f1213665d85daed4e5e3254cc3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#aecca5f1213665d85daed4e5e3254cc3f">stream_recv</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>, void *buffer, size_t n)</td></tr>
+<tr class="separator:aecca5f1213665d85daed4e5e3254cc3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44de7275c08f501f83a96e07d8900c86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a44de7275c08f501f83a96e07d8900c86">stream_send</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>, const void *buffer, size_t n)</td></tr>
+<tr class="separator:a44de7275c08f501f83a96e07d8900c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c199b4ceb1f62c7372f36bb526f6a51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a2c199b4ceb1f62c7372f36bb526f6a51">stream_run</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:a2c199b4ceb1f62c7372f36bb526f6a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074bd2c3eb2bbfb9f7d7e5a352a318ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a074bd2c3eb2bbfb9f7d7e5a352a318ca">stream_run_wait</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>)</td></tr>
+<tr class="separator:a074bd2c3eb2bbfb9f7d7e5a352a318ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770dd41d56bcc91e0feb4e1f1cac95c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a770dd41d56bcc91e0feb4e1f1cac95c4">pstream_verify_name</a> (const char *name)</td></tr>
+<tr class="separator:a770dd41d56bcc91e0feb4e1f1cac95c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab840e79ab31df293a40306c26bc0da6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#ab840e79ab31df293a40306c26bc0da6c">stream_or_pstream_needs_probes</a> (const char *name)</td></tr>
+<tr class="separator:ab840e79ab31df293a40306c26bc0da6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab1aee73ff5cae04c0162ac46b759a5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e">pstream_open</a> (const char *name, struct <a class="el" href="structpstream.html">pstream</a> **pstreamp, uint8_t dscp)</td></tr>
+<tr class="separator:aab1aee73ff5cae04c0162ac46b759a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a03a7347a7150057a280e940e8d12a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#ab0a03a7347a7150057a280e940e8d12a">pstream_get_name</a> (const struct <a class="el" href="structpstream.html">pstream</a> *<a class="el" href="structpstream.html">pstream</a>)</td></tr>
+<tr class="separator:ab0a03a7347a7150057a280e940e8d12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7a7101bf12dc534600d727bf04f22b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#acf7a7101bf12dc534600d727bf04f22b">pstream_close</a> (struct <a class="el" href="structpstream.html">pstream</a> *<a class="el" href="structpstream.html">pstream</a>)</td></tr>
+<tr class="separator:acf7a7101bf12dc534600d727bf04f22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3add0a68fcfbe13e261435f264e3fd69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a3add0a68fcfbe13e261435f264e3fd69">pstream_accept</a> (struct <a class="el" href="structpstream.html">pstream</a> *<a class="el" href="structpstream.html">pstream</a>, struct <a class="el" href="structstream.html">stream</a> **new_stream)</td></tr>
+<tr class="separator:a3add0a68fcfbe13e261435f264e3fd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6985eff1d29f61b9bc53822c45aa1fb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a6985eff1d29f61b9bc53822c45aa1fb6">pstream_wait</a> (struct <a class="el" href="structpstream.html">pstream</a> *<a class="el" href="structpstream.html">pstream</a>)</td></tr>
+<tr class="separator:a6985eff1d29f61b9bc53822c45aa1fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb86342ba54e013e4ec9db5f79a4d32c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#afb86342ba54e013e4ec9db5f79a4d32c">pstream_set_dscp</a> (struct <a class="el" href="structpstream.html">pstream</a> *<a class="el" href="structpstream.html">pstream</a>, uint8_t dscp)</td></tr>
+<tr class="separator:afb86342ba54e013e4ec9db5f79a4d32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb17736dba3efe6cf866015efd8d1fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#adeb17736dba3efe6cf866015efd8d1fe">pstream_get_bound_port</a> (const struct <a class="el" href="structpstream.html">pstream</a> *<a class="el" href="structpstream.html">pstream</a>)</td></tr>
+<tr class="separator:adeb17736dba3efe6cf866015efd8d1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb86788316c67caa7a93b81068a4c65b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#abb86788316c67caa7a93b81068a4c65b">stream_init</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>, const struct <a class="el" href="structstream__class.html">stream_class</a> *class, int connect_status, const char *name)</td></tr>
+<tr class="separator:abb86788316c67caa7a93b81068a4c65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd4b94929e3c7fe92ba2ba1533eccd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a0dd4b94929e3c7fe92ba2ba1533eccd6">stream_set_remote_ip</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>, <a class="el" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a> ip)</td></tr>
+<tr class="separator:a0dd4b94929e3c7fe92ba2ba1533eccd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a466506ce29687af24e4194ba652e7326"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a466506ce29687af24e4194ba652e7326">stream_set_remote_port</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>, <a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a> port)</td></tr>
+<tr class="separator:a466506ce29687af24e4194ba652e7326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1071fe31ece96dda6d46ff61937ccd5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a1071fe31ece96dda6d46ff61937ccd5a">stream_set_local_ip</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>, <a class="el" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a> ip)</td></tr>
+<tr class="separator:a1071fe31ece96dda6d46ff61937ccd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d6815af50939a5500aedfc7c3261e6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a4d6815af50939a5500aedfc7c3261e6e">stream_set_local_port</a> (struct <a class="el" href="structstream.html">stream</a> *<a class="el" href="structstream.html">stream</a>, <a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a> port)</td></tr>
+<tr class="separator:a4d6815af50939a5500aedfc7c3261e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0cbf9c048dd0f51b9eb601f0ee8f64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a1b0cbf9c048dd0f51b9eb601f0ee8f64">pstream_init</a> (struct <a class="el" href="structpstream.html">pstream</a> *<a class="el" href="structpstream.html">pstream</a>, const struct <a class="el" href="structpstream__class.html">pstream_class</a> *class, const char *name)</td></tr>
+<tr class="separator:a1b0cbf9c048dd0f51b9eb601f0ee8f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1dfe6623b0f8bc385a698ac711b6ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a4c1dfe6623b0f8bc385a698ac711b6ed">pstream_set_bound_port</a> (struct <a class="el" href="structpstream.html">pstream</a> *<a class="el" href="structpstream.html">pstream</a>, <a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a> port)</td></tr>
+<tr class="separator:a4c1dfe6623b0f8bc385a698ac711b6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764e66d235c49d9e267a0c460a99126a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a764e66d235c49d9e267a0c460a99126a">strtok_r</a> (char *, char *, char **)</td></tr>
+<tr class="separator:a764e66d235c49d9e267a0c460a99126a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3524ece63600dc65a7874a5eac223a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a1d3524ece63600dc65a7874a5eac223a">stream_open_with_default_ports</a> (const char *name_, uint16_t default_tcp_port, uint16_t default_ssl_port, struct <a class="el" href="structstream.html">stream</a> **streamp, uint8_t dscp)</td></tr>
+<tr class="separator:a1d3524ece63600dc65a7874a5eac223a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49937cac4a4c2025f34a332936afc07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#ad49937cac4a4c2025f34a332936afc07">pstream_open_with_default_ports</a> (const char *name_, uint16_t default_ptcp_port, uint16_t default_pssl_port, struct <a class="el" href="structpstream.html">pstream</a> **pstreamp, uint8_t dscp)</td></tr>
+<tr class="separator:ad49937cac4a4c2025f34a332936afc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9ea7837f4f79ecd79f793fd07728a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stream_8c.html#a1c9ea7837f4f79ecd79f793fd07728a9">stream_parse_target_with_default_ports</a> (const char *target, uint16_t default_tcp_port, uint16_t default_ssl_port, struct sockaddr_in *sin)</td></tr>
+<tr class="separator:a1c9ea7837f4f79ecd79f793fd07728a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="ae71ce4452d78bfb55e2c0727413bf6fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6fa">stream_state</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd"></a>SCS_CONNECTING</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b"></a>SCS_CONNECTED</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22"></a>SCS_DISCONNECTED</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00015">15</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                  {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a>,             <span class="comment">/* Underlying stream is not connected. */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a>,              <span class="comment">/* Connection established. */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a>            <span class="comment">/* Connection failed or connection closed. */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00017">stream.c:17</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00016">stream.c:16</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00018">stream.c:18</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="add2c2e406c5dbf228d58d02dab9e1aa4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VLOG_DEFINE_THIS_MODULE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structstream.html">stream</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a54b3ba44b0dbb81bcdb344f52471f553"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stream_usage </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>active</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>passive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool bootstrap&#160;</td>
+          <td class="paramname"><em>OVS_UNUSED</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00078">78</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">/* Really this should be implemented via callbacks into the stream</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">     * providers, but that seems too heavy-weight to bother with at the</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">     * moment. */</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (active) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        printf(<span class="stringliteral">&quot;Active %s connection methods:\n&quot;</span>, name);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        printf(<span class="stringliteral">&quot;  tcp:IP:PORT             &quot;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;               <span class="stringliteral">&quot;PORT at remote IP\n&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#ifdef HAVE_OPENSSL</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor"></span>        printf(<span class="stringliteral">&quot;  ssl:IP:PORT             &quot;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;               <span class="stringliteral">&quot;SSL PORT at remote IP\n&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor"></span>        printf(<span class="stringliteral">&quot;  unix:FILE               &quot;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;               <span class="stringliteral">&quot;Unix domain socket named FILE\n&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (passive) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        printf(<span class="stringliteral">&quot;Passive %s connection methods:\n&quot;</span>, name);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        printf(<span class="stringliteral">&quot;  ptcp:PORT[:IP]          &quot;</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;               <span class="stringliteral">&quot;listen to TCP PORT on IP\n&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#ifdef HAVE_OPENSSL</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor"></span>        printf(<span class="stringliteral">&quot;  pssl:PORT[:IP]          &quot;</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;               <span class="stringliteral">&quot;listen for SSL on PORT on IP\n&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor"></span>        printf(<span class="stringliteral">&quot;  punix:FILE              &quot;</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;               <span class="stringliteral">&quot;listen on Unix domain socket FILE\n&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#ifdef HAVE_OPENSSL</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor"></span>    printf(<span class="stringliteral">&quot;PKI configuration (required to use SSL):\n&quot;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;           <span class="stringliteral">&quot;  -p, --private-key=FILE  file with private key\n&quot;</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;           <span class="stringliteral">&quot;  -c, --certificate=FILE  file with certificate for private key\n&quot;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;           <span class="stringliteral">&quot;  -C, --ca-cert=FILE      file with peer CA certificate\n&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">if</span> (bootstrap) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        printf(<span class="stringliteral">&quot;  --bootstrap-ca-cert=FILE  file with peer CA certificate &quot;</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;               <span class="stringliteral">&quot;to read or create\n&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor"></span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a59ec80e7710bee749736cc14f60ed6d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stream_verify_name </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00153">153</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structstream__class.html">stream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> stream_lookup_class(<a class="code" href="structstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, &amp;<span class="keyword">class</span>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="ttc" id="structstream__class_html"><div class="ttname"><a href="structstream__class.html">stream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00025">stream-provider.h:25</a></div></div>
+<div class="ttc" id="structstream__class_html_a8f8f80d37794cde9472343e4487ba3eb"><div class="ttname"><a href="structstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">stream_class::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00026">stream-provider.h:26</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab62685a321134f86fbe4c1d4b3c87203"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stream_open </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> **&#160;</td>
+          <td class="paramname"><em>streamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>dscp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00167">167</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structstream__class.html">stream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">struct </span><a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">char</span> *suffix_copy;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">/*COVERAGE_INC(stream_open);*/</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">/* Look up the class. */</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    error = stream_lookup_class(<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a>, &amp;<span class="keyword">class</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">if</span> (!<span class="keyword">class</span>) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">goto</span> <a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">/* Call class&#39;s &quot;open&quot; function. */</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    suffix_copy = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(strchr(<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a>, <span class="charliteral">&#39;:&#39;</span>) + 1);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    error = <span class="keyword">class</span>-&gt;open(<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a>, suffix_copy, &amp;stream, dscp);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    free(suffix_copy);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> (error) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">goto</span> <a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">/* Success. */</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    *streamp = stream;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;error:</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    *streamp = NULL;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+<div class="ttc" id="util_8c_html_a31c8e4cd784d16e28687ee2f10b80028"><div class="ttname"><a href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a></div><div class="ttdeci">char * xstrdup(const char *s)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00107">util.c:107</a></div></div>
+<div class="ttc" id="structstream__class_html"><div class="ttname"><a href="structstream__class.html">stream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00025">stream-provider.h:25</a></div></div>
+<div class="ttc" id="structstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structstream.html#a5ac083a645d964373f022d03df4849c8">stream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00015">stream-provider.h:15</a></div></div>
+<div class="ttc" id="structstream_html"><div class="ttname"><a href="structstream.html">stream</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00007">stream-provider.h:7</a></div></div>
+<div class="ttc" id="structstream_html_a11614f44ef4d939bdd984953346a7572"><div class="ttname"><a href="structstream.html#a11614f44ef4d939bdd984953346a7572">stream::error</a></div><div class="ttdeci">int error</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00010">stream-provider.h:10</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_ab62685a321134f86fbe4c1d4b3c87203_cgraph.jpg" border="0" usemap="#stream_8c_ab62685a321134f86fbe4c1d4b3c87203_cgraph" alt=""/></div>
+<map name="stream_8c_ab62685a321134f86fbe4c1d4b3c87203_cgraph" id="stream_8c_ab62685a321134f86fbe4c1d4b3c87203_cgraph">
+<area shape="rect" id="node2" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="171,5,245,35"/><area shape="rect" id="node3" href="util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="294,5,394,35"/><area shape="rect" id="node4" href="util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="443,5,517,35"/><area shape="rect" id="node5" href="util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="566,5,701,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_ab62685a321134f86fbe4c1d4b3c87203_icgraph.jpg" border="0" usemap="#stream_8c_ab62685a321134f86fbe4c1d4b3c87203_icgraph" alt=""/></div>
+<map name="stream_8c_ab62685a321134f86fbe4c1d4b3c87203_icgraph" id="stream_8c_ab62685a321134f86fbe4c1d4b3c87203_icgraph">
+<area shape="rect" id="node2" href="client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="247,5,305,35"/><area shape="rect" id="node3" href="stream_8h.html#a38c5d7a0a63147bfb60a65ec8a9680d8" title="stream_open_with_default\l_ports" alt="" coords="171,59,381,109"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8da7d7c3d9a573ae9cf1dab1be38e623"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stream_close </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00236">236</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">if</span> (stream != NULL) {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordtype">char</span> *<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a> = stream-&gt;<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#adb97b26029a3ee20d5c7f84d8f0c25a3">close</a>)(stream);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        free(name);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
+<div class="ttc" id="structstream__class_html_adb97b26029a3ee20d5c7f84d8f0c25a3"><div class="ttname"><a href="structstream__class.html#adb97b26029a3ee20d5c7f84d8f0c25a3">stream_class::close</a></div><div class="ttdeci">void(* close)(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00030">stream-provider.h:30</a></div></div>
+<div class="ttc" id="structstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structstream.html#a5ac083a645d964373f022d03df4849c8">stream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00015">stream-provider.h:15</a></div></div>
+<div class="ttc" id="structstream_html_a6d556998b64d0c2b2384e5d410b8172b"><div class="ttname"><a href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">stream::class</a></div><div class="ttdeci">const struct stream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00008">stream-provider.h:8</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_a8da7d7c3d9a573ae9cf1dab1be38e623_icgraph.jpg" border="0" usemap="#stream_8c_a8da7d7c3d9a573ae9cf1dab1be38e623_icgraph" alt=""/></div>
+<map name="stream_8c_a8da7d7c3d9a573ae9cf1dab1be38e623_icgraph" id="stream_8c_a8da7d7c3d9a573ae9cf1dab1be38e623_icgraph">
+<area shape="rect" id="node2" href="client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="174,5,231,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ce77dd1f56bc192c6019e4fddadfddf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* stream_get_name </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00248">248</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> stream ? stream-&gt;<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a> : <span class="stringliteral">&quot;(null)&quot;</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="ttc" id="structstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structstream.html#a5ac083a645d964373f022d03df4849c8">stream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00015">stream-provider.h:15</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="adcfc5d66e2a475bed966e506f6c8e8b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a> stream_get_remote_ip </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00256">256</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#a7de479379b012fcc18e00d2e02862dd0">remote_ip</a>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
+<div class="ttc" id="structstream_html_a7de479379b012fcc18e00d2e02862dd0"><div class="ttname"><a href="structstream.html#a7de479379b012fcc18e00d2e02862dd0">stream::remote_ip</a></div><div class="ttdeci">ovs_be32 remote_ip</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00011">stream-provider.h:11</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a02d7c22a9637ba4dddca9cb235a3933d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a> stream_get_remote_port </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00264">264</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#adc58c53a4e9f649c72b6593d2c4d4cb9">remote_port</a>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<div class="ttc" id="structstream_html_adc58c53a4e9f649c72b6593d2c4d4cb9"><div class="ttname"><a href="structstream.html#adc58c53a4e9f649c72b6593d2c4d4cb9">stream::remote_port</a></div><div class="ttdeci">ovs_be16 remote_port</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00012">stream-provider.h:12</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a10c0f72e02eb1be98d59521a246ce29c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a> stream_get_local_ip </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00272">272</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;{</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#a1a34864d0fe93dff58b24039c1d0f6a0">local_ip</a>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+<div class="ttc" id="structstream_html_a1a34864d0fe93dff58b24039c1d0f6a0"><div class="ttname"><a href="structstream.html#a1a34864d0fe93dff58b24039c1d0f6a0">stream::local_ip</a></div><div class="ttdeci">ovs_be32 local_ip</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00013">stream-provider.h:13</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6dc351b538b82c9934713b8fd72dc617"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a> stream_get_local_port </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00280">280</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;{</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#a20a428979ced183e2eeb7f347a679472">local_port</a>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
+<div class="ttc" id="structstream_html_a20a428979ced183e2eeb7f347a679472"><div class="ttname"><a href="structstream.html#a20a428979ced183e2eeb7f347a679472">stream::local_port</a></div><div class="ttdeci">ovs_be16 local_port</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00014">stream-provider.h:14</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aa7f64ecaa7cde96ecc6f7bc491f5b83f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stream_connect </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00303">303</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keyword">enum</span> <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6fa">stream_state</a> last_state;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        last_state = stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">switch</span> (stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a>) {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a>:</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            scs_connecting(stream);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a>:</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a>:</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="util_8h.html#a6c2edf1e500e498b687567418bf4fef6">NOT_REACHED</a>();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    } <span class="keywordflow">while</span> ((<span class="keywordtype">unsigned</span>)stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a> != last_state);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">return</span> EAGAIN;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6fa"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6fa">stream_state</a></div><div class="ttdeci">stream_state</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00015">stream.c:15</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00017">stream.c:17</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00016">stream.c:16</a></div></div>
+<div class="ttc" id="util_8h_html_a6c2edf1e500e498b687567418bf4fef6"><div class="ttname"><a href="util_8h.html#a6c2edf1e500e498b687567418bf4fef6">NOT_REACHED</a></div><div class="ttdeci">#define NOT_REACHED()</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00138">util.h:138</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00018">stream.c:18</a></div></div>
+<div class="ttc" id="structstream_html_a11614f44ef4d939bdd984953346a7572"><div class="ttname"><a href="structstream.html#a11614f44ef4d939bdd984953346a7572">stream::error</a></div><div class="ttdeci">int error</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00010">stream-provider.h:10</a></div></div>
+<div class="ttc" id="structstream_html_a89f234133d3efe315836311cbf21c64b"><div class="ttname"><a href="structstream.html#a89f234133d3efe315836311cbf21c64b">stream::state</a></div><div class="ttdeci">int state</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00009">stream-provider.h:9</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_aa7f64ecaa7cde96ecc6f7bc491f5b83f_icgraph.jpg" border="0" usemap="#stream_8c_aa7f64ecaa7cde96ecc6f7bc491f5b83f_icgraph" alt=""/></div>
+<map name="stream_8c_aa7f64ecaa7cde96ecc6f7bc491f5b83f_icgraph" id="stream_8c_aa7f64ecaa7cde96ecc6f7bc491f5b83f_icgraph">
+<area shape="rect" id="node2" href="client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="355,5,413,35"/><area shape="rect" id="node3" href="stream_8h.html#a92cb74802572277799254410f7db4c01" title="stream_recv" alt="" coords="194,86,305,117"/><area shape="rect" id="node5" href="stream_8h.html#a898febed1e031a1f66c757f90b3da471" title="stream_send" alt="" coords="192,31,307,62"/><area shape="rect" id="node4" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="355,86,413,117"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aecca5f1213665d85daed4e5e3254cc3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stream_recv </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00340">340</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;{</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">int</span> retval = <a class="code" href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f">stream_connect</a>(stream);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">return</span> (retval ? -retval</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            : n == 0 ? 0</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            : (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#a807d938cd3b0883b1896624728353bd0">recv</a>)(stream, buffer, n));</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;}</div>
+<div class="ttc" id="stream_8c_html_aa7f64ecaa7cde96ecc6f7bc491f5b83f"><div class="ttname"><a href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f">stream_connect</a></div><div class="ttdeci">int stream_connect(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00303">stream.c:303</a></div></div>
+<div class="ttc" id="structstream__class_html_a807d938cd3b0883b1896624728353bd0"><div class="ttname"><a href="structstream__class.html#a807d938cd3b0883b1896624728353bd0">stream_class::recv</a></div><div class="ttdeci">ssize_t(* recv)(struct stream *stream, void *buffer, size_t n)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00032">stream-provider.h:32</a></div></div>
+<div class="ttc" id="structstream_html_a6d556998b64d0c2b2384e5d410b8172b"><div class="ttname"><a href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">stream::class</a></div><div class="ttdeci">const struct stream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00008">stream-provider.h:8</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_aecca5f1213665d85daed4e5e3254cc3f_cgraph.jpg" border="0" usemap="#stream_8c_aecca5f1213665d85daed4e5e3254cc3f_cgraph" alt=""/></div>
+<map name="stream_8c_aecca5f1213665d85daed4e5e3254cc3f_cgraph" id="stream_8c_aecca5f1213665d85daed4e5e3254cc3f_cgraph">
+<area shape="rect" id="node2" href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f" title="stream_connect" alt="" coords="165,5,304,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_aecca5f1213665d85daed4e5e3254cc3f_icgraph.jpg" border="0" usemap="#stream_8c_aecca5f1213665d85daed4e5e3254cc3f_icgraph" alt=""/></div>
+<map name="stream_8c_aecca5f1213665d85daed4e5e3254cc3f_icgraph" id="stream_8c_aecca5f1213665d85daed4e5e3254cc3f_icgraph">
+<area shape="rect" id="node2" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="166,5,223,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a44de7275c08f501f83a96e07d8900c86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stream_send </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00358">358</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;{</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordtype">int</span> retval = <a class="code" href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f">stream_connect</a>(stream);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">return</span> (retval ? -retval</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            : n == 0 ? 0</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            : (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#a2c7418fe16ca68a1e1f7616c18019a99">send</a>)(stream, buffer, n));</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
+<div class="ttc" id="stream_8c_html_aa7f64ecaa7cde96ecc6f7bc491f5b83f"><div class="ttname"><a href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f">stream_connect</a></div><div class="ttdeci">int stream_connect(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00303">stream.c:303</a></div></div>
+<div class="ttc" id="structstream__class_html_a2c7418fe16ca68a1e1f7616c18019a99"><div class="ttname"><a href="structstream__class.html#a2c7418fe16ca68a1e1f7616c18019a99">stream_class::send</a></div><div class="ttdeci">ssize_t(* send)(struct stream *stream, const void *buffer, size_t n)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00033">stream-provider.h:33</a></div></div>
+<div class="ttc" id="structstream_html_a6d556998b64d0c2b2384e5d410b8172b"><div class="ttname"><a href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">stream::class</a></div><div class="ttdeci">const struct stream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00008">stream-provider.h:8</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_a44de7275c08f501f83a96e07d8900c86_cgraph.jpg" border="0" usemap="#stream_8c_a44de7275c08f501f83a96e07d8900c86_cgraph" alt=""/></div>
+<map name="stream_8c_a44de7275c08f501f83a96e07d8900c86_cgraph" id="stream_8c_a44de7275c08f501f83a96e07d8900c86_cgraph">
+<area shape="rect" id="node2" href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f" title="stream_connect" alt="" coords="168,5,307,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_a44de7275c08f501f83a96e07d8900c86_icgraph.jpg" border="0" usemap="#stream_8c_a44de7275c08f501f83a96e07d8900c86_icgraph" alt=""/></div>
+<map name="stream_8c_a44de7275c08f501f83a96e07d8900c86_icgraph" id="stream_8c_a44de7275c08f501f83a96e07d8900c86_icgraph">
+<area shape="rect" id="node2" href="client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="169,5,226,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c199b4ceb1f62c7372f36bb526f6a51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stream_run </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00369">369</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;{</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">if</span> (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#ac1c7b976b8dd809f26ab54b0fec08701">run</a>) {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#ac1c7b976b8dd809f26ab54b0fec08701">run</a>)(stream);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;}</div>
+<div class="ttc" id="structstream__class_html_ac1c7b976b8dd809f26ab54b0fec08701"><div class="ttname"><a href="structstream__class.html#ac1c7b976b8dd809f26ab54b0fec08701">stream_class::run</a></div><div class="ttdeci">void(* run)(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00034">stream-provider.h:34</a></div></div>
+<div class="ttc" id="structstream_html_a6d556998b64d0c2b2384e5d410b8172b"><div class="ttname"><a href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">stream::class</a></div><div class="ttdeci">const struct stream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00008">stream-provider.h:8</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a074bd2c3eb2bbfb9f7d7e5a352a318ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stream_run_wait </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00379">379</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;{</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">if</span> (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#a485adc33703cabc470efe32f31bed2a6">run_wait</a>) {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#a485adc33703cabc470efe32f31bed2a6">run_wait</a>)(stream);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
+<div class="ttc" id="structstream__class_html_a485adc33703cabc470efe32f31bed2a6"><div class="ttname"><a href="structstream__class.html#a485adc33703cabc470efe32f31bed2a6">stream_class::run_wait</a></div><div class="ttdeci">void(* run_wait)(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00035">stream-provider.h:35</a></div></div>
+<div class="ttc" id="structstream_html_a6d556998b64d0c2b2384e5d410b8172b"><div class="ttname"><a href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">stream::class</a></div><div class="ttdeci">const struct stream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00008">stream-provider.h:8</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a770dd41d56bcc91e0feb4e1f1cac95c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pstream_verify_name </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00457">457</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;{</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structpstream__class.html">pstream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordflow">return</span> pstream_lookup_class(<a class="code" href="structpstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, &amp;<span class="keyword">class</span>);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;}</div>
+<div class="ttc" id="structpstream__class_html"><div class="ttname"><a href="structpstream__class.html">pstream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00048">stream-provider.h:48</a></div></div>
+<div class="ttc" id="structpstream__class_html_a8f8f80d37794cde9472343e4487ba3eb"><div class="ttname"><a href="structpstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">pstream_class::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00049">stream-provider.h:49</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab840e79ab31df293a40306c26bc0da6c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stream_or_pstream_needs_probes </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00468">468</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;{</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structpstream__class.html">pstream_class</a> *pclass;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structstream__class.html">stream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">if</span> (!stream_lookup_class(<a class="code" href="structstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, &amp;<span class="keyword">class</span>)) {</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">class</span>-&gt;<a class="code" href="structstream__class.html#a3aa32893937115b46850547f0b6ad391">needs_probes</a>;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!pstream_lookup_class(<a class="code" href="structstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, &amp;pclass)) {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordflow">return</span> pclass-&gt;<a class="code" href="structpstream__class.html#a3aa32893937115b46850547f0b6ad391">needs_probes</a>;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    }</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;}</div>
+<div class="ttc" id="structpstream__class_html_a3aa32893937115b46850547f0b6ad391"><div class="ttname"><a href="structpstream__class.html#a3aa32893937115b46850547f0b6ad391">pstream_class::needs_probes</a></div><div class="ttdeci">bool needs_probes</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00050">stream-provider.h:50</a></div></div>
+<div class="ttc" id="structpstream__class_html"><div class="ttname"><a href="structpstream__class.html">pstream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00048">stream-provider.h:48</a></div></div>
+<div class="ttc" id="structstream__class_html"><div class="ttname"><a href="structstream__class.html">stream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00025">stream-provider.h:25</a></div></div>
+<div class="ttc" id="structstream__class_html_a8f8f80d37794cde9472343e4487ba3eb"><div class="ttname"><a href="structstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">stream_class::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00026">stream-provider.h:26</a></div></div>
+<div class="ttc" id="structstream__class_html_a3aa32893937115b46850547f0b6ad391"><div class="ttname"><a href="structstream__class.html#a3aa32893937115b46850547f0b6ad391">stream_class::needs_probes</a></div><div class="ttdeci">bool needs_probes</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00027">stream-provider.h:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aab1aee73ff5cae04c0162ac46b759a5e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pstream_open </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structpstream.html">pstream</a> **&#160;</td>
+          <td class="paramname"><em>pstreamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>dscp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00490">490</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;{</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structpstream__class.html">pstream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="keywordtype">char</span> *suffix_copy;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordtype">int</span> error;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="comment">/*COVERAGE_INC(pstream_open);*/</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="comment">/* Look up the class. */</span></div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    error = pstream_lookup_class(<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>, &amp;<span class="keyword">class</span>);</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="keywordflow">if</span> (!<span class="keyword">class</span>) {</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        <span class="keywordflow">goto</span> error;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    }</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="comment">/* Call class&#39;s &quot;open&quot; function. */</span></div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    suffix_copy = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(strchr(<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>, <span class="charliteral">&#39;:&#39;</span>) + 1);</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    error = <span class="keyword">class</span>-&gt;listen(<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>, suffix_copy, &amp;pstream, dscp);</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    free(suffix_copy);</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">if</span> (error) {</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keywordflow">goto</span> error;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    }</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="comment">/* Success. */</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    *pstreamp = pstream;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;error:</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    *pstreamp = NULL;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;}</div>
+<div class="ttc" id="structpstream__class_html"><div class="ttname"><a href="structpstream__class.html">pstream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00048">stream-provider.h:48</a></div></div>
+<div class="ttc" id="util_8c_html_a31c8e4cd784d16e28687ee2f10b80028"><div class="ttname"><a href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a></div><div class="ttdeci">char * xstrdup(const char *s)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00107">util.c:107</a></div></div>
+<div class="ttc" id="structpstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structpstream.html#a5ac083a645d964373f022d03df4849c8">pstream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00041">stream-provider.h:41</a></div></div>
+<div class="ttc" id="structpstream_html"><div class="ttname"><a href="structpstream.html">pstream</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00039">stream-provider.h:39</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_aab1aee73ff5cae04c0162ac46b759a5e_cgraph.jpg" border="0" usemap="#stream_8c_aab1aee73ff5cae04c0162ac46b759a5e_cgraph" alt=""/></div>
+<map name="stream_8c_aab1aee73ff5cae04c0162ac46b759a5e_cgraph" id="stream_8c_aab1aee73ff5cae04c0162ac46b759a5e_cgraph">
+<area shape="rect" id="node2" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="179,5,253,35"/><area shape="rect" id="node3" href="util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="302,5,402,35"/><area shape="rect" id="node4" href="util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="451,5,525,35"/><area shape="rect" id="node5" href="util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="574,5,709,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_aab1aee73ff5cae04c0162ac46b759a5e_icgraph.jpg" border="0" usemap="#stream_8c_aab1aee73ff5cae04c0162ac46b759a5e_icgraph" alt=""/></div>
+<map name="stream_8c_aab1aee73ff5cae04c0162ac46b759a5e_icgraph" id="stream_8c_aab1aee73ff5cae04c0162ac46b759a5e_icgraph">
+<area shape="rect" id="node2" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="259,5,317,35"/><area shape="rect" id="node3" href="stream_8h.html#aac9477f06d81d13367417fff4c5472cb" title="pstream_open_with_default\l_ports" alt="" coords="179,59,397,109"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0a03a7347a7150057a280e940e8d12a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* pstream_get_name </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structpstream.html">pstream</a> *&#160;</td>
+          <td class="paramname"><em>pstream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00525">525</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;{</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordflow">return</span> pstream-&gt;<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;}</div>
+<div class="ttc" id="structpstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structpstream.html#a5ac083a645d964373f022d03df4849c8">pstream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00041">stream-provider.h:41</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="acf7a7101bf12dc534600d727bf04f22b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pstream_close </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structpstream.html">pstream</a> *&#160;</td>
+          <td class="paramname"><em>pstream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00532">532</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;{</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="keywordflow">if</span> (pstream != NULL) {</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        <span class="keywordtype">char</span> *<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a> = pstream-&gt;<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        (pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#ac5d0f7f77eb92f2e1d0062a7f4159318">close</a>)(pstream);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        free(name);</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    }</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;}</div>
+<div class="ttc" id="structpstream_html_a2cf0ec16f5bae19354fd665a2502dbcc"><div class="ttname"><a href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">pstream::class</a></div><div class="ttdeci">const struct pstream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00040">stream-provider.h:40</a></div></div>
+<div class="ttc" id="structpstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structpstream.html#a5ac083a645d964373f022d03df4849c8">pstream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00041">stream-provider.h:41</a></div></div>
+<div class="ttc" id="structpstream__class_html_ac5d0f7f77eb92f2e1d0062a7f4159318"><div class="ttname"><a href="structpstream__class.html#ac5d0f7f77eb92f2e1d0062a7f4159318">pstream_class::close</a></div><div class="ttdeci">void(* close)(struct pstream *pstream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00053">stream-provider.h:53</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_acf7a7101bf12dc534600d727bf04f22b_icgraph.jpg" border="0" usemap="#stream_8c_acf7a7101bf12dc534600d727bf04f22b_icgraph" alt=""/></div>
+<map name="stream_8c_acf7a7101bf12dc534600d727bf04f22b_icgraph" id="stream_8c_acf7a7101bf12dc534600d727bf04f22b_icgraph">
+<area shape="rect" id="node2" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="182,5,239,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3add0a68fcfbe13e261435f264e3fd69"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pstream_accept </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structpstream.html">pstream</a> *&#160;</td>
+          <td class="paramname"><em>pstream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> **&#160;</td>
+          <td class="paramname"><em>new_stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00548">548</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;{</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keywordtype">int</span> retval = (pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#ad91205b5bdb399e5b11a515fe1b15d0a">accept</a>)(pstream, new_stream);</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordflow">if</span> (retval) {</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        *new_stream = NULL;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;        <a class="code" href="util_8h.html#ac236d3d8f33428ab822cc4e277a451c8">ovs_assert</a>((*new_stream)-&gt;state != <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;                   || (*new_stream)-&gt;class-&gt;connect);</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    }</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;}</div>
+<div class="ttc" id="util_8h_html_ac236d3d8f33428ab822cc4e277a451c8"><div class="ttname"><a href="util_8h.html#ac236d3d8f33428ab822cc4e277a451c8">ovs_assert</a></div><div class="ttdeci">#define ovs_assert(CONDITION)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00072">util.h:72</a></div></div>
+<div class="ttc" id="structpstream_html_a2cf0ec16f5bae19354fd665a2502dbcc"><div class="ttname"><a href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">pstream::class</a></div><div class="ttdeci">const struct pstream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00040">stream-provider.h:40</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00016">stream.c:16</a></div></div>
+<div class="ttc" id="structpstream__class_html_ad91205b5bdb399e5b11a515fe1b15d0a"><div class="ttname"><a href="structpstream__class.html#ad91205b5bdb399e5b11a515fe1b15d0a">pstream_class::accept</a></div><div class="ttdeci">int(* accept)(struct pstream *pstream, struct stream **new_streamp)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00054">stream-provider.h:54</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_a3add0a68fcfbe13e261435f264e3fd69_icgraph.jpg" border="0" usemap="#stream_8c_a3add0a68fcfbe13e261435f264e3fd69_icgraph" alt=""/></div>
+<map name="stream_8c_a3add0a68fcfbe13e261435f264e3fd69_icgraph" id="stream_8c_a3add0a68fcfbe13e261435f264e3fd69_icgraph">
+<area shape="rect" id="node2" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="193,5,250,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6985eff1d29f61b9bc53822c45aa1fb6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pstream_wait </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structpstream.html">pstream</a> *&#160;</td>
+          <td class="paramname"><em>pstream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00582">582</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;{</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    (pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#a23d8bd7a16304c0636c7014fc5586935">wait</a>)(pstream);</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;}</div>
+<div class="ttc" id="structpstream_html_a2cf0ec16f5bae19354fd665a2502dbcc"><div class="ttname"><a href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">pstream::class</a></div><div class="ttdeci">const struct pstream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00040">stream-provider.h:40</a></div></div>
+<div class="ttc" id="structpstream__class_html_a23d8bd7a16304c0636c7014fc5586935"><div class="ttname"><a href="structpstream__class.html#a23d8bd7a16304c0636c7014fc5586935">pstream_class::wait</a></div><div class="ttdeci">void(* wait)(struct pstream *pstream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00055">stream-provider.h:55</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="afb86342ba54e013e4ec9db5f79a4d32c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pstream_set_dscp </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structpstream.html">pstream</a> *&#160;</td>
+          <td class="paramname"><em>pstream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>dscp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00588">588</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;{</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    <span class="keywordflow">if</span> (pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#ad4ebf34fbb642f7859540c56de05c5b9">set_dscp</a>) {</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        <span class="keywordflow">return</span> pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#ad4ebf34fbb642f7859540c56de05c5b9">set_dscp</a>(pstream, dscp);</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    }</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;}</div>
+<div class="ttc" id="structpstream__class_html_ad4ebf34fbb642f7859540c56de05c5b9"><div class="ttname"><a href="structpstream__class.html#ad4ebf34fbb642f7859540c56de05c5b9">pstream_class::set_dscp</a></div><div class="ttdeci">int(* set_dscp)(struct pstream *pstream, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00056">stream-provider.h:56</a></div></div>
+<div class="ttc" id="structpstream_html_a2cf0ec16f5bae19354fd665a2502dbcc"><div class="ttname"><a href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">pstream::class</a></div><div class="ttdeci">const struct pstream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00040">stream-provider.h:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="adeb17736dba3efe6cf866015efd8d1fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a> pstream_get_bound_port </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structpstream.html">pstream</a> *&#160;</td>
+          <td class="paramname"><em>pstream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00599">599</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;{</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    <span class="keywordflow">return</span> pstream-&gt;<a class="code" href="structpstream.html#a73487c1e329175732cd946bf4ddba3f0">bound_port</a>;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;}</div>
+<div class="ttc" id="structpstream_html_a73487c1e329175732cd946bf4ddba3f0"><div class="ttname"><a href="structpstream.html#a73487c1e329175732cd946bf4ddba3f0">pstream::bound_port</a></div><div class="ttdeci">ovs_be16 bound_port</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00042">stream-provider.h:42</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="abb86788316c67caa7a93b81068a4c65b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stream_init </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structstream__class.html">stream_class</a> *&#160;</td>
+          <td class="paramname"><em>class</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>connect_status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00622">622</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;{</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    memset(stream, 0, <span class="keyword">sizeof</span> *stream);</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a> = <span class="keyword">class</span>;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a> = (connect_status == EAGAIN ? <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a></div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                    : !connect_status ? <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                    : <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a>);</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a> = connect_status;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a> = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>);</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <a class="code" href="util_8h.html#ac236d3d8f33428ab822cc4e277a451c8">ovs_assert</a>(stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a> != <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a> || class-&gt;<a class="code" href="structstream__class.html#ae018363b6200b3062978b59efd52d78b">connect</a>);</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;}</div>
+<div class="ttc" id="util_8h_html_ac236d3d8f33428ab822cc4e277a451c8"><div class="ttname"><a href="util_8h.html#ac236d3d8f33428ab822cc4e277a451c8">ovs_assert</a></div><div class="ttdeci">#define ovs_assert(CONDITION)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00072">util.h:72</a></div></div>
+<div class="ttc" id="util_8c_html_a31c8e4cd784d16e28687ee2f10b80028"><div class="ttname"><a href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a></div><div class="ttdeci">char * xstrdup(const char *s)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00107">util.c:107</a></div></div>
+<div class="ttc" id="structstream__class_html_ae018363b6200b3062978b59efd52d78b"><div class="ttname"><a href="structstream__class.html#ae018363b6200b3062978b59efd52d78b">stream_class::connect</a></div><div class="ttdeci">int(* connect)(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00031">stream-provider.h:31</a></div></div>
+<div class="ttc" id="structpstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structpstream.html#a5ac083a645d964373f022d03df4849c8">pstream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00041">stream-provider.h:41</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00017">stream.c:17</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00016">stream.c:16</a></div></div>
+<div class="ttc" id="structstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structstream.html#a5ac083a645d964373f022d03df4849c8">stream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00015">stream-provider.h:15</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00018">stream.c:18</a></div></div>
+<div class="ttc" id="structstream_html_a6d556998b64d0c2b2384e5d410b8172b"><div class="ttname"><a href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">stream::class</a></div><div class="ttdeci">const struct stream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00008">stream-provider.h:8</a></div></div>
+<div class="ttc" id="structstream_html_a11614f44ef4d939bdd984953346a7572"><div class="ttname"><a href="structstream.html#a11614f44ef4d939bdd984953346a7572">stream::error</a></div><div class="ttdeci">int error</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00010">stream-provider.h:10</a></div></div>
+<div class="ttc" id="structstream_html_a89f234133d3efe315836311cbf21c64b"><div class="ttname"><a href="structstream.html#a89f234133d3efe315836311cbf21c64b">stream::state</a></div><div class="ttdeci">int state</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00009">stream-provider.h:9</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_abb86788316c67caa7a93b81068a4c65b_cgraph.jpg" border="0" usemap="#stream_8c_abb86788316c67caa7a93b81068a4c65b_cgraph" alt=""/></div>
+<map name="stream_8c_abb86788316c67caa7a93b81068a4c65b_cgraph" id="stream_8c_abb86788316c67caa7a93b81068a4c65b_cgraph">
+<area shape="rect" id="node2" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="155,5,229,35"/><area shape="rect" id="node3" href="util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="278,5,378,35"/><area shape="rect" id="node4" href="util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="427,5,501,35"/><area shape="rect" id="node5" href="util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="550,5,685,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_abb86788316c67caa7a93b81068a4c65b_icgraph.jpg" border="0" usemap="#stream_8c_abb86788316c67caa7a93b81068a4c65b_icgraph" alt=""/></div>
+<map name="stream_8c_abb86788316c67caa7a93b81068a4c65b_icgraph" id="stream_8c_abb86788316c67caa7a93b81068a4c65b_icgraph">
+<area shape="rect" id="node2" href="stream-fd_8h.html#adbd47506dfee92ab3c7c1c5b8356a41f" title="new_fd_stream" alt="" coords="155,5,287,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0dd4b94929e3c7fe92ba2ba1533eccd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stream_set_remote_ip </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a>&#160;</td>
+          <td class="paramname"><em>ip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00636">636</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;{</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a7de479379b012fcc18e00d2e02862dd0">remote_ip</a> = ip;</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;}</div>
+<div class="ttc" id="structstream_html_a7de479379b012fcc18e00d2e02862dd0"><div class="ttname"><a href="structstream.html#a7de479379b012fcc18e00d2e02862dd0">stream::remote_ip</a></div><div class="ttdeci">ovs_be32 remote_ip</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00011">stream-provider.h:11</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a466506ce29687af24e4194ba652e7326"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stream_set_remote_port </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a>&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00642">642</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;{</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    stream-&gt;<a class="code" href="structstream.html#adc58c53a4e9f649c72b6593d2c4d4cb9">remote_port</a> = port;</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;}</div>
+<div class="ttc" id="structstream_html_adc58c53a4e9f649c72b6593d2c4d4cb9"><div class="ttname"><a href="structstream.html#adc58c53a4e9f649c72b6593d2c4d4cb9">stream::remote_port</a></div><div class="ttdeci">ovs_be16 remote_port</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00012">stream-provider.h:12</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1071fe31ece96dda6d46ff61937ccd5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stream_set_local_ip </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a>&#160;</td>
+          <td class="paramname"><em>ip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00648">648</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;{</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a1a34864d0fe93dff58b24039c1d0f6a0">local_ip</a> = ip;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;}</div>
+<div class="ttc" id="structstream_html_a1a34864d0fe93dff58b24039c1d0f6a0"><div class="ttname"><a href="structstream.html#a1a34864d0fe93dff58b24039c1d0f6a0">stream::local_ip</a></div><div class="ttdeci">ovs_be32 local_ip</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00013">stream-provider.h:13</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a4d6815af50939a5500aedfc7c3261e6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stream_set_local_port </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a>&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00654">654</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;{</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a20a428979ced183e2eeb7f347a679472">local_port</a> = port;</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;}</div>
+<div class="ttc" id="structstream_html_a20a428979ced183e2eeb7f347a679472"><div class="ttname"><a href="structstream.html#a20a428979ced183e2eeb7f347a679472">stream::local_port</a></div><div class="ttdeci">ovs_be16 local_port</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00014">stream-provider.h:14</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1b0cbf9c048dd0f51b9eb601f0ee8f64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pstream_init </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structpstream.html">pstream</a> *&#160;</td>
+          <td class="paramname"><em>pstream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structpstream__class.html">pstream_class</a> *&#160;</td>
+          <td class="paramname"><em>class</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00660">660</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;{</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    memset(pstream, 0, <span class="keyword">sizeof</span> *pstream);</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a> = <span class="keyword">class</span>;</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    pstream-&gt;<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a> = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>);</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;}</div>
+<div class="ttc" id="structpstream_html_a2cf0ec16f5bae19354fd665a2502dbcc"><div class="ttname"><a href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">pstream::class</a></div><div class="ttdeci">const struct pstream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00040">stream-provider.h:40</a></div></div>
+<div class="ttc" id="util_8c_html_a31c8e4cd784d16e28687ee2f10b80028"><div class="ttname"><a href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a></div><div class="ttdeci">char * xstrdup(const char *s)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00107">util.c:107</a></div></div>
+<div class="ttc" id="structpstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structpstream.html#a5ac083a645d964373f022d03df4849c8">pstream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00041">stream-provider.h:41</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_a1b0cbf9c048dd0f51b9eb601f0ee8f64_cgraph.jpg" border="0" usemap="#stream_8c_a1b0cbf9c048dd0f51b9eb601f0ee8f64_cgraph" alt=""/></div>
+<map name="stream_8c_a1b0cbf9c048dd0f51b9eb601f0ee8f64_cgraph" id="stream_8c_a1b0cbf9c048dd0f51b9eb601f0ee8f64_cgraph">
+<area shape="rect" id="node2" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="165,5,240,35"/><area shape="rect" id="node3" href="util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="289,5,389,35"/><area shape="rect" id="node4" href="util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="437,5,512,35"/><area shape="rect" id="node5" href="util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="561,5,695,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_a1b0cbf9c048dd0f51b9eb601f0ee8f64_icgraph.jpg" border="0" usemap="#stream_8c_a1b0cbf9c048dd0f51b9eb601f0ee8f64_icgraph" alt=""/></div>
+<map name="stream_8c_a1b0cbf9c048dd0f51b9eb601f0ee8f64_icgraph" id="stream_8c_a1b0cbf9c048dd0f51b9eb601f0ee8f64_icgraph">
+<area shape="rect" id="node2" href="stream-fd_8c.html#a71d8bd3415259b6c497ad231ccbcfb65" title="new_fd_pstream" alt="" coords="165,5,307,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c1dfe6623b0f8bc385a698ac711b6ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pstream_set_bound_port </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structpstream.html">pstream</a> *&#160;</td>
+          <td class="paramname"><em>pstream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a>&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00669">669</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;{</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    pstream-&gt;<a class="code" href="structpstream.html#a73487c1e329175732cd946bf4ddba3f0">bound_port</a> = port;</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;}</div>
+<div class="ttc" id="structpstream_html_a73487c1e329175732cd946bf4ddba3f0"><div class="ttname"><a href="structpstream.html#a73487c1e329175732cd946bf4ddba3f0">pstream::bound_port</a></div><div class="ttdeci">ovs_be16 bound_port</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00042">stream-provider.h:42</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a764e66d235c49d9e267a0c460a99126a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* strtok_r </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1d3524ece63600dc65a7874a5eac223a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stream_open_with_default_ports </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>default_tcp_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>default_ssl_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structstream.html">stream</a> **&#160;</td>
+          <td class="paramname"><em>streamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>dscp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00696">696</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;{</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keywordtype">int</span> error;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    <span class="keywordflow">if</span> (!strncmp(name_, <span class="stringliteral">&quot;tcp:&quot;</span>, 4) &amp;&amp; count_fields(name_) &lt; 3) {</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        name = <a class="code" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a>(<span class="stringliteral">&quot;%s:%d&quot;</span>, name_, default_tcp_port);</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strncmp(name_, <span class="stringliteral">&quot;ssl:&quot;</span>, 4) &amp;&amp; count_fields(name_) &lt; 3) {</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        name = <a class="code" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a>(<span class="stringliteral">&quot;%s:%d&quot;</span>, name_, default_ssl_port);</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        name = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(name_);</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    }</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    error = <a class="code" href="stream_8c.html#ab62685a321134f86fbe4c1d4b3c87203">stream_open</a>(name, streamp, dscp);</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    free(name);</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;}</div>
+<div class="ttc" id="util_8c_html_a31c8e4cd784d16e28687ee2f10b80028"><div class="ttname"><a href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a></div><div class="ttdeci">char * xstrdup(const char *s)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00107">util.c:107</a></div></div>
+<div class="ttc" id="structpstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structpstream.html#a5ac083a645d964373f022d03df4849c8">pstream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00041">stream-provider.h:41</a></div></div>
+<div class="ttc" id="stream_8c_html_ab62685a321134f86fbe4c1d4b3c87203"><div class="ttname"><a href="stream_8c.html#ab62685a321134f86fbe4c1d4b3c87203">stream_open</a></div><div class="ttdeci">int stream_open(const char *name, struct stream **streamp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00167">stream.c:167</a></div></div>
+<div class="ttc" id="util_8c_html_af46c0ecf130aec0c5e6fb6c5d7131aac"><div class="ttname"><a href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a></div><div class="ttdeci">char * xasprintf(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00138">util.c:138</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_a1d3524ece63600dc65a7874a5eac223a_cgraph.jpg" border="0" usemap="#stream_8c_a1d3524ece63600dc65a7874a5eac223a_cgraph" alt=""/></div>
+<map name="stream_8c_a1d3524ece63600dc65a7874a5eac223a_cgraph" id="stream_8c_a1d3524ece63600dc65a7874a5eac223a_cgraph">
+<area shape="rect" id="node2" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac" title="xasprintf" alt="" coords="281,31,364,62"/><area shape="rect" id="node7" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="437,111,512,142"/><area shape="rect" id="node9" href="stream_8c.html#ab62685a321134f86fbe4c1d4b3c87203" title="stream_open" alt="" coords="265,138,381,169"/><area shape="rect" id="node3" href="util_8c.html#aef59cc7b9c87654dd5d521adaf82a91a" title="xvasprintf" alt="" coords="429,31,520,62"/><area shape="rect" id="node4" href="util_8c.html#a0495b4aa0b2ea7e5dd10e976aa63e4d3" title="vsnprintf" alt="" coords="577,5,660,35"/><area shape="rect" id="node5" href="util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="717,85,792,115"/><area shape="rect" id="node6" href="util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="841,85,975,115"/><area shape="rect" id="node8" href="util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="569,111,669,142"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad49937cac4a4c2025f34a332936afc07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pstream_open_with_default_ports </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>default_ptcp_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>default_pssl_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structpstream.html">pstream</a> **&#160;</td>
+          <td class="paramname"><em>pstreamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>dscp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00722">722</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;{</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="keywordtype">int</span> error;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <span class="keywordflow">if</span> (!strncmp(name_, <span class="stringliteral">&quot;ptcp:&quot;</span>, 5) &amp;&amp; count_fields(name_) &lt; 2) {</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        name = <a class="code" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a>(<span class="stringliteral">&quot;%s%d&quot;</span>, name_, default_ptcp_port);</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strncmp(name_, <span class="stringliteral">&quot;pssl:&quot;</span>, 5) &amp;&amp; count_fields(name_) &lt; 2) {</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        name = <a class="code" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a>(<span class="stringliteral">&quot;%s%d&quot;</span>, name_, default_pssl_port);</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        name = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(name_);</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    }</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    error = <a class="code" href="stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e">pstream_open</a>(name, pstreamp, dscp);</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    free(name);</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;}</div>
+<div class="ttc" id="util_8c_html_a31c8e4cd784d16e28687ee2f10b80028"><div class="ttname"><a href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a></div><div class="ttdeci">char * xstrdup(const char *s)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00107">util.c:107</a></div></div>
+<div class="ttc" id="structpstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structpstream.html#a5ac083a645d964373f022d03df4849c8">pstream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00041">stream-provider.h:41</a></div></div>
+<div class="ttc" id="stream_8c_html_aab1aee73ff5cae04c0162ac46b759a5e"><div class="ttname"><a href="stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e">pstream_open</a></div><div class="ttdeci">int pstream_open(const char *name, struct pstream **pstreamp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00490">stream.c:490</a></div></div>
+<div class="ttc" id="util_8c_html_af46c0ecf130aec0c5e6fb6c5d7131aac"><div class="ttname"><a href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a></div><div class="ttdeci">char * xasprintf(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00138">util.c:138</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_ad49937cac4a4c2025f34a332936afc07_cgraph.jpg" border="0" usemap="#stream_8c_ad49937cac4a4c2025f34a332936afc07_cgraph" alt=""/></div>
+<map name="stream_8c_ad49937cac4a4c2025f34a332936afc07_cgraph" id="stream_8c_ad49937cac4a4c2025f34a332936afc07_cgraph">
+<area shape="rect" id="node2" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac" title="xasprintf" alt="" coords="293,31,376,62"/><area shape="rect" id="node7" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="453,111,528,142"/><area shape="rect" id="node9" href="stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e" title="pstream_open" alt="" coords="272,138,397,169"/><area shape="rect" id="node3" href="util_8c.html#aef59cc7b9c87654dd5d521adaf82a91a" title="xvasprintf" alt="" coords="445,31,536,62"/><area shape="rect" id="node4" href="util_8c.html#a0495b4aa0b2ea7e5dd10e976aa63e4d3" title="vsnprintf" alt="" coords="593,5,676,35"/><area shape="rect" id="node5" href="util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="733,85,808,115"/><area shape="rect" id="node6" href="util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="857,85,991,115"/><area shape="rect" id="node8" href="util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="585,111,685,142"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c9ea7837f4f79ecd79f793fd07728a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool stream_parse_target_with_default_ports </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>default_tcp_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>default_ssl_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct sockaddr_in *&#160;</td>
+          <td class="paramname"><em>sin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="stream_8c_source.html">stream.c</a> 第 <a class="el" href="stream_8c_source.html#l00753">753</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;{</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    <span class="keywordflow">return</span> (!strncmp(target, <span class="stringliteral">&quot;tcp:&quot;</span>, 4)</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;             &amp;&amp; <a class="code" href="socket-util_8c.html#ab3e6aa61794fdcedb26c4ad22f3d910a">inet_parse_active</a>(target + 4, default_tcp_port, sin)) ||</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            (!strncmp(target, <span class="stringliteral">&quot;ssl:&quot;</span>, 4)</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;             &amp;&amp; <a class="code" href="socket-util_8c.html#ab3e6aa61794fdcedb26c4ad22f3d910a">inet_parse_active</a>(target + 4, default_ssl_port, sin));</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;}</div>
+<div class="ttc" id="socket-util_8c_html_ab3e6aa61794fdcedb26c4ad22f3d910a"><div class="ttname"><a href="socket-util_8c.html#ab3e6aa61794fdcedb26c4ad22f3d910a">inet_parse_active</a></div><div class="ttdeci">bool inet_parse_active(const char *target_, uint16_t default_port, struct sockaddr_in *sinp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00520">socket-util.c:520</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stream_8c_a1c9ea7837f4f79ecd79f793fd07728a9_cgraph.jpg" border="0" usemap="#stream_8c_a1c9ea7837f4f79ecd79f793fd07728a9_cgraph" alt=""/></div>
+<map name="stream_8c_a1c9ea7837f4f79ecd79f793fd07728a9_cgraph" id="stream_8c_a1c9ea7837f4f79ecd79f793fd07728a9_cgraph">
+<area shape="rect" id="node2" href="socket-util_8c.html#ab3e6aa61794fdcedb26c4ad22f3d910a" title="inet_parse_active" alt="" coords="224,59,373,90"/><area shape="rect" id="node3" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="429,5,504,35"/><area shape="rect" id="node7" href="socket-util_8c.html#a764e66d235c49d9e267a0c460a99126a" title="strtok_r" alt="" coords="429,59,505,90"/><area shape="rect" id="node8" href="socket-util_8c.html#a76ed43307fcb1a6a5d52b97fb06a3e1e" title="lookup_ip" alt="" coords="421,114,512,145"/><area shape="rect" id="node4" href="util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="561,5,661,35"/><area shape="rect" id="node5" href="util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="709,5,784,35"/><area shape="rect" id="node6" href="util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="833,5,967,35"/><area shape="rect" id="node9" href="socket-util_8c.html#aad7e46b44fb59b3b3be225bf623213df" title="inet_aton" alt="" coords="567,114,655,145"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6452c44390d2c89d0eb624a6a27a058b.html">stream-master</a></li><li class="navelem"><a class="el" href="dir_fa7fb7869eeec6843c02cdf31e3ab9ab.html">stream</a></li><li class="navelem"><a class="el" href="stream_8c.html">stream.c</a></li>
+    <li class="footer">生成于 2014年 一月 3日 星期五 10:42:09 , 为 Stream使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

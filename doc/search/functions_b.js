@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['new_5ffd_5fpstream',['new_fd_pstream',['../stream-fd_8c.html#a71d8bd3415259b6c497ad231ccbcfb65',1,'new_fd_pstream(const char *name, int fd, int(*accept_cb)(int fd, const struct sockaddr *sa, size_t sa_len, struct stream **streamp), int(*set_dscp_cb)(int fd, uint8_t dscp), char *unlink_path, struct pstream **pstreamp):&#160;stream-fd.c'],['../stream-fd_8h.html#a4b6238f30c38d8f2f7e459a47912b6dd',1,'new_fd_pstream(const char *name, int fd, int(*accept_cb)(int fd, const struct sockaddr *, size_t sa_len, struct stream **), int(*set_dscp_cb)(int fd, uint8_t dscp), char *unlink_path, struct pstream **pstreamp):&#160;stream-fd.h']]],
+  ['new_5ffd_5fstream',['new_fd_stream',['../stream-fd_8c.html#adbd47506dfee92ab3c7c1c5b8356a41f',1,'new_fd_stream(const char *name, int fd, int connect_status, struct stream **streamp):&#160;stream-fd.c'],['../stream-fd_8h.html#adbd47506dfee92ab3c7c1c5b8356a41f',1,'new_fd_stream(const char *name, int fd, int connect_status, struct stream **streamp):&#160;stream-fd.c']]]
+];

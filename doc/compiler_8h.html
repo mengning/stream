@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Stream: C:/Users/kang/Desktop/SSE/SDN/stream-master/stream/compiler.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Stream
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('compiler_8h.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>宏定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle">
+<div class="title">compiler.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="compiler_8h__dep__incl.jpg" border="0" usemap="#_c_1_2_users_2kang_2_desktop_2_s_s_e_2_s_d_n_2stream-master_2stream_2compiler_8hdep" alt=""/></div>
+<map name="_c_1_2_users_2kang_2_desktop_2_s_s_e_2_s_d_n_2stream-master_2stream_2compiler_8hdep" id="_c_1_2_users_2kang_2_desktop_2_s_s_e_2_s_d_n_2stream-master_2stream_2compiler_8hdep">
+<area shape="rect" id="node2" href="util_8h.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/stream/util.h" alt="" coords="379,123,587,191"/><area shape="rect" id="node3" href="vlog_8h.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/stream/vlog.h" alt="" coords="263,241,471,309"/><area shape="rect" id="node12" href="util_8c.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/stream/util.c" alt="" coords="495,241,703,309"/><area shape="rect" id="node4" href="socket-util_8c.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/stream/socket&#45;util.c" alt="" coords="147,358,355,426"/><area shape="rect" id="node5" href="stream_8h.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/stream/stream.h" alt="" coords="379,358,587,426"/><area shape="rect" id="node6" href="client_8c.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/client.c" alt="" coords="5,475,213,543"/><area shape="rect" id="node7" href="server_8c.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/server.c" alt="" coords="237,475,445,543"/><area shape="rect" id="node8" href="stream-provider_8h.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/stream/stream&#45;provider.h" alt="" coords="521,475,729,543"/><area shape="rect" id="node9" href="stream-fd_8c.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/stream/stream&#45;fd.c" alt="" coords="289,593,497,661"/><area shape="rect" id="node10" href="stream-tcp_8c.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/stream/stream&#45;tcp.c" alt="" coords="753,593,961,661"/><area shape="rect" id="node11" href="stream_8c.html" title="C:/Users/kang/Desktop\l/SSE/SDN/stream&#45;master\l/stream/stream.c" alt="" coords="521,593,729,661"/></map>
+</div>
+</div>
+<p><a href="compiler_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:af989845e24678c452b9222afdac95e7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#af989845e24678c452b9222afdac95e7f">__has_feature</a>(x)&#160;&#160;&#160;0</td></tr>
+<tr class="separator:af989845e24678c452b9222afdac95e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ce1a4353334dd8968a94a98b4bf1dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#ae1ce1a4353334dd8968a94a98b4bf1dd">__has_extension</a>(x)&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ae1ce1a4353334dd8968a94a98b4bf1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a0ed62c941d1d307c72db8f6462909"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a98a0ed62c941d1d307c72db8f6462909">NO_RETURN</a></td></tr>
+<tr class="separator:a98a0ed62c941d1d307c72db8f6462909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfc1f0481145b9308b2e58e84e8dacb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a7bfc1f0481145b9308b2e58e84e8dacb">OVS_UNUSED</a></td></tr>
+<tr class="separator:a7bfc1f0481145b9308b2e58e84e8dacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978a970d8d20621cd323901d94c9aae4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a978a970d8d20621cd323901d94c9aae4">PRINTF_FORMAT</a>(FMT, ARG1)</td></tr>
+<tr class="separator:a978a970d8d20621cd323901d94c9aae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0662024c33f4a5a4ec0fe1e789d57087"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a0662024c33f4a5a4ec0fe1e789d57087">STRFTIME_FORMAT</a>(FMT)</td></tr>
+<tr class="separator:a0662024c33f4a5a4ec0fe1e789d57087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0c5c9566236104788b5b18f36d5c35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#afc0c5c9566236104788b5b18f36d5c35">MALLOC_LIKE</a></td></tr>
+<tr class="separator:afc0c5c9566236104788b5b18f36d5c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1dec568e79152c892dcf63f445cbd7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a></td></tr>
+<tr class="separator:aa1dec568e79152c892dcf63f445cbd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0e2d9e1ee0f401844b5b6ff8338f82"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a4e0e2d9e1ee0f401844b5b6ff8338f82">WARN_UNUSED_RESULT</a></td></tr>
+<tr class="separator:a4e0e2d9e1ee0f401844b5b6ff8338f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19438235d28c378095a0f8befc1c9380"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a19438235d28c378095a0f8befc1c9380">SENTINEL</a>(N)</td></tr>
+<tr class="separator:a19438235d28c378095a0f8befc1c9380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b9bfb170bc4a4dc4d036155c3564ad2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a3b9bfb170bc4a4dc4d036155c3564ad2">OVS_LIKELY</a>(CONDITION)&#160;&#160;&#160;(!!(CONDITION))</td></tr>
+<tr class="separator:a3b9bfb170bc4a4dc4d036155c3564ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50af2563759e39b6fd3412651fc6889"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#aa50af2563759e39b6fd3412651fc6889">OVS_UNLIKELY</a>(CONDITION)&#160;&#160;&#160;(!!(CONDITION))</td></tr>
+<tr class="separator:aa50af2563759e39b6fd3412651fc6889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288495e3d19717f85afc58d4935bc38d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a288495e3d19717f85afc58d4935bc38d">OVS_LOCKABLE</a></td></tr>
+<tr class="separator:a288495e3d19717f85afc58d4935bc38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf9c5f42e409cc5c250fd814a42408f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a6bf9c5f42e409cc5c250fd814a42408f">OVS_REQ_RDLOCK</a>(...)</td></tr>
+<tr class="separator:a6bf9c5f42e409cc5c250fd814a42408f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608fb2ce73fe40fac15d9f6cd33a08ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a608fb2ce73fe40fac15d9f6cd33a08ee">OVS_ACQ_RDLOCK</a>(...)</td></tr>
+<tr class="separator:a608fb2ce73fe40fac15d9f6cd33a08ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57609466a33903804ee4f02b37c7a73c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a57609466a33903804ee4f02b37c7a73c">OVS_REQ_WRLOCK</a>(...)</td></tr>
+<tr class="separator:a57609466a33903804ee4f02b37c7a73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0f6492285d0dae14cbb4476d40c742"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#adc0f6492285d0dae14cbb4476d40c742">OVS_ACQ_WRLOCK</a>(...)</td></tr>
+<tr class="separator:adc0f6492285d0dae14cbb4476d40c742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f34b6221dc9a262ef7892abb50da03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#ac8f34b6221dc9a262ef7892abb50da03">OVS_REQUIRES</a>(...)</td></tr>
+<tr class="separator:ac8f34b6221dc9a262ef7892abb50da03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0758ccd1abaf8bcb4b9528a0c951dcf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#ab0758ccd1abaf8bcb4b9528a0c951dcf">OVS_ACQUIRES</a>(...)</td></tr>
+<tr class="separator:ab0758ccd1abaf8bcb4b9528a0c951dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84fe3a2de6e21977a462219ce8a5c52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#ab84fe3a2de6e21977a462219ce8a5c52">OVS_TRY_WRLOCK</a>(...)</td></tr>
+<tr class="separator:ab84fe3a2de6e21977a462219ce8a5c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40ad72a66a6f3d811443ce93548ecd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#ae40ad72a66a6f3d811443ce93548ecd8">OVS_TRY_RDLOCK</a>(...)</td></tr>
+<tr class="separator:ae40ad72a66a6f3d811443ce93548ecd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeccc91731a1af049dd9ab4c5233242d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#aeccc91731a1af049dd9ab4c5233242d2">OVS_TRY_LOCK</a>(...)</td></tr>
+<tr class="separator:aeccc91731a1af049dd9ab4c5233242d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6532033e04e0eddc9b3907b4ebee56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a9e6532033e04e0eddc9b3907b4ebee56">OVS_GUARDED</a></td></tr>
+<tr class="separator:a9e6532033e04e0eddc9b3907b4ebee56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424000cc86b701acbd3dc2617bd7dd27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a424000cc86b701acbd3dc2617bd7dd27">OVS_GUARDED_BY</a>(...)</td></tr>
+<tr class="separator:a424000cc86b701acbd3dc2617bd7dd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03de4e7f7745d6d8307f9fd0d9a89a92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a03de4e7f7745d6d8307f9fd0d9a89a92">OVS_EXCLUDED</a>(...)</td></tr>
+<tr class="separator:a03de4e7f7745d6d8307f9fd0d9a89a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6adef399c7e21594223ed340b1a9a792"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a6adef399c7e21594223ed340b1a9a792">OVS_RELEASES</a>(...)</td></tr>
+<tr class="separator:a6adef399c7e21594223ed340b1a9a792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5138bd728fa4d7b2fc8a8b2c7c7672e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a5138bd728fa4d7b2fc8a8b2c7c7672e6">OVS_ACQ_BEFORE</a>(...)</td></tr>
+<tr class="separator:a5138bd728fa4d7b2fc8a8b2c7c7672e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18139a2258eb8ad50cc96188b17047b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a18139a2258eb8ad50cc96188b17047b4">OVS_ACQ_AFTER</a>(...)</td></tr>
+<tr class="separator:a18139a2258eb8ad50cc96188b17047b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1489f8a548cc71ccdf1bd9a898d56c97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a1489f8a548cc71ccdf1bd9a898d56c97">OVS_NO_THREAD_SAFETY_ANALYSIS</a></td></tr>
+<tr class="separator:a1489f8a548cc71ccdf1bd9a898d56c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212943745de05ea5253e573985367b31"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a212943745de05ea5253e573985367b31">OVS_PACKED_ENUM</a></td></tr>
+<tr class="separator:a212943745de05ea5253e573985367b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b5b7797de6088df99349f95a32a66b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compiler_8h.html#a28b5b7797de6088df99349f95a32a66b">OVS_PACKED</a>(DECL)&#160;&#160;&#160;DECL __attribute__((__packed__))</td></tr>
+<tr class="separator:a28b5b7797de6088df99349f95a32a66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a class="anchor" id="af989845e24678c452b9222afdac95e7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __has_feature</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1ce1a4353334dd8968a94a98b4bf1dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __has_extension</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98a0ed62c941d1d307c72db8f6462909"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NO_RETURN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7bfc1f0481145b9308b2e58e84e8dacb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_UNUSED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a978a970d8d20621cd323901d94c9aae4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PRINTF_FORMAT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">FMT, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ARG1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0662024c33f4a5a4ec0fe1e789d57087"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRFTIME_FORMAT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">FMT</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00042">42</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="afc0c5c9566236104788b5b18f36d5c35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char MALLOC_LIKE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa1dec568e79152c892dcf63f445cbd7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ALWAYS_INLINE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e0e2d9e1ee0f401844b5b6ff8338f82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WARN_UNUSED_RESULT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19438235d28c378095a0f8befc1c9380"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SENTINEL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">N</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b9bfb170bc4a4dc4d036155c3564ad2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_LIKELY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CONDITION</td><td>)</td>
+          <td>&#160;&#160;&#160;(!!(CONDITION))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa50af2563759e39b6fd3412651fc6889"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_UNLIKELY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CONDITION</td><td>)</td>
+          <td>&#160;&#160;&#160;(!!(CONDITION))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00048">48</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a288495e3d19717f85afc58d4935bc38d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_LOCKABLE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00137">137</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6bf9c5f42e409cc5c250fd814a42408f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_REQ_RDLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00138">138</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a608fb2ce73fe40fac15d9f6cd33a08ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_ACQ_RDLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00139">139</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57609466a33903804ee4f02b37c7a73c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_REQ_WRLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00140">140</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc0f6492285d0dae14cbb4476d40c742"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_ACQ_WRLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00141">141</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8f34b6221dc9a262ef7892abb50da03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_REQUIRES</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00142">142</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0758ccd1abaf8bcb4b9528a0c951dcf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_ACQUIRES</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00143">143</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab84fe3a2de6e21977a462219ce8a5c52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_TRY_WRLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00144">144</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae40ad72a66a6f3d811443ce93548ecd8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_TRY_RDLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00145">145</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeccc91731a1af049dd9ab4c5233242d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_TRY_LOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00146">146</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e6532033e04e0eddc9b3907b4ebee56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_GUARDED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00147">147</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a424000cc86b701acbd3dc2617bd7dd27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_GUARDED_BY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00148">148</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03de4e7f7745d6d8307f9fd0d9a89a92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_EXCLUDED</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00149">149</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6adef399c7e21594223ed340b1a9a792"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_RELEASES</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00150">150</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5138bd728fa4d7b2fc8a8b2c7c7672e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_ACQ_BEFORE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00151">151</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18139a2258eb8ad50cc96188b17047b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_ACQ_AFTER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00152">152</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1489f8a548cc71ccdf1bd9a898d56c97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_NO_THREAD_SAFETY_ANALYSIS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00153">153</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a212943745de05ea5253e573985367b31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_PACKED_ENUM</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00171">171</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28b5b7797de6088df99349f95a32a66b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVS_PACKED</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">DECL</td><td>)</td>
+          <td>&#160;&#160;&#160;DECL __attribute__((__packed__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="compiler_8h_source.html">compiler.h</a> 第 <a class="el" href="compiler_8h_source.html#l00175">175</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6452c44390d2c89d0eb624a6a27a058b.html">stream-master</a></li><li class="navelem"><a class="el" href="dir_fa7fb7869eeec6843c02cdf31e3ab9ab.html">stream</a></li><li class="navelem"><a class="el" href="compiler_8h.html">compiler.h</a></li>
+    <li class="footer">生成于 2014年 一月 3日 星期五 10:42:09 , 为 Stream使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<map id="stream_open_with_default_ports" name="stream_open_with_default_ports">
+<area shape="rect" id="node2" href="$util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac" title="xasprintf" alt="" coords="281,31,364,62"/>
+<area shape="rect" id="node7" href="$util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="437,111,512,142"/>
+<area shape="rect" id="node9" href="$stream_8c.html#ab62685a321134f86fbe4c1d4b3c87203" title="stream_open" alt="" coords="265,138,381,169"/>
+<area shape="rect" id="node3" href="$util_8c.html#aef59cc7b9c87654dd5d521adaf82a91a" title="xvasprintf" alt="" coords="429,31,520,62"/>
+<area shape="rect" id="node4" href="$util_8c.html#a0495b4aa0b2ea7e5dd10e976aa63e4d3" title="vsnprintf" alt="" coords="577,5,660,35"/>
+<area shape="rect" id="node5" href="$util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="717,85,792,115"/>
+<area shape="rect" id="node6" href="$util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="841,85,975,115"/>
+<area shape="rect" id="node8" href="$util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="569,111,669,142"/>
+</map>

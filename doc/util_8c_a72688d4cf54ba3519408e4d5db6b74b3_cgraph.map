@@ -1,0 +1,11 @@
+<map id="abs_file_name" name="abs_file_name">
+<area shape="rect" id="node2" href="$util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="185,59,260,90"/>
+<area shape="rect" id="node6" href="$util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac" title="xasprintf" alt="" coords="181,5,264,35"/>
+<area shape="rect" id="node9" href="$util_8c.html#a6c11e066837636e13c6109b940b4dfdb" title="get_cwd" alt="" coords="321,114,404,145"/>
+<area shape="rect" id="node3" href="$util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="313,59,413,90"/>
+<area shape="rect" id="node4" href="$util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="465,59,540,90"/>
+<area shape="rect" id="node5" href="$util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="593,87,727,118"/>
+<area shape="rect" id="node7" href="$util_8c.html#aef59cc7b9c87654dd5d521adaf82a91a" title="xvasprintf" alt="" coords="317,5,408,35"/>
+<area shape="rect" id="node8" href="$util_8c.html#a0495b4aa0b2ea7e5dd10e976aa63e4d3" title="vsnprintf" alt="" coords="461,5,544,35"/>
+<area shape="rect" id="node10" href="$util_8c.html#a9f6bc6d637434a7cca469629ed0594ed" title="xrealloc" alt="" coords="464,114,541,145"/>
+</map>

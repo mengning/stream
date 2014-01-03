@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e" title="pstream_open" alt="" coords="119,5,244,35"/>
+<area shape="rect" id="node7" href="$stream_8c.html#a3add0a68fcfbe13e261435f264e3fd69" title="pstream_accept" alt="" coords="112,59,251,90"/>
+<area shape="rect" id="node8" href="$stream_8c.html#aecca5f1213665d85daed4e5e3254cc3f" title="stream_recv" alt="" coords="126,114,237,145"/>
+<area shape="rect" id="node10" href="$stream_8c.html#a8da7d7c3d9a573ae9cf1dab1be38e623" title="stream_close" alt="" coords="122,169,241,199"/>
+<area shape="rect" id="node11" href="$stream_8c.html#acf7a7101bf12dc534600d727bf04f22b" title="pstream_close" alt="" coords="118,223,245,254"/>
+<area shape="rect" id="node3" href="$util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="331,5,405,35"/>
+<area shape="rect" id="node4" href="$util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="486,5,586,35"/>
+<area shape="rect" id="node5" href="$util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="635,5,709,35"/>
+<area shape="rect" id="node6" href="$util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="758,5,893,35"/>
+<area shape="rect" id="node9" href="$stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f" title="stream_connect" alt="" coords="299,114,437,145"/>
+</map>
