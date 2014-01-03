@@ -21,10 +21,9 @@
 #include<sys/wait.h>		
 #include<string.h>			
 #include<pthread.h>
-#include <unistd.h>
+#include<unistd.h>
+
 #include "stream.h"
-
-
 
 int main()
 {
@@ -58,13 +57,18 @@ int main()
                 index++;
 
                 if(actualsend < 0)
+                {
                     printf("stream send failure!\n");
+                }
                 else if(actualsend == 0)
+                {
                     printf("stream send 0 bytes!\n");
+                }
                 else
+                {
                     printf("stream actual send %d bytes,Data:%s\n",actualsend,pnum);
+                }
             }
-
         }
 
         stream_close(p_stream);
