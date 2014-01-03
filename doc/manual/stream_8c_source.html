@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Stream: C:/Users/kang/Desktop/SSE/SDN/stream-master/stream/stream.c 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Stream
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('stream_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>宏定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">stream.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stream_8c.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stream-provider_8h.html">stream-provider.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;poll.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<a class="code" href="stream_8c.html#add2c2e406c5dbf228d58d02dab9e1aa4">VLOG_DEFINE_THIS_MODULE</a>(<a class="code" href="structstream.html">stream</a>);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*COVERAGE_DEFINE(pstream_open);</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">COVERAGE_DEFINE(stream_open);*/</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/* State of an active stream.*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6fa">   15</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6fa">stream_state</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">   16</a></span>&#160;    <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a>,             <span class="comment">/* Underlying stream is not connected. */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">   17</a></span>&#160;    <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a>,              <span class="comment">/* Connection established. */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">   18</a></span>&#160;    <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a>            <span class="comment">/* Connection failed or connection closed. */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structstream__class.html">stream_class</a> *stream_classes[] = {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    &amp;<a class="code" href="stream-provider_8h.html#a80fc2a3eec94fabf8e97d95782b43ecb">tcp_stream_class</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   <span class="comment">/* &amp;unix_stream_class,</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">#ifdef HAVE_OPENSSL</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    &amp;ssl_stream_class,</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">#endif*/</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structpstream__class.html">pstream_class</a> *pstream_classes[] = {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    &amp;<a class="code" href="stream-provider_8h.html#aff04cc0675aed00c62cfedef8cd0d829">ptcp_pstream_class</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">/*&amp;punix_pstream_class,</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">#ifdef HAVE_OPENSSL</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    &amp;pssl_pstream_class,</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">#endif*/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">/* Check the validity of the stream class structures. */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">static void</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">check_stream_classes(void)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">#ifndef NDEBUG</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    size_t i;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    for (i = 0; i &lt; ARRAY_SIZE(stream_classes); i++) {</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">        const struct stream_class *class = stream_classes[i];</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">        ovs_assert(class-&gt;name != NULL);</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">        ovs_assert(class-&gt;open != NULL);</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">        if (class-&gt;close || class-&gt;recv || class-&gt;send || class-&gt;run</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">            || class-&gt;run_wait || class-&gt;wait) {</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">            ovs_assert(class-&gt;close != NULL);</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">            ovs_assert(class-&gt;recv != NULL);</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">            ovs_assert(class-&gt;send != NULL);</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">            ovs_assert(class-&gt;wait != NULL);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">        } else {</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">            / This class delegates to another one. </span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    for (i = 0; i &lt; ARRAY_SIZE(pstream_classes); i++) {</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">        const struct pstream_class *class = pstream_classes[i];</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">        ovs_assert(class-&gt;name != NULL);</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">        ovs_assert(class-&gt;listen != NULL);</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">        if (class-&gt;close || class-&gt;accept || class-&gt;wait) {</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">            ovs_assert(class-&gt;close != NULL);</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">            ovs_assert(class-&gt;accept != NULL);</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">            ovs_assert(class-&gt;wait != NULL);</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">        } else {</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">            / This class delegates to another one. </span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">#endif</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">}*/</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/* Prints information on active (if &#39;active&#39;) and passive (if &#39;passive&#39;)</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * connection methods supported by the stream. */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="stream_8h.html#ae94e40c4afc4e310cdce8db045de6b83">   78</a></span>&#160;<a class="code" href="stream_8c.html#a54b3ba44b0dbb81bcdb344f52471f553">stream_usage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structpstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, <span class="keywordtype">bool</span> active, <span class="keywordtype">bool</span> passive,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;             <span class="keywordtype">bool</span> bootstrap <a class="code" href="compiler_8h.html#a7bfc1f0481145b9308b2e58e84e8dacb">OVS_UNUSED</a>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">/* Really this should be implemented via callbacks into the stream</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">     * providers, but that seems too heavy-weight to bother with at the</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">     * moment. */</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (active) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        printf(<span class="stringliteral">&quot;Active %s connection methods:\n&quot;</span>, name);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        printf(<span class="stringliteral">&quot;  tcp:IP:PORT             &quot;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;               <span class="stringliteral">&quot;PORT at remote IP\n&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#ifdef HAVE_OPENSSL</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor"></span>        printf(<span class="stringliteral">&quot;  ssl:IP:PORT             &quot;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;               <span class="stringliteral">&quot;SSL PORT at remote IP\n&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor"></span>        printf(<span class="stringliteral">&quot;  unix:FILE               &quot;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;               <span class="stringliteral">&quot;Unix domain socket named FILE\n&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (passive) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        printf(<span class="stringliteral">&quot;Passive %s connection methods:\n&quot;</span>, name);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        printf(<span class="stringliteral">&quot;  ptcp:PORT[:IP]          &quot;</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;               <span class="stringliteral">&quot;listen to TCP PORT on IP\n&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#ifdef HAVE_OPENSSL</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor"></span>        printf(<span class="stringliteral">&quot;  pssl:PORT[:IP]          &quot;</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;               <span class="stringliteral">&quot;listen for SSL on PORT on IP\n&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor"></span>        printf(<span class="stringliteral">&quot;  punix:FILE              &quot;</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;               <span class="stringliteral">&quot;listen on Unix domain socket FILE\n&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#ifdef HAVE_OPENSSL</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor"></span>    printf(<span class="stringliteral">&quot;PKI configuration (required to use SSL):\n&quot;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;           <span class="stringliteral">&quot;  -p, --private-key=FILE  file with private key\n&quot;</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;           <span class="stringliteral">&quot;  -c, --certificate=FILE  file with certificate for private key\n&quot;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;           <span class="stringliteral">&quot;  -C, --ca-cert=FILE      file with peer CA certificate\n&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">if</span> (bootstrap) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        printf(<span class="stringliteral">&quot;  --bootstrap-ca-cert=FILE  file with peer CA certificate &quot;</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;               <span class="stringliteral">&quot;to read or create\n&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">/* Given &#39;name&#39;, a stream name in the form &quot;TYPE:ARGS&quot;, stores the class</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"> * named &quot;TYPE&quot; into &#39;*classp&#39; and returns 0.  Returns EAFNOSUPPORT and stores</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"> * a null pointer into &#39;*classp&#39; if &#39;name&#39; is in the wrong form or if no such</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"> * class exists. */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;stream_lookup_class(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structpstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, <span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structstream__class.html">stream_class</a> **classp)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">size_t</span> prefix_len;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   <span class="comment">/* check_stream_classes();*/</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    *classp = NULL;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    prefix_len = strcspn(name, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">if</span> (name[prefix_len] == <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">return</span> EAFNOSUPPORT;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="util_8h.html#ad24957f92985d579e883362781d19b8e">ARRAY_SIZE</a>(stream_classes); i++) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structstream__class.html">stream_class</a> *<span class="keyword">class </span>= stream_classes[i];</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">if</span> (strlen(class-&gt;name) == prefix_len</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            &amp;&amp; !memcmp(class-&gt;name, name, prefix_len)) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            *classp = <span class="keyword">class</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">return</span> EAFNOSUPPORT;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">/* Returns 0 if &#39;name&#39; is a stream name in the form &quot;TYPE:ARGS&quot; and TYPE is</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"> * a supported stream type, otherwise EAFNOSUPPORT.  */</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="stream_8h.html#a59ec80e7710bee749736cc14f60ed6d5">  153</a></span>&#160;<a class="code" href="stream_8c.html#a59ec80e7710bee749736cc14f60ed6d5">stream_verify_name</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structstream__class.html">stream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> stream_lookup_class(name, &amp;<span class="keyword">class</span>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">/* Attempts to connect a stream to a remote peer.  &#39;name&#39; is a connection name</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment"> * in the form &quot;TYPE:ARGS&quot;, where TYPE is an active stream class&#39;s name and</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment"> * ARGS are stream class-specific.</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment"> * Returns 0 if successful, otherwise a positive errno value.  If successful,</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"> * stores a pointer to the new connection in &#39;*streamp&#39;, otherwise a null</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment"> * pointer.  */</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="stream_8h.html#a9a63e5943be5074408a666fd1ccf8685">  167</a></span>&#160;<a class="code" href="stream_8c.html#ab62685a321134f86fbe4c1d4b3c87203">stream_open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> **streamp, uint8_t dscp)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structstream__class.html">stream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">struct </span><a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">char</span> *suffix_copy;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">/*COVERAGE_INC(stream_open);*/</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">/* Look up the class. */</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    error = stream_lookup_class(name, &amp;<span class="keyword">class</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">if</span> (!<span class="keyword">class</span>) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">goto</span> <a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">/* Call class&#39;s &quot;open&quot; function. */</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    suffix_copy = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(strchr(name, <span class="charliteral">&#39;:&#39;</span>) + 1);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    error = <span class="keyword">class</span>-&gt;open(name, suffix_copy, &amp;stream, dscp);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    free(suffix_copy);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> (error) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">goto</span> <a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">/* Success. */</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    *streamp = stream;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;error:</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    *streamp = NULL;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">/* Blocks until a previously started stream connection attempt succeeds or</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment"> * fails.  &#39;error&#39; should be the value returned by stream_open() and &#39;streamp&#39;</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment"> * should point to the stream pointer set by stream_open().  Returns 0 if</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment"> * successful, otherwise a positive errno value other than EAGAIN or</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment"> * EINPROGRESS.  If successful, leaves &#39;*streamp&#39; untouched; on error, closes</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment"> * &#39;*streamp&#39; and sets &#39;*streamp&#39; to null.</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment"> * Typical usage:</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment"> *   error = stream_open_block(stream_open(&quot;tcp:1.2.3.4:5&quot;, &amp;stream), &amp;stream);</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">/*int</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">stream_open_block(int error, struct stream **streamp)</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">    struct stream *stream = *streamp;</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">    if (!error) {</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">        while ((error = stream_connect(stream)) == EAGAIN) {</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">            stream_run(stream);</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">            stream_run_wait(stream);</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">            stream_connect_wait(stream);</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">            poll_block();</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">        ovs_assert(error != EINPROGRESS);</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">    if (error) {</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">        stream_close(stream);</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">        *streamp = NULL;</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">    } else {</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">        *streamp = stream;</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">    return error;</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">}*/</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">/* Closes &#39;stream&#39;. */</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="stream_8h.html#a4cf50443f96a7a1d694875de01276c07">  236</a></span>&#160;<a class="code" href="stream_8c.html#a8da7d7c3d9a573ae9cf1dab1be38e623">stream_close</a>(<span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a>)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">if</span> (stream != NULL) {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordtype">char</span> *name = stream-&gt;<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#adb97b26029a3ee20d5c7f84d8f0c25a3">close</a>)(stream);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        free(name);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment">/* Returns the name of &#39;stream&#39;, that is, the string passed to</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment"> * stream_open(). */</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *</div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="stream_8h.html#a0fbecbb550611c4dbd722185a9857c84">  248</a></span>&#160;<a class="code" href="stream_8c.html#a5ce77dd1f56bc192c6019e4fddadfddf">stream_get_name</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a>)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> stream ? stream-&gt;<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a> : <span class="stringliteral">&quot;(null)&quot;</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">/* Returns the IP address of the peer, or 0 if the peer is not connected over</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"> * an IP-based protocol or if its IP address is not yet known. */</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<a class="code" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a></div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="stream_8h.html#a879ea404556d612a4df441989590dedf">  256</a></span>&#160;<a class="code" href="stream_8c.html#adcfc5d66e2a475bed966e506f6c8e8b3">stream_get_remote_ip</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a>)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#a7de479379b012fcc18e00d2e02862dd0">remote_ip</a>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment">/* Returns the transport port of the peer, or 0 if the connection does not</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment"> * contain a port or if the port is not yet known. */</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<a class="code" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a></div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="stream_8h.html#a5a484606d2a45a03c6430660fbc32784">  264</a></span>&#160;<a class="code" href="stream_8c.html#a02d7c22a9637ba4dddca9cb235a3933d">stream_get_remote_port</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a>)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#adc58c53a4e9f649c72b6593d2c4d4cb9">remote_port</a>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment">/* Returns the IP address used to connect to the peer, or 0 if the connection</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment"> * is not an IP-based protocol or if its IP address is not yet known. */</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<a class="code" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a></div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="stream_8h.html#a0b96cea717a32df0f7a85dfa89974116">  272</a></span>&#160;<a class="code" href="stream_8c.html#a10c0f72e02eb1be98d59521a246ce29c">stream_get_local_ip</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a>)</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;{</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#a1a34864d0fe93dff58b24039c1d0f6a0">local_ip</a>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">/* Returns the transport port used to connect to the peer, or 0 if the</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment"> * connection does not contain a port or if the port is not yet known. */</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<a class="code" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a></div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="stream_8h.html#a8f870e8cbd998a020f437a327888201a">  280</a></span>&#160;<a class="code" href="stream_8c.html#a6dc351b538b82c9934713b8fd72dc617">stream_get_local_port</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a>)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;{</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#a20a428979ced183e2eeb7f347a679472">local_port</a>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;scs_connecting(<span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a>)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">int</span> retval = (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#ae018363b6200b3062978b59efd52d78b">connect</a>)(stream);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <a class="code" href="util_8h.html#ac236d3d8f33428ab822cc4e277a451c8">ovs_assert</a>(retval != EINPROGRESS);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (!retval) {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a> = <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (retval != EAGAIN) {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a> = <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        stream-&gt;<a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a> = retval;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">/* Tries to complete the connection on &#39;stream&#39;.  If &#39;stream&#39;&#39;s connection is</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment"> * complete, returns 0 if the connection was successful or a positive errno</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment"> * value if it failed.  If the connection is still in progress, returns</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment"> * EAGAIN. */</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="stream_8h.html#af0fa3485d2c44855321653b51b049d16">  303</a></span>&#160;<a class="code" href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f">stream_connect</a>(<span class="keyword">struct</span> stream *stream)</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keyword">enum</span> <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6fa">stream_state</a> last_state;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        last_state = stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">switch</span> (stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a>) {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a>:</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            scs_connecting(stream);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a>:</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a>:</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">return</span> stream-&gt;<a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="util_8h.html#a6c2edf1e500e498b687567418bf4fef6">NOT_REACHED</a>();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    } <span class="keywordflow">while</span> ((<span class="keywordtype">unsigned</span>)stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a> != last_state);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">return</span> EAGAIN;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment">/* Tries to receive up to &#39;n&#39; bytes from &#39;stream&#39; into &#39;buffer&#39;, and returns:</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment"> *     - If successful, the number of bytes received (between 1 and &#39;n&#39;).</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment"> *     - On error, a negative errno value.</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment"> *     - 0, if the connection has been closed in the normal fashion, or if &#39;n&#39;</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment"> *       is zero.</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment"> * The recv function will not block waiting for a packet to arrive.  If no</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment"> * data have been received, it returns -EAGAIN immediately. */</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno"><a class="line" href="stream_8h.html#a92cb74802572277799254410f7db4c01">  340</a></span>&#160;<a class="code" href="stream_8c.html#aecca5f1213665d85daed4e5e3254cc3f">stream_recv</a>(<span class="keyword">struct</span> stream *stream, <span class="keywordtype">void</span> *buffer, <span class="keywordtype">size_t</span> n)</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;{</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">int</span> retval = <a class="code" href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f">stream_connect</a>(stream);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">return</span> (retval ? -retval</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            : n == 0 ? 0</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            : (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#a807d938cd3b0883b1896624728353bd0">recv</a>)(stream, buffer, n));</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;}</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">/* Tries to send up to &#39;n&#39; bytes of &#39;buffer&#39; on &#39;stream&#39;, and returns:</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment"> *     - If successful, the number of bytes sent (between 1 and &#39;n&#39;).  0 is</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment"> *       only a valid return value if &#39;n&#39; is 0.</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment"> *     - On error, a negative errno value.</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment"> * The send function will not block.  If no bytes can be immediately accepted</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment"> * for transmission, it returns -EAGAIN immediately. */</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="stream_8h.html#a898febed1e031a1f66c757f90b3da471">  358</a></span>&#160;<a class="code" href="stream_8c.html#a44de7275c08f501f83a96e07d8900c86">stream_send</a>(<span class="keyword">struct</span> stream *stream, <span class="keyword">const</span> <span class="keywordtype">void</span> *buffer, <span class="keywordtype">size_t</span> n)</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;{</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordtype">int</span> retval = <a class="code" href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f">stream_connect</a>(stream);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">return</span> (retval ? -retval</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            : n == 0 ? 0</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            : (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#a2c7418fe16ca68a1e1f7616c18019a99">send</a>)(stream, buffer, n));</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment">/* Allows &#39;stream&#39; to perform maintenance activities, such as flushing</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment"> * output buffers. */</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno"><a class="line" href="stream_8h.html#ae0ea768efcaf863b2e48d98fafdce743">  369</a></span>&#160;<a class="code" href="stream_8c.html#a2c199b4ceb1f62c7372f36bb526f6a51">stream_run</a>(<span class="keyword">struct</span> stream *stream)</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;{</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">if</span> (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#ac1c7b976b8dd809f26ab54b0fec08701">run</a>) {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#ac1c7b976b8dd809f26ab54b0fec08701">run</a>)(stream);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;}</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment">/* Arranges for the poll loop to wake up when &#39;stream&#39; needs to perform</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment"> * maintenance activities. */</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno"><a class="line" href="stream_8h.html#a5136209612d0e1417622efbacdd2f674">  379</a></span>&#160;<a class="code" href="stream_8c.html#a074bd2c3eb2bbfb9f7d7e5a352a318ca">stream_run_wait</a>(<span class="keyword">struct</span> stream *stream)</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;{</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">if</span> (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#a485adc33703cabc470efe32f31bed2a6">run_wait</a>) {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        (stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a>-&gt;<a class="code" href="structstream__class.html#a485adc33703cabc470efe32f31bed2a6">run_wait</a>)(stream);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment">/* Arranges for the poll loop to wake up when &#39;stream&#39; is ready to take an</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment"> * action of the given &#39;type&#39;. */</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">/*void</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">stream_wait(struct stream *stream, enum stream_wait_type wait)</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="comment">    ovs_assert(wait == STREAM_CONNECT || wait == STREAM_RECV</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment">               || wait == STREAM_SEND);</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="comment">    switch (stream-&gt;state) {</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="comment">    case SCS_CONNECTING:</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="comment">        wait = STREAM_CONNECT;</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="comment">        break;</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="comment">    case SCS_DISCONNECTED:</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="comment">        poll_immediate_wake();</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="comment">        return;</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="comment">    (stream-&gt;class-&gt;wait)(stream, wait);</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="comment">void</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="comment">stream_connect_wait(struct stream *stream)</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="comment">    stream_wait(stream, STREAM_CONNECT);</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="comment">void</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="comment">stream_recv_wait(struct stream *stream)</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="comment">    stream_wait(stream, STREAM_RECV);</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="comment">void</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="comment">stream_send_wait(struct stream *stream)</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;<span class="comment">    stream_wait(stream, STREAM_SEND);</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="comment">/* Given &#39;name&#39;, a pstream name in the form &quot;TYPE:ARGS&quot;, stores the class</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="comment"> * named &quot;TYPE&quot; into &#39;*classp&#39; and returns 0.  Returns EAFNOSUPPORT and stores</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="comment"> * a null pointer into &#39;*classp&#39; if &#39;name&#39; is in the wrong form or if no such</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="comment"> * class exists. */</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;pstream_lookup_class(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structpstream__class.html">pstream_class</a> **classp)</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;{</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordtype">size_t</span> prefix_len;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="comment">/*check_stream_classes();*/</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    *classp = NULL;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    prefix_len = strcspn(name, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">if</span> (name[prefix_len] == <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        <span class="keywordflow">return</span> EAFNOSUPPORT;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="util_8h.html#ad24957f92985d579e883362781d19b8e">ARRAY_SIZE</a>(pstream_classes); i++) {</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structpstream__class.html">pstream_class</a> *<span class="keyword">class </span>= pstream_classes[i];</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keywordflow">if</span> (strlen(class-&gt;name) == prefix_len</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            &amp;&amp; !memcmp(class-&gt;name, name, prefix_len)) {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;            *classp = <span class="keyword">class</span>;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        }</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    }</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordflow">return</span> EAFNOSUPPORT;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;}</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="comment">/* Returns 0 if &#39;name&#39; is a pstream name in the form &quot;TYPE:ARGS&quot; and TYPE is</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment"> * a supported pstream type, otherwise EAFNOSUPPORT.  */</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno"><a class="line" href="stream_8h.html#a770dd41d56bcc91e0feb4e1f1cac95c4">  457</a></span>&#160;<a class="code" href="stream_8c.html#a770dd41d56bcc91e0feb4e1f1cac95c4">pstream_verify_name</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name)</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;{</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structpstream__class.html">pstream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordflow">return</span> pstream_lookup_class(name, &amp;<span class="keyword">class</span>);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;}</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="comment">/* Returns 1 if the stream or pstream specified by &#39;name&#39; needs periodic probes</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="comment"> * to verify connectivity.  For [p]streams which need probes, it can take a</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="comment"> * long time to notice the connection has been dropped.  Returns 0 if the</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="comment"> * stream or pstream does not need probes, and -1 if &#39;name&#39; is not valid. */</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno"><a class="line" href="stream_8h.html#ab840e79ab31df293a40306c26bc0da6c">  468</a></span>&#160;<a class="code" href="stream_8c.html#ab840e79ab31df293a40306c26bc0da6c">stream_or_pstream_needs_probes</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name)</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;{</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structpstream__class.html">pstream_class</a> *pclass;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structstream__class.html">stream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">if</span> (!stream_lookup_class(name, &amp;<span class="keyword">class</span>)) {</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">class</span>-&gt;<a class="code" href="structstream__class.html#a3aa32893937115b46850547f0b6ad391">needs_probes</a>;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!pstream_lookup_class(name, &amp;pclass)) {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordflow">return</span> pclass-&gt;<a class="code" href="structpstream__class.html#a3aa32893937115b46850547f0b6ad391">needs_probes</a>;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    }</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;}</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="comment">/* Attempts to start listening for remote stream connections.  &#39;name&#39; is a</span></div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;<span class="comment"> * connection name in the form &quot;TYPE:ARGS&quot;, where TYPE is an passive stream</span></div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="comment"> * class&#39;s name and ARGS are stream class-specific.</span></div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="comment"> * Returns 0 if successful, otherwise a positive errno value.  If successful,</span></div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="comment"> * stores a pointer to the new connection in &#39;*pstreamp&#39;, otherwise a null</span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span class="comment"> * pointer.  */</span></div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno"><a class="line" href="stream_8h.html#a93cee736ea86b77a62cc3d89164f913a">  490</a></span>&#160;<a class="code" href="stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e">pstream_open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> **pstreamp, uint8_t dscp)</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;{</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structpstream__class.html">pstream_class</a> *<span class="keyword">class</span>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="keywordtype">char</span> *suffix_copy;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordtype">int</span> error;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="comment">/*COVERAGE_INC(pstream_open);*/</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="comment">/* Look up the class. */</span></div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    error = pstream_lookup_class(name, &amp;<span class="keyword">class</span>);</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="keywordflow">if</span> (!<span class="keyword">class</span>) {</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        <span class="keywordflow">goto</span> error;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    }</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="comment">/* Call class&#39;s &quot;open&quot; function. */</span></div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    suffix_copy = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(strchr(name, <span class="charliteral">&#39;:&#39;</span>) + 1);</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    error = <span class="keyword">class</span>-&gt;listen(name, suffix_copy, &amp;pstream, dscp);</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    free(suffix_copy);</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">if</span> (error) {</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keywordflow">goto</span> error;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    }</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="comment">/* Success. */</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    *pstreamp = pstream;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;error:</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    *pstreamp = NULL;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;}</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="comment">/* Returns the name that was used to open &#39;pstream&#39;.  The caller must not</span></div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;<span class="comment"> * modify or free the name. */</span></div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *</div>
+<div class="line"><a name="l00525"></a><span class="lineno"><a class="line" href="stream_8h.html#adee0ee9101dc08d3db47eb970a958fa9">  525</a></span>&#160;<a class="code" href="stream_8c.html#ab0a03a7347a7150057a280e940e8d12a">pstream_get_name</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>)</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;{</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordflow">return</span> pstream-&gt;<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;}</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;<span class="comment">/* Closes &#39;pstream&#39;. */</span></div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00532"></a><span class="lineno"><a class="line" href="stream_8h.html#a45bcf94b6f027b59e1a8d56ef653b2df">  532</a></span>&#160;<a class="code" href="stream_8c.html#acf7a7101bf12dc534600d727bf04f22b">pstream_close</a>(<span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>)</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;{</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="keywordflow">if</span> (pstream != NULL) {</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        <span class="keywordtype">char</span> *name = pstream-&gt;<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        (pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#ac5d0f7f77eb92f2e1d0062a7f4159318">close</a>)(pstream);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        free(name);</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    }</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;}</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;<span class="comment">/* Tries to accept a new connection on &#39;pstream&#39;.  If successful, stores the</span></div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;<span class="comment"> * new connection in &#39;*new_stream&#39; and returns 0.  Otherwise, returns a</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;<span class="comment"> * positive errno value.</span></div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<span class="comment"> * pstream_accept() will not block waiting for a connection.  If no connection</span></div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;<span class="comment"> * is ready to be accepted, it returns EAGAIN immediately. */</span></div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00548"></a><span class="lineno"><a class="line" href="stream_8h.html#a9f9abde8f911b5ab43b66ac8d3278626">  548</a></span>&#160;<a class="code" href="stream_8c.html#a3add0a68fcfbe13e261435f264e3fd69">pstream_accept</a>(<span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>, <span class="keyword">struct</span> stream **new_stream)</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;{</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keywordtype">int</span> retval = (pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#ad91205b5bdb399e5b11a515fe1b15d0a">accept</a>)(pstream, new_stream);</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordflow">if</span> (retval) {</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        *new_stream = NULL;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;        <a class="code" href="util_8h.html#ac236d3d8f33428ab822cc4e277a451c8">ovs_assert</a>((*new_stream)-&gt;state != <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;                   || (*new_stream)-&gt;class-&gt;connect);</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    }</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;}</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;<span class="comment">/* Tries to accept a new connection on &#39;pstream&#39;.  If successful, stores the</span></div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="comment"> * new connection in &#39;*new_stream&#39; and returns 0.  Otherwise, returns a</span></div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;<span class="comment"> * positive errno value.</span></div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;<span class="comment"> * pstream_accept_block() blocks until a connection is ready or until an error</span></div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;<span class="comment"> * occurs.  It will not return EAGAIN. */</span></div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;<span class="comment">/*int</span></div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="comment">pstream_accept_block(struct pstream *pstream, struct stream **new_stream)</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="comment">    int error;</span></div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;<span class="comment">    while ((error = pstream_accept(pstream, new_stream)) == EAGAIN) {</span></div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="comment">        pstream_wait(pstream);</span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="comment">        poll_block();</span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;<span class="comment">    if (error) {</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="comment">        *new_stream = NULL;</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="comment">    return error;</span></div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="comment">}*/</span></div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno"><a class="line" href="stream_8h.html#a2df8c46d21a6bd7d249a1187a3dcb505">  582</a></span>&#160;<a class="code" href="stream_8c.html#a6985eff1d29f61b9bc53822c45aa1fb6">pstream_wait</a>(<span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>)</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;{</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    (pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#a23d8bd7a16304c0636c7014fc5586935">wait</a>)(pstream);</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;}</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00588"></a><span class="lineno"><a class="line" href="stream_8h.html#aa1ed00e35790e50bf5c0fca749655ca5">  588</a></span>&#160;<a class="code" href="stream_8c.html#afb86342ba54e013e4ec9db5f79a4d32c">pstream_set_dscp</a>(<span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>, uint8_t dscp)</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;{</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    <span class="keywordflow">if</span> (pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#ad4ebf34fbb642f7859540c56de05c5b9">set_dscp</a>) {</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        <span class="keywordflow">return</span> pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;<a class="code" href="structpstream__class.html#ad4ebf34fbb642f7859540c56de05c5b9">set_dscp</a>(pstream, dscp);</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    }</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;}</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;<span class="comment">/* Returns the transport port on which &#39;pstream&#39; is listening, or 0 if the</span></div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;<span class="comment"> * concept doesn&#39;t apply. */</span></div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;<a class="code" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a></div>
+<div class="line"><a name="l00599"></a><span class="lineno"><a class="line" href="stream_8h.html#aa750b360dc30688910cfbc88343ad79d">  599</a></span>&#160;<a class="code" href="stream_8c.html#adeb17736dba3efe6cf866015efd8d1fe">pstream_get_bound_port</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>)</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;{</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    <span class="keywordflow">return</span> pstream-&gt;<a class="code" href="structpstream.html#a73487c1e329175732cd946bf4ddba3f0">bound_port</a>;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;}</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;<span class="comment">/* Initializes &#39;stream&#39; as a new stream named &#39;name&#39;, implemented via &#39;class&#39;.</span></div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;<span class="comment"> * The initial connection status, supplied as &#39;connect_status&#39;, is interpreted</span></div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;<span class="comment"> * as follows:</span></div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;<span class="comment"> *      - 0: &#39;stream&#39; is connected.  Its &#39;send&#39; and &#39;recv&#39; functions may be</span></div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;<span class="comment"> *        called in the normal fashion.</span></div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;<span class="comment"> *      - EAGAIN: &#39;stream&#39; is trying to complete a connection.  Its &#39;connect&#39;</span></div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;<span class="comment"> *        function should be called to complete the connection.</span></div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;<span class="comment"> *      - Other positive errno values indicate that the connection failed with</span></div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;<span class="comment"> *        the specified error.</span></div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;<span class="comment"> * After calling this function, stream_close() must be used to destroy</span></div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;<span class="comment"> * &#39;stream&#39;, otherwise resources will be leaked.</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;<span class="comment"> * The caller retains ownership of &#39;name&#39;. */</span></div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00622"></a><span class="lineno"><a class="line" href="stream_8c.html#abb86788316c67caa7a93b81068a4c65b">  622</a></span>&#160;<a class="code" href="stream_8c.html#abb86788316c67caa7a93b81068a4c65b">stream_init</a>(<span class="keyword">struct</span> stream *stream, <span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structstream__class.html">stream_class</a> *<span class="keyword">class</span>,</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;            <span class="keywordtype">int</span> connect_status, <span class="keyword">const</span> <span class="keywordtype">char</span> *name)</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;{</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    memset(stream, 0, <span class="keyword">sizeof</span> *stream);</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">class</a> = <span class="keyword">class</span>;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a> = (connect_status == EAGAIN ? <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a></div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                    : !connect_status ? <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                    : <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a>);</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a> = connect_status;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a> = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(name);</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <a class="code" href="util_8h.html#ac236d3d8f33428ab822cc4e277a451c8">ovs_assert</a>(stream-&gt;<a class="code" href="structstream.html#a89f234133d3efe315836311cbf21c64b">state</a> != <a class="code" href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a> || <a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a>-&gt;connect);</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;}</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00636"></a><span class="lineno"><a class="line" href="stream_8c.html#a0dd4b94929e3c7fe92ba2ba1533eccd6">  636</a></span>&#160;<a class="code" href="stream_8c.html#a0dd4b94929e3c7fe92ba2ba1533eccd6">stream_set_remote_ip</a>(<span class="keyword">struct</span> stream *stream, <a class="code" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a> ip)</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;{</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a7de479379b012fcc18e00d2e02862dd0">remote_ip</a> = ip;</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;}</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00642"></a><span class="lineno"><a class="line" href="stream_8c.html#a466506ce29687af24e4194ba652e7326">  642</a></span>&#160;<a class="code" href="stream_8c.html#a466506ce29687af24e4194ba652e7326">stream_set_remote_port</a>(<span class="keyword">struct</span> stream *stream, <a class="code" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a> port)</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;{</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    stream-&gt;<a class="code" href="structstream.html#adc58c53a4e9f649c72b6593d2c4d4cb9">remote_port</a> = port;</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;}</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00648"></a><span class="lineno"><a class="line" href="stream_8c.html#a1071fe31ece96dda6d46ff61937ccd5a">  648</a></span>&#160;<a class="code" href="stream_8c.html#a1071fe31ece96dda6d46ff61937ccd5a">stream_set_local_ip</a>(<span class="keyword">struct</span> stream *stream, <a class="code" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a> ip)</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;{</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a1a34864d0fe93dff58b24039c1d0f6a0">local_ip</a> = ip;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;}</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00654"></a><span class="lineno"><a class="line" href="stream_8c.html#a4d6815af50939a5500aedfc7c3261e6e">  654</a></span>&#160;<a class="code" href="stream_8c.html#a4d6815af50939a5500aedfc7c3261e6e">stream_set_local_port</a>(<span class="keyword">struct</span> stream *stream, <a class="code" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a> port)</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;{</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    stream-&gt;<a class="code" href="structstream.html#a20a428979ced183e2eeb7f347a679472">local_port</a> = port;</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;}</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno"><a class="line" href="stream_8c.html#a1b0cbf9c048dd0f51b9eb601f0ee8f64">  660</a></span>&#160;<a class="code" href="stream_8c.html#a1b0cbf9c048dd0f51b9eb601f0ee8f64">pstream_init</a>(<span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>, <span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structpstream__class.html">pstream_class</a> *<span class="keyword">class</span>,</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> *name)</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;{</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    memset(pstream, 0, <span class="keyword">sizeof</span> *pstream);</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    pstream-&gt;<a class="code" href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">class</a> = <span class="keyword">class</span>;</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    pstream-&gt;<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a> = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(name);</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;}</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00669"></a><span class="lineno"><a class="line" href="stream_8c.html#a4c1dfe6623b0f8bc385a698ac711b6ed">  669</a></span>&#160;<a class="code" href="stream_8c.html#a4c1dfe6623b0f8bc385a698ac711b6ed">pstream_set_bound_port</a>(<span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> *<a class="code" href="structpstream.html">pstream</a>, <a class="code" href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a> port)</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;{</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    pstream-&gt;<a class="code" href="structpstream.html#a73487c1e329175732cd946bf4ddba3f0">bound_port</a> = port;</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;}</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="stream_8c.html#a764e66d235c49d9e267a0c460a99126a">strtok_r</a>(<span class="keywordtype">char</span>*,<span class="keywordtype">char</span> *,<span class="keywordtype">char</span> **);</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;count_fields(<span class="keyword">const</span> <span class="keywordtype">char</span> *s_)</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;{</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    <span class="keywordtype">char</span> *s, *field, *save_ptr;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    <span class="keywordtype">int</span> n = 0;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    save_ptr = NULL;</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    s = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(s_);</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keywordflow">for</span> (field = (<span class="keywordtype">char</span> *)<a class="code" href="stream_8c.html#a764e66d235c49d9e267a0c460a99126a">strtok_r</a>(s, <span class="stringliteral">&quot;:&quot;</span>, &amp;save_ptr); field != NULL;</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;         field = (<span class="keywordtype">char</span> *)<a class="code" href="stream_8c.html#a764e66d235c49d9e267a0c460a99126a">strtok_r</a>(NULL, <span class="stringliteral">&quot;:&quot;</span>, &amp;save_ptr)) {</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        n++;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    }</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    free(s);</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="keywordflow">return</span> n;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;}</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;<span class="comment">/* Like stream_open(), but for tcp streams the port defaults to</span></div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="comment"> * &#39;default_tcp_port&#39; if no port number is given and for SSL streams the port</span></div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<span class="comment"> * defaults to &#39;default_ssl_port&#39; if no port number is given. */</span></div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00696"></a><span class="lineno"><a class="line" href="stream_8h.html#a38c5d7a0a63147bfb60a65ec8a9680d8">  696</a></span>&#160;<a class="code" href="stream_8c.html#a1d3524ece63600dc65a7874a5eac223a">stream_open_with_default_ports</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name_,</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;                               uint16_t default_tcp_port,</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;                               uint16_t default_ssl_port,</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;                               <span class="keyword">struct</span> stream **streamp,</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;                               uint8_t dscp)</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;{</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keywordtype">int</span> error;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    <span class="keywordflow">if</span> (!strncmp(name_, <span class="stringliteral">&quot;tcp:&quot;</span>, 4) &amp;&amp; count_fields(name_) &lt; 3) {</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        name = <a class="code" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a>(<span class="stringliteral">&quot;%s:%d&quot;</span>, name_, default_tcp_port);</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strncmp(name_, <span class="stringliteral">&quot;ssl:&quot;</span>, 4) &amp;&amp; count_fields(name_) &lt; 3) {</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        name = <a class="code" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a>(<span class="stringliteral">&quot;%s:%d&quot;</span>, name_, default_ssl_port);</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        name = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(name_);</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    }</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    error = <a class="code" href="stream_8c.html#ab62685a321134f86fbe4c1d4b3c87203">stream_open</a>(name, streamp, dscp);</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    free(name);</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;}</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="comment">/* Like pstream_open(), but for ptcp streams the port defaults to</span></div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="comment"> * &#39;default_ptcp_port&#39; if no port number is given and for passive SSL streams</span></div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="comment"> * the port defaults to &#39;default_pssl_port&#39; if no port number is given. */</span></div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00722"></a><span class="lineno"><a class="line" href="stream_8h.html#aac9477f06d81d13367417fff4c5472cb">  722</a></span>&#160;<a class="code" href="stream_8c.html#ad49937cac4a4c2025f34a332936afc07">pstream_open_with_default_ports</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name_,</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;                                uint16_t default_ptcp_port,</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;                                uint16_t default_pssl_port,</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                                <span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> **pstreamp,</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                                uint8_t dscp)</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;{</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structpstream.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="keywordtype">int</span> error;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <span class="keywordflow">if</span> (!strncmp(name_, <span class="stringliteral">&quot;ptcp:&quot;</span>, 5) &amp;&amp; count_fields(name_) &lt; 2) {</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        name = <a class="code" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a>(<span class="stringliteral">&quot;%s%d&quot;</span>, name_, default_ptcp_port);</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strncmp(name_, <span class="stringliteral">&quot;pssl:&quot;</span>, 5) &amp;&amp; count_fields(name_) &lt; 2) {</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        name = <a class="code" href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a>(<span class="stringliteral">&quot;%s%d&quot;</span>, name_, default_pssl_port);</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        name = <a class="code" href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a>(name_);</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    }</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    error = <a class="code" href="stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e">pstream_open</a>(name, pstreamp, dscp);</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    free(name);</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;}</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="comment"> * This function extracts IP address and port from the target string.</span></div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;<span class="comment"> *     - On success, function returns true and fills *sin structure with port</span></div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;<span class="comment"> *       and IP address. If port was absent in target string then it will use</span></div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="comment"> *       corresponding default port value.</span></div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="comment"> *     - On error, function returns false and *sin contains garbage.</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;<span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00753"></a><span class="lineno"><a class="line" href="stream_8h.html#a1c9ea7837f4f79ecd79f793fd07728a9">  753</a></span>&#160;<a class="code" href="stream_8c.html#a1c9ea7837f4f79ecd79f793fd07728a9">stream_parse_target_with_default_ports</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *target,</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                                       uint16_t default_tcp_port,</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                                       uint16_t default_ssl_port,</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                                       <span class="keyword">struct</span> sockaddr_in *sin)</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;{</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    <span class="keywordflow">return</span> (!strncmp(target, <span class="stringliteral">&quot;tcp:&quot;</span>, 4)</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;             &amp;&amp; <a class="code" href="socket-util_8c.html#ab3e6aa61794fdcedb26c4ad22f3d910a">inet_parse_active</a>(target + 4, default_tcp_port, sin)) ||</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            (!strncmp(target, <span class="stringliteral">&quot;ssl:&quot;</span>, 4)</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;             &amp;&amp; <a class="code" href="socket-util_8c.html#ab3e6aa61794fdcedb26c4ad22f3d910a">inet_parse_active</a>(target + 4, default_ssl_port, sin));</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;}</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="comment">/* Attempts to guess the content type of a stream whose first few bytes were</span></div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="comment"> * the &#39;size&#39; bytes of &#39;data&#39;. */</span></div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="comment">/*static enum stream_content_type</span></div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="comment">stream_guess_content(const uint8_t *data, ssize_t size)</span></div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;<span class="comment">    if (size &gt;= 2) {</span></div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;<span class="comment">#define PAIR(A, B) (((A) &lt;&lt; 8) | (B))</span></div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;<span class="comment">        switch (PAIR(data[0], data[1])) {</span></div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;<span class="comment">        case PAIR(0x16, 0x03):  </span></div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;<span class="comment">            return STREAM_SSL;</span></div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;<span class="comment">        case PAIR(&#39;{&#39;, &#39;&quot;&#39;):</span></div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;<span class="comment">            return STREAM_JSONRPC;</span></div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;<span class="comment">    return STREAM_UNKNOWN;</span></div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;<span class="comment">}*/</span></div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;<span class="comment">/* Returns a string represenation of &#39;type&#39;. */</span></div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;<span class="comment">/*static const char *</span></div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;<span class="comment">stream_content_type_to_string(enum stream_content_type type)</span></div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;<span class="comment">    switch (type) {</span></div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;<span class="comment">    case STREAM_UNKNOWN:</span></div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;<span class="comment">    default:</span></div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;<span class="comment">        return &quot;unknown&quot;;</span></div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;<span class="comment">    case STREAM_JSONRPC:</span></div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;<span class="comment">        return &quot;JSON-RPC&quot;;</span></div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;<span class="comment">    case STREAM_OPENFLOW:</span></div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;<span class="comment">        return &quot;OpenFlow&quot;;</span></div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<span class="comment">    case STREAM_SSL:</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;<span class="comment">        return &quot;SSL&quot;;</span></div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="comment">}*/</span></div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="comment">/* Attempts to guess the content type of a stream whose first few bytes were</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="comment"> * the &#39;size&#39; bytes of &#39;data&#39;.  If this is done successfully, and the guessed</span></div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="comment"> * content type is other than &#39;expected_type&#39;, then log a message in vlog</span></div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="comment"> * module &#39;module&#39;, naming &#39;stream_name&#39; as the source, explaining what</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="comment"> * content was expected and what was actually received. */</span></div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;<span class="comment">void</span></div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;<span class="comment">stream_report_content(const void *data, ssize_t size,</span></div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;<span class="comment">                      enum stream_content_type expected_type,</span></div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;<span class="comment">                      struct vlog_module *module, const char *stream_name)</span></div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;<span class="comment">    static struct vlog_rate_limit rl = VLOG_RATE_LIMIT_INIT(5, 5);</span></div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;<span class="comment">    enum stream_content_type actual_type;</span></div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;<span class="comment">    actual_type = stream_guess_content(data, size);</span></div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;<span class="comment">    if (actual_type != expected_type &amp;&amp; actual_type != STREAM_UNKNOWN) {</span></div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;<span class="comment">        vlog_rate_limit(module, VLL_WARN, &amp;rl,</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;<span class="comment">                        &quot;%s: received %s data on %s channel&quot;,</span></div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;<span class="comment">                        stream_name,</span></div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;<span class="comment">                        stream_content_type_to_string(actual_type),</span></div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;<span class="comment">                        stream_content_type_to_string(expected_type));</span></div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;<span class="comment">}*/</span></div>
+<div class="ttc" id="util_8h_html_ac236d3d8f33428ab822cc4e277a451c8"><div class="ttname"><a href="util_8h.html#ac236d3d8f33428ab822cc4e277a451c8">ovs_assert</a></div><div class="ttdeci">#define ovs_assert(CONDITION)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00072">util.h:72</a></div></div>
+<div class="ttc" id="socket-util_8c_html_ab3e6aa61794fdcedb26c4ad22f3d910a"><div class="ttname"><a href="socket-util_8c.html#ab3e6aa61794fdcedb26c4ad22f3d910a">inet_parse_active</a></div><div class="ttdeci">bool inet_parse_active(const char *target_, uint16_t default_port, struct sockaddr_in *sinp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00520">socket-util.c:520</a></div></div>
+<div class="ttc" id="types_8h_html_ad44edc91c129a56ffccf6e3b13b7a6e8"><div class="ttname"><a href="types_8h.html#ad44edc91c129a56ffccf6e3b13b7a6e8">ovs_be16</a></div><div class="ttdeci">__be16 ovs_be16</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00038">types.h:38</a></div></div>
+<div class="ttc" id="stream_8c_html_a1071fe31ece96dda6d46ff61937ccd5a"><div class="ttname"><a href="stream_8c.html#a1071fe31ece96dda6d46ff61937ccd5a">stream_set_local_ip</a></div><div class="ttdeci">void stream_set_local_ip(struct stream *stream, ovs_be32 ip)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00648">stream.c:648</a></div></div>
+<div class="ttc" id="stream_8c_html_a8da7d7c3d9a573ae9cf1dab1be38e623"><div class="ttname"><a href="stream_8c.html#a8da7d7c3d9a573ae9cf1dab1be38e623">stream_close</a></div><div class="ttdeci">void stream_close(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00236">stream.c:236</a></div></div>
+<div class="ttc" id="structpstream__class_html_a3aa32893937115b46850547f0b6ad391"><div class="ttname"><a href="structpstream__class.html#a3aa32893937115b46850547f0b6ad391">pstream_class::needs_probes</a></div><div class="ttdeci">bool needs_probes</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00050">stream-provider.h:50</a></div></div>
+<div class="ttc" id="structstream__class_html_ac1c7b976b8dd809f26ab54b0fec08701"><div class="ttname"><a href="structstream__class.html#ac1c7b976b8dd809f26ab54b0fec08701">stream_class::run</a></div><div class="ttdeci">void(* run)(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00034">stream-provider.h:34</a></div></div>
+<div class="ttc" id="stream_8c_html_a0dd4b94929e3c7fe92ba2ba1533eccd6"><div class="ttname"><a href="stream_8c.html#a0dd4b94929e3c7fe92ba2ba1533eccd6">stream_set_remote_ip</a></div><div class="ttdeci">void stream_set_remote_ip(struct stream *stream, ovs_be32 ip)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00636">stream.c:636</a></div></div>
+<div class="ttc" id="stream_8c_html_aa7f64ecaa7cde96ecc6f7bc491f5b83f"><div class="ttname"><a href="stream_8c.html#aa7f64ecaa7cde96ecc6f7bc491f5b83f">stream_connect</a></div><div class="ttdeci">int stream_connect(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00303">stream.c:303</a></div></div>
+<div class="ttc" id="stream_8c_html_a1c9ea7837f4f79ecd79f793fd07728a9"><div class="ttname"><a href="stream_8c.html#a1c9ea7837f4f79ecd79f793fd07728a9">stream_parse_target_with_default_ports</a></div><div class="ttdeci">bool stream_parse_target_with_default_ports(const char *target, uint16_t default_tcp_port, uint16_t default_ssl_port, struct sockaddr_in *sin)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00753">stream.c:753</a></div></div>
+<div class="ttc" id="stream_8c_html_a1b0cbf9c048dd0f51b9eb601f0ee8f64"><div class="ttname"><a href="stream_8c.html#a1b0cbf9c048dd0f51b9eb601f0ee8f64">pstream_init</a></div><div class="ttdeci">void pstream_init(struct pstream *pstream, const struct pstream_class *class, const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00660">stream.c:660</a></div></div>
+<div class="ttc" id="stream_8c_html_a4d6815af50939a5500aedfc7c3261e6e"><div class="ttname"><a href="stream_8c.html#a4d6815af50939a5500aedfc7c3261e6e">stream_set_local_port</a></div><div class="ttdeci">void stream_set_local_port(struct stream *stream, ovs_be16 port)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00654">stream.c:654</a></div></div>
+<div class="ttc" id="compiler_8h_html_a7bfc1f0481145b9308b2e58e84e8dacb"><div class="ttname"><a href="compiler_8h.html#a7bfc1f0481145b9308b2e58e84e8dacb">OVS_UNUSED</a></div><div class="ttdeci">#define OVS_UNUSED</div><div class="ttdef"><b>Definition:</b> <a href="compiler_8h_source.html#l00040">compiler.h:40</a></div></div>
+<div class="ttc" id="stream_8c_html_ad49937cac4a4c2025f34a332936afc07"><div class="ttname"><a href="stream_8c.html#ad49937cac4a4c2025f34a332936afc07">pstream_open_with_default_ports</a></div><div class="ttdeci">int pstream_open_with_default_ports(const char *name_, uint16_t default_ptcp_port, uint16_t default_pssl_port, struct pstream **pstreamp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00722">stream.c:722</a></div></div>
+<div class="ttc" id="structstream_html_a20a428979ced183e2eeb7f347a679472"><div class="ttname"><a href="structstream.html#a20a428979ced183e2eeb7f347a679472">stream::local_port</a></div><div class="ttdeci">ovs_be16 local_port</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00014">stream-provider.h:14</a></div></div>
+<div class="ttc" id="stream-provider_8h_html"><div class="ttname"><a href="stream-provider_8h.html">stream-provider.h</a></div></div>
+<div class="ttc" id="stream_8c_html_a54b3ba44b0dbb81bcdb344f52471f553"><div class="ttname"><a href="stream_8c.html#a54b3ba44b0dbb81bcdb344f52471f553">stream_usage</a></div><div class="ttdeci">void stream_usage(const char *name, bool active, bool passive, bool bootstrap OVS_UNUSED)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00078">stream.c:78</a></div></div>
+<div class="ttc" id="structpstream__class_html"><div class="ttname"><a href="structpstream__class.html">pstream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00048">stream-provider.h:48</a></div></div>
+<div class="ttc" id="structpstream_html_a73487c1e329175732cd946bf4ddba3f0"><div class="ttname"><a href="structpstream.html#a73487c1e329175732cd946bf4ddba3f0">pstream::bound_port</a></div><div class="ttdeci">ovs_be16 bound_port</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00042">stream-provider.h:42</a></div></div>
+<div class="ttc" id="structpstream__class_html_ad4ebf34fbb642f7859540c56de05c5b9"><div class="ttname"><a href="structpstream__class.html#ad4ebf34fbb642f7859540c56de05c5b9">pstream_class::set_dscp</a></div><div class="ttdeci">int(* set_dscp)(struct pstream *pstream, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00056">stream-provider.h:56</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6fa"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6fa">stream_state</a></div><div class="ttdeci">stream_state</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00015">stream.c:15</a></div></div>
+<div class="ttc" id="structstream__class_html_adb97b26029a3ee20d5c7f84d8f0c25a3"><div class="ttname"><a href="structstream__class.html#adb97b26029a3ee20d5c7f84d8f0c25a3">stream_class::close</a></div><div class="ttdeci">void(* close)(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00030">stream-provider.h:30</a></div></div>
+<div class="ttc" id="stream-provider_8h_html_a80fc2a3eec94fabf8e97d95782b43ecb"><div class="ttname"><a href="stream-provider_8h.html#a80fc2a3eec94fabf8e97d95782b43ecb">tcp_stream_class</a></div><div class="ttdeci">const struct stream_class tcp_stream_class</div><div class="ttdef"><b>Definition:</b> <a href="stream-tcp_8c_source.html#l00091">stream-tcp.c:91</a></div></div>
+<div class="ttc" id="structpstream_html_a2cf0ec16f5bae19354fd665a2502dbcc"><div class="ttname"><a href="structpstream.html#a2cf0ec16f5bae19354fd665a2502dbcc">pstream::class</a></div><div class="ttdeci">const struct pstream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00040">stream-provider.h:40</a></div></div>
+<div class="ttc" id="stream_8c_html_a6dc351b538b82c9934713b8fd72dc617"><div class="ttname"><a href="stream_8c.html#a6dc351b538b82c9934713b8fd72dc617">stream_get_local_port</a></div><div class="ttdeci">ovs_be16 stream_get_local_port(const struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00280">stream.c:280</a></div></div>
+<div class="ttc" id="structstream__class_html_a485adc33703cabc470efe32f31bed2a6"><div class="ttname"><a href="structstream__class.html#a485adc33703cabc470efe32f31bed2a6">stream_class::run_wait</a></div><div class="ttdeci">void(* run_wait)(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00035">stream-provider.h:35</a></div></div>
+<div class="ttc" id="stream_8c_html_a44de7275c08f501f83a96e07d8900c86"><div class="ttname"><a href="stream_8c.html#a44de7275c08f501f83a96e07d8900c86">stream_send</a></div><div class="ttdeci">int stream_send(struct stream *stream, const void *buffer, size_t n)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00358">stream.c:358</a></div></div>
+<div class="ttc" id="stream_8c_html_a6985eff1d29f61b9bc53822c45aa1fb6"><div class="ttname"><a href="stream_8c.html#a6985eff1d29f61b9bc53822c45aa1fb6">pstream_wait</a></div><div class="ttdeci">void pstream_wait(struct pstream *pstream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00582">stream.c:582</a></div></div>
+<div class="ttc" id="util_8h_html_ad24957f92985d579e883362781d19b8e"><div class="ttname"><a href="util_8h.html#ad24957f92985d579e883362781d19b8e">ARRAY_SIZE</a></div><div class="ttdeci">#define ARRAY_SIZE(ARRAY)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00091">util.h:91</a></div></div>
+<div class="ttc" id="stream_8c_html_adeb17736dba3efe6cf866015efd8d1fe"><div class="ttname"><a href="stream_8c.html#adeb17736dba3efe6cf866015efd8d1fe">pstream_get_bound_port</a></div><div class="ttdeci">ovs_be16 pstream_get_bound_port(const struct pstream *pstream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00599">stream.c:599</a></div></div>
+<div class="ttc" id="stream_8c_html_a5ce77dd1f56bc192c6019e4fddadfddf"><div class="ttname"><a href="stream_8c.html#a5ce77dd1f56bc192c6019e4fddadfddf">stream_get_name</a></div><div class="ttdeci">const char * stream_get_name(const struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00248">stream.c:248</a></div></div>
+<div class="ttc" id="util_8c_html_a31c8e4cd784d16e28687ee2f10b80028"><div class="ttname"><a href="util_8c.html#a31c8e4cd784d16e28687ee2f10b80028">xstrdup</a></div><div class="ttdeci">char * xstrdup(const char *s)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00107">util.c:107</a></div></div>
+<div class="ttc" id="structstream__class_html_ae018363b6200b3062978b59efd52d78b"><div class="ttname"><a href="structstream__class.html#ae018363b6200b3062978b59efd52d78b">stream_class::connect</a></div><div class="ttdeci">int(* connect)(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00031">stream-provider.h:31</a></div></div>
+<div class="ttc" id="structpstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structpstream.html#a5ac083a645d964373f022d03df4849c8">pstream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00041">stream-provider.h:41</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa0e8902755bb5bc2c9af653bf97ea5b3b">SCS_CONNECTED</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00017">stream.c:17</a></div></div>
+<div class="ttc" id="structstream_html_adc58c53a4e9f649c72b6593d2c4d4cb9"><div class="ttname"><a href="structstream.html#adc58c53a4e9f649c72b6593d2c4d4cb9">stream::remote_port</a></div><div class="ttdeci">ovs_be16 remote_port</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00012">stream-provider.h:12</a></div></div>
+<div class="ttc" id="structpstream__class_html_ac5d0f7f77eb92f2e1d0062a7f4159318"><div class="ttname"><a href="structpstream__class.html#ac5d0f7f77eb92f2e1d0062a7f4159318">pstream_class::close</a></div><div class="ttdeci">void(* close)(struct pstream *pstream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00053">stream-provider.h:53</a></div></div>
+<div class="ttc" id="structstream__class_html"><div class="ttname"><a href="structstream__class.html">stream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00025">stream-provider.h:25</a></div></div>
+<div class="ttc" id="stream_8c_html_ab62685a321134f86fbe4c1d4b3c87203"><div class="ttname"><a href="stream_8c.html#ab62685a321134f86fbe4c1d4b3c87203">stream_open</a></div><div class="ttdeci">int stream_open(const char *name, struct stream **streamp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00167">stream.c:167</a></div></div>
+<div class="ttc" id="structstream__class_html_a807d938cd3b0883b1896624728353bd0"><div class="ttname"><a href="structstream__class.html#a807d938cd3b0883b1896624728353bd0">stream_class::recv</a></div><div class="ttdeci">ssize_t(* recv)(struct stream *stream, void *buffer, size_t n)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00032">stream-provider.h:32</a></div></div>
+<div class="ttc" id="structstream_html_a7de479379b012fcc18e00d2e02862dd0"><div class="ttname"><a href="structstream.html#a7de479379b012fcc18e00d2e02862dd0">stream::remote_ip</a></div><div class="ttdeci">ovs_be32 remote_ip</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00011">stream-provider.h:11</a></div></div>
+<div class="ttc" id="stream_8c_html_add2c2e406c5dbf228d58d02dab9e1aa4"><div class="ttname"><a href="stream_8c.html#add2c2e406c5dbf228d58d02dab9e1aa4">VLOG_DEFINE_THIS_MODULE</a></div><div class="ttdeci">VLOG_DEFINE_THIS_MODULE(stream)</div></div>
+<div class="ttc" id="stream_8c_html_a1d3524ece63600dc65a7874a5eac223a"><div class="ttname"><a href="stream_8c.html#a1d3524ece63600dc65a7874a5eac223a">stream_open_with_default_ports</a></div><div class="ttdeci">int stream_open_with_default_ports(const char *name_, uint16_t default_tcp_port, uint16_t default_ssl_port, struct stream **streamp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00696">stream.c:696</a></div></div>
+<div class="ttc" id="stream_8c_html_a02d7c22a9637ba4dddca9cb235a3933d"><div class="ttname"><a href="stream_8c.html#a02d7c22a9637ba4dddca9cb235a3933d">stream_get_remote_port</a></div><div class="ttdeci">ovs_be16 stream_get_remote_port(const struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00264">stream.c:264</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faaec9c8cb98ee6f428424c976a788675cd">SCS_CONNECTING</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00016">stream.c:16</a></div></div>
+<div class="ttc" id="stream_8c_html_acf7a7101bf12dc534600d727bf04f22b"><div class="ttname"><a href="stream_8c.html#acf7a7101bf12dc534600d727bf04f22b">pstream_close</a></div><div class="ttdeci">void pstream_close(struct pstream *pstream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00532">stream.c:532</a></div></div>
+<div class="ttc" id="structstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structstream.html#a5ac083a645d964373f022d03df4849c8">stream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00015">stream-provider.h:15</a></div></div>
+<div class="ttc" id="structstream_html"><div class="ttname"><a href="structstream.html">stream</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00007">stream-provider.h:7</a></div></div>
+<div class="ttc" id="structstream__class_html_a2c7418fe16ca68a1e1f7616c18019a99"><div class="ttname"><a href="structstream__class.html#a2c7418fe16ca68a1e1f7616c18019a99">stream_class::send</a></div><div class="ttdeci">ssize_t(* send)(struct stream *stream, const void *buffer, size_t n)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00033">stream-provider.h:33</a></div></div>
+<div class="ttc" id="stream_8c_html_abb86788316c67caa7a93b81068a4c65b"><div class="ttname"><a href="stream_8c.html#abb86788316c67caa7a93b81068a4c65b">stream_init</a></div><div class="ttdeci">void stream_init(struct stream *stream, const struct stream_class *class, int connect_status, const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00622">stream.c:622</a></div></div>
+<div class="ttc" id="stream_8c_html_a074bd2c3eb2bbfb9f7d7e5a352a318ca"><div class="ttname"><a href="stream_8c.html#a074bd2c3eb2bbfb9f7d7e5a352a318ca">stream_run_wait</a></div><div class="ttdeci">void stream_run_wait(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00379">stream.c:379</a></div></div>
+<div class="ttc" id="structstream_html_a1a34864d0fe93dff58b24039c1d0f6a0"><div class="ttname"><a href="structstream.html#a1a34864d0fe93dff58b24039c1d0f6a0">stream::local_ip</a></div><div class="ttdeci">ovs_be32 local_ip</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00013">stream-provider.h:13</a></div></div>
+<div class="ttc" id="util_8h_html_a6c2edf1e500e498b687567418bf4fef6"><div class="ttname"><a href="util_8h.html#a6c2edf1e500e498b687567418bf4fef6">NOT_REACHED</a></div><div class="ttdeci">#define NOT_REACHED()</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00138">util.h:138</a></div></div>
+<div class="ttc" id="stream_8c_html_a770dd41d56bcc91e0feb4e1f1cac95c4"><div class="ttname"><a href="stream_8c.html#a770dd41d56bcc91e0feb4e1f1cac95c4">pstream_verify_name</a></div><div class="ttdeci">int pstream_verify_name(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00457">stream.c:457</a></div></div>
+<div class="ttc" id="stream_8c_html_afb86342ba54e013e4ec9db5f79a4d32c"><div class="ttname"><a href="stream_8c.html#afb86342ba54e013e4ec9db5f79a4d32c">pstream_set_dscp</a></div><div class="ttdeci">int pstream_set_dscp(struct pstream *pstream, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00588">stream.c:588</a></div></div>
+<div class="ttc" id="stream_8c_html_a2c199b4ceb1f62c7372f36bb526f6a51"><div class="ttname"><a href="stream_8c.html#a2c199b4ceb1f62c7372f36bb526f6a51">stream_run</a></div><div class="ttdeci">void stream_run(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00369">stream.c:369</a></div></div>
+<div class="ttc" id="structpstream__class_html_ad91205b5bdb399e5b11a515fe1b15d0a"><div class="ttname"><a href="structpstream__class.html#ad91205b5bdb399e5b11a515fe1b15d0a">pstream_class::accept</a></div><div class="ttdeci">int(* accept)(struct pstream *pstream, struct stream **new_streamp)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00054">stream-provider.h:54</a></div></div>
+<div class="ttc" id="stream_8c_html_ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22"><div class="ttname"><a href="stream_8c.html#ae71ce4452d78bfb55e2c0727413bf6faa4719b2a182168fa4512a3ffd0d203f22">SCS_DISCONNECTED</a></div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00018">stream.c:18</a></div></div>
+<div class="ttc" id="structstream_html_a6d556998b64d0c2b2384e5d410b8172b"><div class="ttname"><a href="structstream.html#a6d556998b64d0c2b2384e5d410b8172b">stream::class</a></div><div class="ttdeci">const struct stream_class * class</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00008">stream-provider.h:8</a></div></div>
+<div class="ttc" id="structpstream__class_html_a8f8f80d37794cde9472343e4487ba3eb"><div class="ttname"><a href="structpstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">pstream_class::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00049">stream-provider.h:49</a></div></div>
+<div class="ttc" id="stream_8c_html_a59ec80e7710bee749736cc14f60ed6d5"><div class="ttname"><a href="stream_8c.html#a59ec80e7710bee749736cc14f60ed6d5">stream_verify_name</a></div><div class="ttdeci">int stream_verify_name(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00153">stream.c:153</a></div></div>
+<div class="ttc" id="stream_8c_html_a764e66d235c49d9e267a0c460a99126a"><div class="ttname"><a href="stream_8c.html#a764e66d235c49d9e267a0c460a99126a">strtok_r</a></div><div class="ttdeci">char * strtok_r(char *, char *, char **)</div></div>
+<div class="ttc" id="stream_8c_html_ab0a03a7347a7150057a280e940e8d12a"><div class="ttname"><a href="stream_8c.html#ab0a03a7347a7150057a280e940e8d12a">pstream_get_name</a></div><div class="ttdeci">const char * pstream_get_name(const struct pstream *pstream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00525">stream.c:525</a></div></div>
+<div class="ttc" id="structstream_html_a11614f44ef4d939bdd984953346a7572"><div class="ttname"><a href="structstream.html#a11614f44ef4d939bdd984953346a7572">stream::error</a></div><div class="ttdeci">int error</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00010">stream-provider.h:10</a></div></div>
+<div class="ttc" id="structstream__class_html_a3aa32893937115b46850547f0b6ad391"><div class="ttname"><a href="structstream__class.html#a3aa32893937115b46850547f0b6ad391">stream_class::needs_probes</a></div><div class="ttdeci">bool needs_probes</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00027">stream-provider.h:27</a></div></div>
+<div class="ttc" id="stream_8c_html_aab1aee73ff5cae04c0162ac46b759a5e"><div class="ttname"><a href="stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e">pstream_open</a></div><div class="ttdeci">int pstream_open(const char *name, struct pstream **pstreamp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00490">stream.c:490</a></div></div>
+<div class="ttc" id="stream_8c_html_a4c1dfe6623b0f8bc385a698ac711b6ed"><div class="ttname"><a href="stream_8c.html#a4c1dfe6623b0f8bc385a698ac711b6ed">pstream_set_bound_port</a></div><div class="ttdeci">void pstream_set_bound_port(struct pstream *pstream, ovs_be16 port)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00669">stream.c:669</a></div></div>
+<div class="ttc" id="stream_8c_html_ab840e79ab31df293a40306c26bc0da6c"><div class="ttname"><a href="stream_8c.html#ab840e79ab31df293a40306c26bc0da6c">stream_or_pstream_needs_probes</a></div><div class="ttdeci">int stream_or_pstream_needs_probes(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00468">stream.c:468</a></div></div>
+<div class="ttc" id="stream_8c_html_aecca5f1213665d85daed4e5e3254cc3f"><div class="ttname"><a href="stream_8c.html#aecca5f1213665d85daed4e5e3254cc3f">stream_recv</a></div><div class="ttdeci">int stream_recv(struct stream *stream, void *buffer, size_t n)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00340">stream.c:340</a></div></div>
+<div class="ttc" id="structpstream_html"><div class="ttname"><a href="structpstream.html">pstream</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00039">stream-provider.h:39</a></div></div>
+<div class="ttc" id="stream-provider_8h_html_aff04cc0675aed00c62cfedef8cd0d829"><div class="ttname"><a href="stream-provider_8h.html#aff04cc0675aed00c62cfedef8cd0d829">ptcp_pstream_class</a></div><div class="ttdeci">const struct pstream_class ptcp_pstream_class</div><div class="ttdef"><b>Definition:</b> <a href="stream-tcp_8c_source.html#l00150">stream-tcp.c:150</a></div></div>
+<div class="ttc" id="util_8c_html_af46c0ecf130aec0c5e6fb6c5d7131aac"><div class="ttname"><a href="util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac">xasprintf</a></div><div class="ttdeci">char * xasprintf(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00138">util.c:138</a></div></div>
+<div class="ttc" id="stream_8c_html_a10c0f72e02eb1be98d59521a246ce29c"><div class="ttname"><a href="stream_8c.html#a10c0f72e02eb1be98d59521a246ce29c">stream_get_local_ip</a></div><div class="ttdeci">ovs_be32 stream_get_local_ip(const struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00272">stream.c:272</a></div></div>
+<div class="ttc" id="types_8h_html_a319297c2a7ffb2b0a82c346886b638b1"><div class="ttname"><a href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a></div><div class="ttdeci">__be32 ovs_be32</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00039">types.h:39</a></div></div>
+<div class="ttc" id="structstream_html_a89f234133d3efe315836311cbf21c64b"><div class="ttname"><a href="structstream.html#a89f234133d3efe315836311cbf21c64b">stream::state</a></div><div class="ttdeci">int state</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00009">stream-provider.h:9</a></div></div>
+<div class="ttc" id="stream_8c_html_a3add0a68fcfbe13e261435f264e3fd69"><div class="ttname"><a href="stream_8c.html#a3add0a68fcfbe13e261435f264e3fd69">pstream_accept</a></div><div class="ttdeci">int pstream_accept(struct pstream *pstream, struct stream **new_stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00548">stream.c:548</a></div></div>
+<div class="ttc" id="structpstream__class_html_a23d8bd7a16304c0636c7014fc5586935"><div class="ttname"><a href="structpstream__class.html#a23d8bd7a16304c0636c7014fc5586935">pstream_class::wait</a></div><div class="ttdeci">void(* wait)(struct pstream *pstream)</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00055">stream-provider.h:55</a></div></div>
+<div class="ttc" id="stream_8c_html_adcfc5d66e2a475bed966e506f6c8e8b3"><div class="ttname"><a href="stream_8c.html#adcfc5d66e2a475bed966e506f6c8e8b3">stream_get_remote_ip</a></div><div class="ttdeci">ovs_be32 stream_get_remote_ip(const struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00256">stream.c:256</a></div></div>
+<div class="ttc" id="stream_8c_html_a466506ce29687af24e4194ba652e7326"><div class="ttname"><a href="stream_8c.html#a466506ce29687af24e4194ba652e7326">stream_set_remote_port</a></div><div class="ttdeci">void stream_set_remote_port(struct stream *stream, ovs_be16 port)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00642">stream.c:642</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6452c44390d2c89d0eb624a6a27a058b.html">stream-master</a></li><li class="navelem"><a class="el" href="dir_fa7fb7869eeec6843c02cdf31e3ab9ab.html">stream</a></li><li class="navelem"><a class="el" href="stream_8c.html">stream.c</a></li>
+    <li class="footer">生成于 2014年 一月 3日 星期五 10:42:09 , 为 Stream使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

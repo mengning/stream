@@ -1,0 +1,6 @@
+<map id="xasprintf" name="xasprintf">
+<area shape="rect" id="node2" href="$util_8c.html#aef59cc7b9c87654dd5d521adaf82a91a" title="xvasprintf" alt="" coords="136,33,227,63"/>
+<area shape="rect" id="node3" href="$util_8c.html#a0495b4aa0b2ea7e5dd10e976aa63e4d3" title="vsnprintf" alt="" coords="275,5,357,35"/>
+<area shape="rect" id="node4" href="$util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="279,59,353,90"/>
+<area shape="rect" id="node5" href="$util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="406,59,541,90"/>
+</map>

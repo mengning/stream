@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Stream: C:/Users/kang/Desktop/SSE/SDN/stream-master/stream/stream-tcp.c 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Stream
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('stream-tcp_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>宏定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">stream-tcp.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stream-tcp_8c.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2008, 2009, 2010, 2012, 2013 Nicira, Inc.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * You may obtain a copy of the License at:</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *     http://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * limitations under the License.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stream_8h.html">stream.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;netinet/tcp.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="socket-util_8h.html">socket-util.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stream-provider_8h.html">stream-provider.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stream-fd_8h.html">stream-fd.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="stream-tcp_8c.html#ade99cbafd24ac5b9d0c4972b8f5c95f3">   32</a></span>&#160;<span class="preprocessor">#define IP_FMT &quot;%&quot;PRIu32&quot;.%&quot;PRIu32&quot;.%&quot;PRIu32&quot;.%&quot;PRIu32</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="stream-tcp_8c.html#a6c011f69d8808bdd1c3a5914538a97f7">   33</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define IP_ARGS(ip)\</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">    ntohl(ip)&gt;&gt;24,\</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">    (ntohl(ip)&gt;&gt;16) &amp; 0Xff,\</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">    (ntohl(ip)&gt;&gt;8) &amp; 0Xff,\</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">    ntohl(ip)&gt;&gt;24 &amp; 0xff</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<a class="code" href="stream-tcp_8c.html#aee83844dd8f6393c517a1645b045facf">VLOG_DEFINE_THIS_MODULE</a>(stream_tcp);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/* Active TCP. */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;new_tcp_stream(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structpstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, <span class="keywordtype">int</span> fd, <span class="keywordtype">int</span> connect_status,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;               <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr_in *remote, <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> **streamp)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">struct </span>sockaddr_in local;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    socklen_t local_len = <span class="keyword">sizeof</span> local;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> on = 1;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> retval;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">/* Get the local IP and port information */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    retval = getsockname(fd, (<span class="keyword">struct</span> sockaddr *)&amp;local, &amp;local_len);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (retval) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        memset(&amp;local, 0, <span class="keyword">sizeof</span> local);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    retval = setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, &amp;on, <span class="keyword">sizeof</span> on);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (retval) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; <span class="comment">/*       VLOG_ERR(&quot;%s: setsockopt(TCP_NODELAY): %s&quot;, name, ovs_strerror(errno));*/</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        close(fd);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> errno;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    retval = <a class="code" href="stream-fd_8c.html#adbd47506dfee92ab3c7c1c5b8356a41f">new_fd_stream</a>(name, fd, connect_status, streamp);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (!retval) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">struct </span><a class="code" href="structstream.html">stream</a> *<a class="code" href="structstream.html">stream</a> = *streamp;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="stream-provider_8h.html#ae073f8051024f36fc3c8ed0a85f1e30e">stream_set_remote_ip</a>(stream, remote-&gt;sin_addr.s_addr);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="stream-provider_8h.html#a2f72b4e03bc21b214edbca7fd2ccb28c">stream_set_remote_port</a>(stream, remote-&gt;sin_port);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="stream-provider_8h.html#a9b33ce2f63e86d8954ed33b70e6d90fe">stream_set_local_ip</a>(stream, local.sin_addr.s_addr);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="stream-provider_8h.html#ac387d1c29810ca183f640fb3cc7911eb">stream_set_local_port</a>(stream, local.sin_port);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;tcp_open(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">char</span> *suffix, <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> **streamp, uint8_t dscp)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">struct </span>sockaddr_in sin;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> fd, error;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    error = <a class="code" href="socket-util_8c.html#aa35259cad745f684e95349ffca06f7b4">inet_open_active</a>(SOCK_STREAM, suffix, 0, &amp;sin, &amp;fd, dscp);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (fd &gt;= 0) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> new_tcp_stream(name, fd, error, &amp;sin, streamp);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="comment">/*      VLOG_ERR(&quot;%s: connect: %s&quot;, name, ovs_strerror(error)); */</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="stream-tcp_8c.html#a80fc2a3eec94fabf8e97d95782b43ecb">   91</a></span>&#160;<span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structstream__class.html">stream_class</a> <a class="code" href="stream-tcp_8c.html#a80fc2a3eec94fabf8e97d95782b43ecb">tcp_stream_class</a> = {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="stringliteral">&quot;tcp&quot;</span>,                      <span class="comment">/* name */</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">true</span>,                       <span class="comment">/* needs_probes */</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    tcp_open,                   <span class="comment">/* open */</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    NULL,                       <span class="comment">/* close */</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    NULL,                       <span class="comment">/* connect */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    NULL,                       <span class="comment">/* recv */</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    NULL,                       <span class="comment">/* send */</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    NULL,                       <span class="comment">/* run */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    NULL,                       <span class="comment">/* run_wait */</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    NULL,                       <span class="comment">/* wait */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">/* Passive TCP. */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> ptcp_accept(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr *sa, <span class="keywordtype">size_t</span> sa_len,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                       <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> **streamp);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;ptcp_open(<span class="keyword">const</span> <span class="keywordtype">char</span> *name <a class="code" href="compiler_8h.html#a7bfc1f0481145b9308b2e58e84e8dacb">OVS_UNUSED</a>, <span class="keywordtype">char</span> *suffix, <span class="keyword">struct</span> <a class="code" href="structpstream.html">pstream</a> **pstreamp,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          uint8_t dscp)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">struct </span>sockaddr_in sin;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">char</span> bound_name[128];</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> error;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">int</span> fd;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    fd = <a class="code" href="socket-util_8c.html#ae25f45e80886c3aafde62fec90b08e14">inet_open_passive</a>(SOCK_STREAM, suffix, -1, &amp;sin, dscp);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">if</span> (fd &lt; 0) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> -fd;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;       sprintf(bound_name, <span class="stringliteral">&quot;ptcp:%&quot;</span>PRIu16<span class="stringliteral">&quot;:&quot;</span><a class="code" href="stream-tcp_8c.html#ade99cbafd24ac5b9d0c4972b8f5c95f3">IP_FMT</a>,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    ntohs(sin.sin_port), <a class="code" href="stream-tcp_8c.html#a6c011f69d8808bdd1c3a5914538a97f7">IP_ARGS</a>(sin.sin_addr.s_addr));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    error = <a class="code" href="stream-fd_8c.html#a71d8bd3415259b6c497ad231ccbcfb65">new_fd_pstream</a>(bound_name, fd, ptcp_accept, <a class="code" href="socket-util_8c.html#a2c2ca7f031b6501e7f7fabca9c5bc6e9">set_dscp</a>, NULL,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                           pstreamp);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span> (!error) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="stream-provider_8h.html#a481658f2f274f9d100cfb0afb4dfc706">pstream_set_bound_port</a>(*pstreamp, sin.sin_port);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;ptcp_accept(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr *sa, <span class="keywordtype">size_t</span> sa_len,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keyword">struct</span> <a class="code" href="structstream.html">stream</a> **streamp)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span>sockaddr_in *sin = <a class="code" href="util_8h.html#a93666a3a971220347b61189d2e5552d6">ALIGNED_CAST</a>(<span class="keyword">const</span> <span class="keyword">struct</span> sockaddr_in *,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                                 sa);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">char</span> name[128];</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">if</span> (sa_len == <span class="keyword">sizeof</span>(<span class="keyword">struct</span> sockaddr_in) &amp;&amp; sin-&gt;sin_family == AF_INET) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        sprintf(name, <span class="stringliteral">&quot;tcp:&quot;</span>IP_FMT, <a class="code" href="stream-tcp_8c.html#a6c011f69d8808bdd1c3a5914538a97f7">IP_ARGS</a>(sin-&gt;sin_addr.s_addr));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        sprintf(strchr(name, <span class="charliteral">&#39;\0&#39;</span>), <span class="stringliteral">&quot;:%&quot;</span>PRIu16, ntohs(sin-&gt;sin_port));</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        strcpy(name, <span class="stringliteral">&quot;tcp&quot;</span>);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">return</span> new_tcp_stream(name, fd, 0, sin, streamp);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="stream-tcp_8c.html#aff04cc0675aed00c62cfedef8cd0d829">  150</a></span>&#160;<span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structpstream__class.html">pstream_class</a> <a class="code" href="stream-tcp_8c.html#aff04cc0675aed00c62cfedef8cd0d829">ptcp_pstream_class</a> = {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="stringliteral">&quot;ptcp&quot;</span>,</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    ptcp_open,</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    NULL,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    NULL,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    NULL,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    NULL,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;};</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="ttc" id="stream-provider_8h_html_a481658f2f274f9d100cfb0afb4dfc706"><div class="ttname"><a href="stream-provider_8h.html#a481658f2f274f9d100cfb0afb4dfc706">pstream_set_bound_port</a></div><div class="ttdeci">void pstream_set_bound_port(struct pstream *, ovs_be16 bound_port)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00669">stream.c:669</a></div></div>
+<div class="ttc" id="socket-util_8c_html_ae25f45e80886c3aafde62fec90b08e14"><div class="ttname"><a href="socket-util_8c.html#ae25f45e80886c3aafde62fec90b08e14">inet_open_passive</a></div><div class="ttdeci">int inet_open_passive(int style, const char *target, int default_port, struct sockaddr_in *sinp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00675">socket-util.c:675</a></div></div>
+<div class="ttc" id="util_8h_html_a93666a3a971220347b61189d2e5552d6"><div class="ttname"><a href="util_8h.html#a93666a3a971220347b61189d2e5552d6">ALIGNED_CAST</a></div><div class="ttdeci">#define ALIGNED_CAST(TYPE, ATTR)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00198">util.h:198</a></div></div>
+<div class="ttc" id="stream-provider_8h_html_ac387d1c29810ca183f640fb3cc7911eb"><div class="ttname"><a href="stream-provider_8h.html#ac387d1c29810ca183f640fb3cc7911eb">stream_set_local_port</a></div><div class="ttdeci">void stream_set_local_port(struct stream *, ovs_be16 local_port)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00654">stream.c:654</a></div></div>
+<div class="ttc" id="compiler_8h_html_a7bfc1f0481145b9308b2e58e84e8dacb"><div class="ttname"><a href="compiler_8h.html#a7bfc1f0481145b9308b2e58e84e8dacb">OVS_UNUSED</a></div><div class="ttdeci">#define OVS_UNUSED</div><div class="ttdef"><b>Definition:</b> <a href="compiler_8h_source.html#l00040">compiler.h:40</a></div></div>
+<div class="ttc" id="stream-provider_8h_html"><div class="ttname"><a href="stream-provider_8h.html">stream-provider.h</a></div></div>
+<div class="ttc" id="structpstream__class_html"><div class="ttname"><a href="structpstream__class.html">pstream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00048">stream-provider.h:48</a></div></div>
+<div class="ttc" id="stream-provider_8h_html_a2f72b4e03bc21b214edbca7fd2ccb28c"><div class="ttname"><a href="stream-provider_8h.html#a2f72b4e03bc21b214edbca7fd2ccb28c">stream_set_remote_port</a></div><div class="ttdeci">void stream_set_remote_port(struct stream *, ovs_be16 remote_port)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00642">stream.c:642</a></div></div>
+<div class="ttc" id="stream-fd_8c_html_adbd47506dfee92ab3c7c1c5b8356a41f"><div class="ttname"><a href="stream-fd_8c.html#adbd47506dfee92ab3c7c1c5b8356a41f">new_fd_stream</a></div><div class="ttdeci">int new_fd_stream(const char *name, int fd, int connect_status, struct stream **streamp)</div><div class="ttdef"><b>Definition:</b> <a href="stream-fd_8c_source.html#l00036">stream-fd.c:36</a></div></div>
+<div class="ttc" id="stream_8h_html"><div class="ttname"><a href="stream_8h.html">stream.h</a></div></div>
+<div class="ttc" id="stream-provider_8h_html_a9b33ce2f63e86d8954ed33b70e6d90fe"><div class="ttname"><a href="stream-provider_8h.html#a9b33ce2f63e86d8954ed33b70e6d90fe">stream_set_local_ip</a></div><div class="ttdeci">void stream_set_local_ip(struct stream *, ovs_be32 local_ip)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00648">stream.c:648</a></div></div>
+<div class="ttc" id="stream-tcp_8c_html_a80fc2a3eec94fabf8e97d95782b43ecb"><div class="ttname"><a href="stream-tcp_8c.html#a80fc2a3eec94fabf8e97d95782b43ecb">tcp_stream_class</a></div><div class="ttdeci">const struct stream_class tcp_stream_class</div><div class="ttdef"><b>Definition:</b> <a href="stream-tcp_8c_source.html#l00091">stream-tcp.c:91</a></div></div>
+<div class="ttc" id="structstream__class_html"><div class="ttname"><a href="structstream__class.html">stream_class</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00025">stream-provider.h:25</a></div></div>
+<div class="ttc" id="stream-tcp_8c_html_aee83844dd8f6393c517a1645b045facf"><div class="ttname"><a href="stream-tcp_8c.html#aee83844dd8f6393c517a1645b045facf">VLOG_DEFINE_THIS_MODULE</a></div><div class="ttdeci">VLOG_DEFINE_THIS_MODULE(stream_tcp)</div></div>
+<div class="ttc" id="stream-tcp_8c_html_ade99cbafd24ac5b9d0c4972b8f5c95f3"><div class="ttname"><a href="stream-tcp_8c.html#ade99cbafd24ac5b9d0c4972b8f5c95f3">IP_FMT</a></div><div class="ttdeci">#define IP_FMT</div><div class="ttdef"><b>Definition:</b> <a href="stream-tcp_8c_source.html#l00032">stream-tcp.c:32</a></div></div>
+<div class="ttc" id="stream-tcp_8c_html_aff04cc0675aed00c62cfedef8cd0d829"><div class="ttname"><a href="stream-tcp_8c.html#aff04cc0675aed00c62cfedef8cd0d829">ptcp_pstream_class</a></div><div class="ttdeci">const struct pstream_class ptcp_pstream_class</div><div class="ttdef"><b>Definition:</b> <a href="stream-tcp_8c_source.html#l00150">stream-tcp.c:150</a></div></div>
+<div class="ttc" id="stream-fd_8c_html_a71d8bd3415259b6c497ad231ccbcfb65"><div class="ttname"><a href="stream-fd_8c.html#a71d8bd3415259b6c497ad231ccbcfb65">new_fd_pstream</a></div><div class="ttdeci">int new_fd_pstream(const char *name, int fd, int(*accept_cb)(int fd, const struct sockaddr *sa, size_t sa_len, struct stream **streamp), int(*set_dscp_cb)(int fd, uint8_t dscp), char *unlink_path, struct pstream **pstreamp)</div><div class="ttdef"><b>Definition:</b> <a href="stream-fd_8c_source.html#l00125">stream-fd.c:125</a></div></div>
+<div class="ttc" id="structstream_html"><div class="ttname"><a href="structstream.html">stream</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00007">stream-provider.h:7</a></div></div>
+<div class="ttc" id="socket-util_8c_html_a2c2ca7f031b6501e7f7fabca9c5bc6e9"><div class="ttname"><a href="socket-util_8c.html#a2c2ca7f031b6501e7f7fabca9c5bc6e9">set_dscp</a></div><div class="ttdeci">int set_dscp(int fd, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00070">socket-util.c:70</a></div></div>
+<div class="ttc" id="stream-provider_8h_html_ae073f8051024f36fc3c8ed0a85f1e30e"><div class="ttname"><a href="stream-provider_8h.html#ae073f8051024f36fc3c8ed0a85f1e30e">stream_set_remote_ip</a></div><div class="ttdeci">void stream_set_remote_ip(struct stream *, ovs_be32 remote_ip)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00636">stream.c:636</a></div></div>
+<div class="ttc" id="socket-util_8h_html"><div class="ttname"><a href="socket-util_8h.html">socket-util.h</a></div></div>
+<div class="ttc" id="structpstream__class_html_a8f8f80d37794cde9472343e4487ba3eb"><div class="ttname"><a href="structpstream__class.html#a8f8f80d37794cde9472343e4487ba3eb">pstream_class::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00049">stream-provider.h:49</a></div></div>
+<div class="ttc" id="socket-util_8c_html_aa35259cad745f684e95349ffca06f7b4"><div class="ttname"><a href="socket-util_8c.html#aa35259cad745f684e95349ffca06f7b4">inet_open_active</a></div><div class="ttdeci">int inet_open_active(int style, const char *target, uint16_t default_port, struct sockaddr_in *sinp, int *fdp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00581">socket-util.c:581</a></div></div>
+<div class="ttc" id="structpstream_html"><div class="ttname"><a href="structpstream.html">pstream</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00039">stream-provider.h:39</a></div></div>
+<div class="ttc" id="stream-tcp_8c_html_a6c011f69d8808bdd1c3a5914538a97f7"><div class="ttname"><a href="stream-tcp_8c.html#a6c011f69d8808bdd1c3a5914538a97f7">IP_ARGS</a></div><div class="ttdeci">#define IP_ARGS(ip)</div><div class="ttdef"><b>Definition:</b> <a href="stream-tcp_8c_source.html#l00033">stream-tcp.c:33</a></div></div>
+<div class="ttc" id="stream-fd_8h_html"><div class="ttname"><a href="stream-fd_8h.html">stream-fd.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6452c44390d2c89d0eb624a6a27a058b.html">stream-master</a></li><li class="navelem"><a class="el" href="dir_fa7fb7869eeec6843c02cdf31e3ab9ab.html">stream</a></li><li class="navelem"><a class="el" href="stream-tcp_8c.html">stream-tcp.c</a></li>
+    <li class="footer">生成于 2014年 一月 3日 星期五 10:42:09 , 为 Stream使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

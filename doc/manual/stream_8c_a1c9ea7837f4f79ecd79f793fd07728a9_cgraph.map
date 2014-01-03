@@ -1,0 +1,10 @@
+<map id="stream_parse_target_with_default_ports" name="stream_parse_target_with_default_ports">
+<area shape="rect" id="node2" href="$socket-util_8c.html#ab3e6aa61794fdcedb26c4ad22f3d910a" title="inet_parse_active" alt="" coords="224,59,373,90"/>
+<area shape="rect" id="node3" href="$util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="429,5,504,35"/>
+<area shape="rect" id="node7" href="$socket-util_8c.html#a764e66d235c49d9e267a0c460a99126a" title="strtok_r" alt="" coords="429,59,505,90"/>
+<area shape="rect" id="node8" href="$socket-util_8c.html#a76ed43307fcb1a6a5d52b97fb06a3e1e" title="lookup_ip" alt="" coords="421,114,512,145"/>
+<area shape="rect" id="node4" href="$util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="561,5,661,35"/>
+<area shape="rect" id="node5" href="$util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="709,5,784,35"/>
+<area shape="rect" id="node6" href="$util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="833,5,967,35"/>
+<area shape="rect" id="node9" href="$socket-util_8c.html#aad7e46b44fb59b3b3be225bf623213df" title="inet_aton" alt="" coords="567,114,655,145"/>
+</map>

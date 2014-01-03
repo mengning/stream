@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Stream: C:/Users/kang/Desktop/SSE/SDN/stream-master/server.c 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Stream
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('server_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>宏定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">server.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="server_8c.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include&lt;stdio.h&gt;</span>           <span class="comment">/* perror */</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&lt;stdlib.h&gt;</span>          <span class="comment">/* exit */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&lt;sys/types.h&gt;</span>       <span class="comment">/* WNOHANG */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include&lt;sys/wait.h&gt;</span>        <span class="comment">/* waitpid */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include&lt;string.h&gt;</span>          <span class="comment">/* memset */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include&lt;pthread.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stream_8h.html">stream.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   11</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rec;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structstream.html#a11614f44ef4d939bdd984953346a7572">error</a>,erro;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpstream.html">pstream</a> *pstreamp;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">struct </span><a class="code" href="structstream.html">stream</a> *streamp;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">size_t</span> n = 1024;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    uint8_t dscp = 1;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">char</span> *buffer = (<span class="keywordtype">char</span> *)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>)*n);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    memset(buffer,0,<span class="keyword">sizeof</span> *buffer);    </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structstream.html#a5ac083a645d964373f022d03df4849c8">name</a> = <span class="stringliteral">&quot;ptcp:1234&quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    error = <a class="code" href="stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e">pstream_open</a>(name,&amp;pstreamp,dscp);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span>(error != 0)printf(<span class="stringliteral">&quot;pstream open failure!\n&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span>(error == 0)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {   </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">do</span>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            erro = <a class="code" href="stream_8c.html#a3add0a68fcfbe13e261435f264e3fd69">pstream_accept</a>(pstreamp,&amp;streamp);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="comment">/*if(erro != 0 ){</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">                printf(&quot;pstream accept failure!\n&quot;);</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">                return 0;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">            }*/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }<span class="keywordflow">while</span>(erro);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span>(erro == 0){</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            printf(<span class="stringliteral">&quot;connect success!\r\n&quot;</span>);         </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }   </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        rec = <a class="code" href="stream_8c.html#aecca5f1213665d85daed4e5e3254cc3f">stream_recv</a>(streamp,buffer,n);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span>(rec &lt; 1 &amp;&amp; rec &gt; n ){</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            printf(<span class="stringliteral">&quot;recv failure!\n&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="stream_8c.html#a8da7d7c3d9a573ae9cf1dab1be38e623">stream_close</a>(streamp);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="stream_8c.html#acf7a7101bf12dc534600d727bf04f22b">pstream_close</a>(pstreamp);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        printf(<span class="stringliteral">&quot;recv success!\n&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        printf(<span class="stringliteral">&quot;%d\n&quot;</span>,rec);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        printf(<span class="stringliteral">&quot;%s\n&quot;</span>,buffer);      </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="stream_8c.html#a8da7d7c3d9a573ae9cf1dab1be38e623">stream_close</a>(streamp);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="stream_8c.html#acf7a7101bf12dc534600d727bf04f22b">pstream_close</a>(pstreamp);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="stream_8c_html_a8da7d7c3d9a573ae9cf1dab1be38e623"><div class="ttname"><a href="stream_8c.html#a8da7d7c3d9a573ae9cf1dab1be38e623">stream_close</a></div><div class="ttdeci">void stream_close(struct stream *stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00236">stream.c:236</a></div></div>
+<div class="ttc" id="stream_8h_html"><div class="ttname"><a href="stream_8h.html">stream.h</a></div></div>
+<div class="ttc" id="stream_8c_html_acf7a7101bf12dc534600d727bf04f22b"><div class="ttname"><a href="stream_8c.html#acf7a7101bf12dc534600d727bf04f22b">pstream_close</a></div><div class="ttdeci">void pstream_close(struct pstream *pstream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00532">stream.c:532</a></div></div>
+<div class="ttc" id="structstream_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structstream.html#a5ac083a645d964373f022d03df4849c8">stream::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00015">stream-provider.h:15</a></div></div>
+<div class="ttc" id="structstream_html"><div class="ttname"><a href="structstream.html">stream</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00007">stream-provider.h:7</a></div></div>
+<div class="ttc" id="server_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="server_8c_source.html#l00011">server.c:11</a></div></div>
+<div class="ttc" id="structstream_html_a11614f44ef4d939bdd984953346a7572"><div class="ttname"><a href="structstream.html#a11614f44ef4d939bdd984953346a7572">stream::error</a></div><div class="ttdeci">int error</div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00010">stream-provider.h:10</a></div></div>
+<div class="ttc" id="stream_8c_html_aab1aee73ff5cae04c0162ac46b759a5e"><div class="ttname"><a href="stream_8c.html#aab1aee73ff5cae04c0162ac46b759a5e">pstream_open</a></div><div class="ttdeci">int pstream_open(const char *name, struct pstream **pstreamp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00490">stream.c:490</a></div></div>
+<div class="ttc" id="stream_8c_html_aecca5f1213665d85daed4e5e3254cc3f"><div class="ttname"><a href="stream_8c.html#aecca5f1213665d85daed4e5e3254cc3f">stream_recv</a></div><div class="ttdeci">int stream_recv(struct stream *stream, void *buffer, size_t n)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00340">stream.c:340</a></div></div>
+<div class="ttc" id="structpstream_html"><div class="ttname"><a href="structpstream.html">pstream</a></div><div class="ttdef"><b>Definition:</b> <a href="stream-provider_8h_source.html#l00039">stream-provider.h:39</a></div></div>
+<div class="ttc" id="stream_8c_html_a3add0a68fcfbe13e261435f264e3fd69"><div class="ttname"><a href="stream_8c.html#a3add0a68fcfbe13e261435f264e3fd69">pstream_accept</a></div><div class="ttdeci">int pstream_accept(struct pstream *pstream, struct stream **new_stream)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8c_source.html#l00548">stream.c:548</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6452c44390d2c89d0eb624a6a27a058b.html">stream-master</a></li><li class="navelem"><a class="el" href="server_8c.html">server.c</a></li>
+    <li class="footer">生成于 2014年 一月 3日 星期五 10:42:08 , 为 Stream使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

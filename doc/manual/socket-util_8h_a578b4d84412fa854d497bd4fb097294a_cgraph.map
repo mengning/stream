@@ -1,0 +1,7 @@
+<map id="fsync_parent_dir" name="fsync_parent_dir">
+<area shape="rect" id="node2" href="$util_8c.html#aaf5c16645a755d9ac0c1cac36a44ddb6" title="dir_name" alt="" coords="200,5,291,35"/>
+<area shape="rect" id="node6" href="$socket-util_8c.html#ab37281e48f68c8fc6ec8002ae7e01ade" title="fsync" alt="" coords="214,59,277,90"/>
+<area shape="rect" id="node3" href="$util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="339,5,439,35"/>
+<area shape="rect" id="node4" href="$util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="488,5,563,35"/>
+<area shape="rect" id="node5" href="$util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="611,5,746,35"/>
+</map>

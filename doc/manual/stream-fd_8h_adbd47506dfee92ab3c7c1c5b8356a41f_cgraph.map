@@ -1,0 +1,7 @@
+<map id="new_fd_stream" name="new_fd_stream">
+<area shape="rect" id="node2" href="$util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="608,6,683,37"/>
+<area shape="rect" id="node4" href="$stream-provider_8h.html#a1f94b1ff736f511bcf844e1bab13b358" title="stream_init" alt="" coords="187,33,288,63"/>
+<area shape="rect" id="node3" href="$util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="731,6,866,37"/>
+<area shape="rect" id="node5" href="$util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="336,33,411,63"/>
+<area shape="rect" id="node6" href="$util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="459,33,559,63"/>
+</map>

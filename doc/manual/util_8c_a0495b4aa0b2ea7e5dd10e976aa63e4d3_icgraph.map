@@ -1,0 +1,8 @@
+<map id="vsnprintf" name="vsnprintf">
+<area shape="rect" id="node2" href="$util_8c.html#aef59cc7b9c87654dd5d521adaf82a91a" title="xvasprintf" alt="" coords="136,119,227,150"/>
+<area shape="rect" id="node3" href="$util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac" title="xasprintf" alt="" coords="275,119,357,150"/>
+<area shape="rect" id="node4" href="$stream_8h.html#a38c5d7a0a63147bfb60a65ec8a9680d8" title="stream_open_with_default\l_ports" alt="" coords="409,5,620,54"/>
+<area shape="rect" id="node5" href="$stream_8h.html#aac9477f06d81d13367417fff4c5472cb" title="pstream_open_with_default\l_ports" alt="" coords="405,78,624,127"/>
+<area shape="rect" id="node6" href="$util_8h.html#a72688d4cf54ba3519408e4d5db6b74b3" title="abs_file_name" alt="" coords="451,151,578,182"/>
+<area shape="rect" id="node7" href="$util_8h.html#a9d69655c0d0d63f2d371d9c35bb790f4" title="follow_symlinks" alt="" coords="448,206,581,237"/>
+</map>

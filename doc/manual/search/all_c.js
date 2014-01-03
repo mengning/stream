@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['name',['name',['../structstream.html#a5ac083a645d964373f022d03df4849c8',1,'stream::name()'],['../structstream__class.html#a8f8f80d37794cde9472343e4487ba3eb',1,'stream_class::name()'],['../structpstream.html#a5ac083a645d964373f022d03df4849c8',1,'pstream::name()'],['../structpstream__class.html#a8f8f80d37794cde9472343e4487ba3eb',1,'pstream_class::name()'],['../structvlog__module.html#a8f8f80d37794cde9472343e4487ba3eb',1,'vlog_module::name()']]],
+  ['needs_5fprobes',['needs_probes',['../structstream__class.html#a3aa32893937115b46850547f0b6ad391',1,'stream_class::needs_probes()'],['../structpstream__class.html#a3aa32893937115b46850547f0b6ad391',1,'pstream_class::needs_probes()']]],
+  ['new_5ffd_5fpstream',['new_fd_pstream',['../stream-fd_8c.html#a71d8bd3415259b6c497ad231ccbcfb65',1,'new_fd_pstream(const char *name, int fd, int(*accept_cb)(int fd, const struct sockaddr *sa, size_t sa_len, struct stream **streamp), int(*set_dscp_cb)(int fd, uint8_t dscp), char *unlink_path, struct pstream **pstreamp):&#160;stream-fd.c'],['../stream-fd_8h.html#a4b6238f30c38d8f2f7e459a47912b6dd',1,'new_fd_pstream(const char *name, int fd, int(*accept_cb)(int fd, const struct sockaddr *, size_t sa_len, struct stream **), int(*set_dscp_cb)(int fd, uint8_t dscp), char *unlink_path, struct pstream **pstreamp):&#160;stream-fd.h']]],
+  ['new_5ffd_5fstream',['new_fd_stream',['../stream-fd_8c.html#adbd47506dfee92ab3c7c1c5b8356a41f',1,'new_fd_stream(const char *name, int fd, int connect_status, struct stream **streamp):&#160;stream-fd.c'],['../stream-fd_8h.html#adbd47506dfee92ab3c7c1c5b8356a41f',1,'new_fd_stream(const char *name, int fd, int connect_status, struct stream **streamp):&#160;stream-fd.c']]],
+  ['no_5freturn',['NO_RETURN',['../compiler_8h.html#a98a0ed62c941d1d307c72db8f6462909',1,'NO_RETURN():&#160;compiler.h'],['../util_8h.html#a98a0ed62c941d1d307c72db8f6462909',1,'NO_RETURN():&#160;util.h']]],
+  ['not_5freached',['NOT_REACHED',['../util_8h.html#a6c2edf1e500e498b687567418bf4fef6',1,'util.h']]],
+  ['ntohll',['ntohll',['../util_8c.html#a47f5c12368dfdf98a92bb0a8175c006f',1,'util.c']]]
+];

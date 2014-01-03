@@ -1,0 +1,6 @@
+<map id="stream_init" name="stream_init">
+<area shape="rect" id="node2" href="$util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="155,5,229,35"/>
+<area shape="rect" id="node3" href="$util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="278,5,378,35"/>
+<area shape="rect" id="node4" href="$util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="427,5,501,35"/>
+<area shape="rect" id="node5" href="$util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="550,5,685,35"/>
+</map>

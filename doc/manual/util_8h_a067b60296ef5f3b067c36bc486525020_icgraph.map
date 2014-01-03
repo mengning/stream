@@ -1,0 +1,19 @@
+<map id="xstrdup" name="xstrdup">
+<area shape="rect" id="node2" href="$socket-util_8h.html#a7c1f8c7f50cf2a25f023da58311f411e" title="inet_parse_active" alt="" coords="135,69,284,99"/>
+<area shape="rect" id="node5" href="$socket-util_8h.html#acf5d521a61261304ed769bdf2cb8d1d9" title="inet_parse_passive" alt="" coords="129,143,290,174"/>
+<area shape="rect" id="node7" href="$stream_8h.html#a9a63e5943be5074408a666fd1ccf8685" title="stream_open" alt="" coords="151,214,267,245"/>
+<area shape="rect" id="node9" href="$stream_8h.html#a38c5d7a0a63147bfb60a65ec8a9680d8" title="stream_open_with_default\l_ports" alt="" coords="343,242,553,291"/>
+<area shape="rect" id="node10" href="$stream_8h.html#a93cee736ea86b77a62cc3d89164f913a" title="pstream_open" alt="" coords="147,321,272,351"/>
+<area shape="rect" id="node12" href="$stream_8h.html#aac9477f06d81d13367417fff4c5472cb" title="pstream_open_with_default\l_ports" alt="" coords="339,370,557,419"/>
+<area shape="rect" id="node13" href="$stream_8c.html#abb86788316c67caa7a93b81068a4c65b" title="stream_init" alt="" coords="159,427,260,458"/>
+<area shape="rect" id="node15" href="$stream_8c.html#a1b0cbf9c048dd0f51b9eb601f0ee8f64" title="pstream_init" alt="" coords="154,482,265,513"/>
+<area shape="rect" id="node17" href="$util_8h.html#a72688d4cf54ba3519408e4d5db6b74b3" title="abs_file_name" alt="" coords="146,537,273,567"/>
+<area shape="rect" id="node18" href="$util_8h.html#a9d69655c0d0d63f2d371d9c35bb790f4" title="follow_symlinks" alt="" coords="143,591,276,622"/>
+<area shape="rect" id="node3" href="$socket-util_8h.html#aa35259cad745f684e95349ffca06f7b4" title="inet_open_active" alt="" coords="376,5,520,35"/>
+<area shape="rect" id="node4" href="$stream_8h.html#a1c9ea7837f4f79ecd79f793fd07728a9" title="stream_parse_target\l_with_default_ports" alt="" coords="363,59,533,109"/>
+<area shape="rect" id="node6" href="$socket-util_8h.html#ae25f45e80886c3aafde62fec90b08e14" title="inet_open_passive" alt="" coords="370,133,526,163"/>
+<area shape="rect" id="node8" href="$client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="419,187,477,218"/>
+<area shape="rect" id="node11" href="$server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="419,315,477,346"/>
+<area shape="rect" id="node14" href="$stream-fd_8h.html#adbd47506dfee92ab3c7c1c5b8356a41f" title="new_fd_stream" alt="" coords="382,443,514,474"/>
+<area shape="rect" id="node16" href="$stream-fd_8c.html#a71d8bd3415259b6c497ad231ccbcfb65" title="new_fd_pstream" alt="" coords="377,498,519,529"/>
+</map>
