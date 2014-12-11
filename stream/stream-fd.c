@@ -99,7 +99,7 @@ static const struct stream_class stream_fd_class = {
     fd_send,                    /* send */
     NULL,                       /* run */
     NULL,                       /* run_wait */
-    NULL,                    /* wait */
+    NULL,                       /* wait */
 };
 
 struct fd_pstream

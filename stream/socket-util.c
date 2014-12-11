@@ -90,13 +90,13 @@ rlim_is_finite(rlim_t limit)
         return false;
     }
 
-#ifdef RLIM_SAVED_CUR           
+#ifdef RLIM_SAVED_CUR
     if (limit == RLIM_SAVED_CUR) {
         return false;
     }
 #endif
 
-#ifdef RLIM_SAVED_MAX       
+#ifdef RLIM_SAVED_MAX
     if (limit == RLIM_SAVED_MAX) {
         return false;
     }
@@ -444,7 +444,7 @@ make_unix_socket(int style, bool nonblock,
             VLOG_WARN("unlinking \"%s\": %s\n",
                       bind_path, ovs_strerror(errno));
         }
-*/  
+*/
      /* fatal_signal_add_file_to_unlink(bind_path);*/
 
         error = make_sockaddr_un(bind_path, &un, &un_len, &dirfd);
