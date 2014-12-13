@@ -53,7 +53,7 @@ check_stream_classes(void)
             ovs_assert(class->send != NULL);
             ovs_assert(class->wait != NULL);
         } else {
-            / This class delegates to another one. 
+            / This class delegates to another one.
         }
     }
 
@@ -66,7 +66,7 @@ check_stream_classes(void)
             ovs_assert(class->accept != NULL);
             ovs_assert(class->wait != NULL);
         } else {
-            / This class delegates to another one. 
+            / This class delegates to another one.
         }
     }
 #endif

@@ -41,10 +41,10 @@ const char *vlog_get_facility_name(enum vlog_facility);
 enum vlog_facility vlog_get_facility_val(const char *name);
 
 struct vlog_module {
-    const char *name;             
-    int levels[VLF_N_FACILITIES]; 
-    int min_level;              
-    bool honor_rate_limits;     
+    const char *name;
+    int levels[VLF_N_FACILITIES];
+    int min_level;
+    bool honor_rate_limits;
 };
 
 #if USE_LINKER_SECTIONS

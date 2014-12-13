@@ -15,11 +15,11 @@
  * Created by Lin zenan,2014/01/02
  *
  */
-#include<stdio.h> 			
-#include<stdlib.h>			
-#include<sys/types.h>		
-#include<sys/wait.h>		
-#include<string.h>			
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<sys/wait.h>
+#include<string.h>
 #include<pthread.h>
 #include<unistd.h>
 
@@ -33,7 +33,7 @@ int main()
     uint8_t dscp = 1;
     int actualsend = 0;
     int index = 0;
-  
+
     while(1)
     {
         if(stream_open(stream_name,&p_stream,dscp))
@@ -51,7 +51,7 @@ int main()
             else
             {
                 printf("stream connect successed!\n");
-         
+
                 sprintf(pnum,"%d",index);
                 actualsend = stream_send(p_stream,pnum,sizeof(pnum));
                 index++;
