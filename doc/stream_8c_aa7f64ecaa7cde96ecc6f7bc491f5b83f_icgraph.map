@@ -1,0 +1,6 @@
+<map id="stream_connect" name="stream_connect">
+<area shape="rect" id="node2" href="$client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="355,5,413,35"/>
+<area shape="rect" id="node3" href="$stream_8h.html#a92cb74802572277799254410f7db4c01" title="stream_recv" alt="" coords="194,86,305,117"/>
+<area shape="rect" id="node5" href="$stream_8h.html#a898febed1e031a1f66c757f90b3da471" title="stream_send" alt="" coords="192,31,307,62"/>
+<area shape="rect" id="node4" href="$server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="355,86,413,117"/>
+</map>

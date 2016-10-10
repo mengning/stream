@@ -1,0 +1,5 @@
+<map id="send_iovec_and_fds_fully" name="send_iovec_and_fds_fully">
+<area shape="rect" id="node2" href="$socket-util_8c.html#aea26b979a829a57c9551ea572b57d065" title="send_iovec_and_fds" alt="" coords="224,5,395,35"/>
+<area shape="rect" id="node3" href="$socket-util_8c.html#acd82d707c7d2f16f955d042ac005f8b8" title="iovec_is_empty" alt="" coords="443,31,578,62"/>
+<area shape="rect" id="node4" href="$socket-util_8c.html#a851f07f69ceea3054f3a7230c0e1e3fb" title="write_fully" alt="" coords="262,111,357,142"/>
+</map>

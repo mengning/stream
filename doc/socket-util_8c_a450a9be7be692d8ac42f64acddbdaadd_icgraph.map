@@ -1,0 +1,7 @@
+<map id="set_nonblocking" name="set_nonblocking">
+<area shape="rect" id="node2" href="$socket-util_8h.html#ac6434c684a1d43e9d343ffc9efce8a74" title="xset_nonblocking" alt="" coords="197,5,344,35"/>
+<area shape="rect" id="node4" href="$socket-util_8h.html#a94bddf8a03280ea0d413f7ac7965c90c" title="make_unix_socket" alt="" coords="193,59,348,90"/>
+<area shape="rect" id="node5" href="$socket-util_8h.html#aa35259cad745f684e95349ffca06f7b4" title="inet_open_active" alt="" coords="199,114,343,145"/>
+<area shape="rect" id="node6" href="$socket-util_8h.html#ae25f45e80886c3aafde62fec90b08e14" title="inet_open_passive" alt="" coords="193,169,349,199"/>
+<area shape="rect" id="node3" href="$socket-util_8h.html#a9ce6f8514dae4e7a11e37ee368acc529" title="xpipe_nonblocking" alt="" coords="398,5,554,35"/>
+</map>

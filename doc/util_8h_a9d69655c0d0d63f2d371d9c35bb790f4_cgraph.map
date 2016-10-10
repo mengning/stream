@@ -1,0 +1,13 @@
+<map id="follow_symlinks" name="follow_symlinks">
+<area shape="rect" id="node2" href="$util_8c.html#a31c8e4cd784d16e28687ee2f10b80028" title="xstrdup" alt="" coords="195,5,269,35"/>
+<area shape="rect" id="node6" href="$util_8c.html#a8a1463b29dc36ef8779dfd239c09fcb5" title="lstat" alt="" coords="207,59,257,90"/>
+<area shape="rect" id="node7" href="$util_8c.html#a192c31bd04aaf698c7d06d978234ef44" title="xreadlink" alt="" coords="189,169,275,199"/>
+<area shape="rect" id="node9" href="$util_8c.html#aaf5c16645a755d9ac0c1cac36a44ddb6" title="dir_name" alt="" coords="187,114,277,145"/>
+<area shape="rect" id="node10" href="$util_8c.html#af46c0ecf130aec0c5e6fb6c5d7131aac" title="xasprintf" alt="" coords="191,223,273,254"/>
+<area shape="rect" id="node3" href="$util_8c.html#a56dcc3064da93e869a215ca58f465c39" title="xmemdup0" alt="" coords="326,62,426,93"/>
+<area shape="rect" id="node4" href="$util_8c.html#a42ccfa6fc49cc4ce90cc44cd05052490" title="xmalloc" alt="" coords="479,115,553,146"/>
+<area shape="rect" id="node5" href="$util_8c.html#afaa5a0a08b60255e5a59cbd3b1f5e45f" title="out_of_memory" alt="" coords="606,115,741,146"/>
+<area shape="rect" id="node8" href="$util_8c.html#a4dbddb0bba4b4249d15a5898e7130cb5" title="readlink" alt="" coords="337,169,415,199"/>
+<area shape="rect" id="node11" href="$util_8c.html#aef59cc7b9c87654dd5d521adaf82a91a" title="xvasprintf" alt="" coords="331,223,421,254"/>
+<area shape="rect" id="node12" href="$util_8c.html#a0495b4aa0b2ea7e5dd10e976aa63e4d3" title="vsnprintf" alt="" coords="475,223,557,254"/>
+</map>

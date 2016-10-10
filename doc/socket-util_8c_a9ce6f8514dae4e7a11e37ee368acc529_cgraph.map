@@ -1,0 +1,5 @@
+<map id="xpipe_nonblocking" name="xpipe_nonblocking">
+<area shape="rect" id="node2" href="$socket-util_8c.html#aade80992ed37eabd7692d55afaea5b4d" title="xpipe" alt="" coords="254,5,314,35"/>
+<area shape="rect" id="node3" href="$socket-util_8c.html#ac6434c684a1d43e9d343ffc9efce8a74" title="xset_nonblocking" alt="" coords="211,59,357,90"/>
+<area shape="rect" id="node4" href="$socket-util_8c.html#a450a9be7be692d8ac42f64acddbdaadd" title="set_nonblocking" alt="" coords="405,59,544,90"/>
+</map>

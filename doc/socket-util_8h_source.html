@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Stream: C:/Users/kang/Desktop/SSE/SDN/stream-master/stream/socket-util.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Stream
+   &#160;<span id="projectnumber">0.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('socket-util_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>宏定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">socket-util.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="socket-util_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SOCKET_UTIL_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SOCKET_UTIL_H 1</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">openvswitch/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;netinet/in_systm.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;netinet/ip.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structaddrinfo.html">   13</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaddrinfo.html">addrinfo</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structaddrinfo.html#a92528a848ebf34ab99687dd06a09cc93">   15</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structaddrinfo.html#a92528a848ebf34ab99687dd06a09cc93">ai_flags</a>;                 <span class="comment">/* Input flags.  */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structaddrinfo.html#a4dc44d22f13bc5c59bff73e549e96a5c">   16</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structaddrinfo.html#a4dc44d22f13bc5c59bff73e549e96a5c">ai_family</a>;                <span class="comment">/* Protocol family for socket.  */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structaddrinfo.html#a2109130e73586150c41fed16311e1af6">   17</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structaddrinfo.html#a2109130e73586150c41fed16311e1af6">ai_socktype</a>;              <span class="comment">/* Socket type.  */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structaddrinfo.html#a6ade486587feaa03d492eb84cfc83451">   18</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structaddrinfo.html#a6ade486587feaa03d492eb84cfc83451">ai_protocol</a>;              <span class="comment">/* Protocol for socket.  */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structaddrinfo.html#a187d9f4b7621e44cae73ddd9dab76a61">   19</a></span>&#160;  socklen_t <a class="code" href="structaddrinfo.html#a187d9f4b7621e44cae73ddd9dab76a61">ai_addrlen</a>;         <span class="comment">/* Length of socket address.  */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structaddrinfo.html#a12798d0c9e56159c6e506eee1f7b9946">   20</a></span>&#160;  <span class="keyword">struct </span>sockaddr *<a class="code" href="structaddrinfo.html#a12798d0c9e56159c6e506eee1f7b9946">ai_addr</a>;     <span class="comment">/* Socket address for socket.  */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structaddrinfo.html#a9fcbdd64fcb9adcf195a78b10f1fe8f6">   21</a></span>&#160;  <span class="keywordtype">char</span> *<a class="code" href="structaddrinfo.html#a9fcbdd64fcb9adcf195a78b10f1fe8f6">ai_canonname</a>;           <span class="comment">/* Canonical name for service location.  */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structaddrinfo.html#ab14efb2c3cdb16b4f765c1cbc29a5182">   22</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structaddrinfo.html">addrinfo</a> *<a class="code" href="structaddrinfo.html#ab14efb2c3cdb16b4f765c1cbc29a5182">ai_next</a>;     <span class="comment">/* Pointer to next in list.  */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a450a9be7be692d8ac42f64acddbdaadd">set_nonblocking</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="socket-util_8h.html#ac6434c684a1d43e9d343ffc9efce8a74">xset_nonblocking</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a2c2ca7f031b6501e7f7fabca9c5bc6e9">set_dscp</a>(<span class="keywordtype">int</span> fd, uint8_t dscp);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a37e0e77842785b2dd335e995811afe41">get_max_fds</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#ac484aeff74f1d05351b956fd565218ed">lookup_ip</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *host_name, <span class="keyword">struct</span> in_addr *address);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#af9df18154f4925518098fcc246617662">lookup_ipv6</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *host_name, <span class="keyword">struct</span> in6_addr *address);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a7c382a198e7b95592dd28cc763fb98e9">lookup_hostname</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *host_name, <span class="keyword">struct</span> in_addr *);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#ab0fddfe8f270cd4fd2653dba97f6f8ac">get_socket_rcvbuf</a>(<span class="keywordtype">int</span> sock);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a80bf82d5d6f9bd49ccf0e8b6e3d7fd29">check_connection_completion</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a23ea25c93d898a1b130533ed373477af">drain_rcvbuf</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="socket-util_8h.html#a35e18608cabbd77a1581c5fa8deb142c">drain_fd</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">size_t</span> n_packets);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a94bddf8a03280ea0d413f7ac7965c90c">make_unix_socket</a>(<span class="keywordtype">int</span> style, <span class="keywordtype">bool</span> nonblock,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">char</span> *bind_path, <span class="keyword">const</span> <span class="keywordtype">char</span> *connect_path);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a53233455542d87efe06a934cb2fb8f3f">get_unix_name_len</a>(socklen_t sun_len);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a> <a class="code" href="socket-util_8h.html#a27eea21912532cb572c7d0a2e3f69373">guess_netmask</a>(<a class="code" href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a> ip);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a4de71c4b4b07d280f35544bab826cdb8">get_null_fd</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="socket-util_8h.html#a7c1f8c7f50cf2a25f023da58311f411e">inet_parse_active</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *target, uint16_t default_port,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                       <span class="keyword">struct</span> sockaddr_in *sinp);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#aa35259cad745f684e95349ffca06f7b4">inet_open_active</a>(<span class="keywordtype">int</span> style, <span class="keyword">const</span> <span class="keywordtype">char</span> *target, uint16_t default_port,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;             <span class="keyword">struct</span> sockaddr_in *sinp, <span class="keywordtype">int</span> *fdp, uint8_t dscp);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="socket-util_8h.html#acf5d521a61261304ed769bdf2cb8d1d9">inet_parse_passive</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *target, <span class="keywordtype">int</span> default_port,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                        <span class="keyword">struct</span> sockaddr_in *sinp);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#ae25f45e80886c3aafde62fec90b08e14">inet_open_passive</a>(<span class="keywordtype">int</span> style, <span class="keyword">const</span> <span class="keywordtype">char</span> *target, <span class="keywordtype">int</span> default_port,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                      <span class="keyword">struct</span> sockaddr_in *sinp, uint8_t dscp);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a4160af1d9a77bc574269931b82d84ff7">read_fully</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">void</span> *, <span class="keywordtype">size_t</span>, <span class="keywordtype">size_t</span> *bytes_read);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a927d40663737d838fe31dde5a1862367">write_fully</a>(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keywordtype">void</span> *, <span class="keywordtype">size_t</span>, <span class="keywordtype">size_t</span> *bytes_written);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a578b4d84412fa854d497bd4fb097294a">fsync_parent_dir</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *file_name);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">/*int get_mtime(const char *file_name, struct timespec *mtime);*/</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> <a class="code" href="socket-util_8h.html#aade80992ed37eabd7692d55afaea5b4d">xpipe</a>(<span class="keywordtype">int</span> fds[2]);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> <a class="code" href="socket-util_8h.html#a9ce6f8514dae4e7a11e37ee368acc529">xpipe_nonblocking</a>(<span class="keywordtype">int</span> fds[2]);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="socket-util_8h.html#aa69812f356f494ce9762b24f64755962">describe_fd</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">/* Default value of dscp bits for connection between controller and manager.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> * Value of IPTOS_PREC_INTERNETCONTROL = 0xc0 which is defined</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> * in &lt;netinet/ip.h&gt; is used. */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="socket-util_8h.html#a6240b4c521d391f364add0fdf8ba696a">   69</a></span>&#160;<span class="preprocessor">#define DSCP_DEFAULT (IPTOS_PREC_INTERNETCONTROL &gt;&gt; 2)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">/* Maximum number of fds that we support sending or receiving at one time</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> * across a Unix domain socket. */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="socket-util_8h.html#aaf4d7c1b92bc1d79df5c197946c3850d">   73</a></span>&#160;<span class="preprocessor">#define SOUTIL_MAX_FDS 8</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/* Iovecs. */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="socket-util_8h.html#ad853140d1817bf424dc4175dcdcc1b9d">iovec_len</a>(<span class="keyword">const</span> <span class="keyword">struct</span> iovec *iovs, <span class="keywordtype">size_t</span> n_iovs);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="socket-util_8h.html#adfccf8ae1f1244b36e6641c866f3f03a">iovec_is_empty</a>(<span class="keyword">const</span> <span class="keyword">struct</span> iovec *iovs, <span class="keywordtype">size_t</span> n_iovs);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">/* Functions particularly useful for Unix domain sockets. */</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="socket-util_8h.html#ad3f3a1a8f381f3e50331daba5973e063">xsocketpair</a>(<span class="keywordtype">int</span> domain, <span class="keywordtype">int</span> type, <span class="keywordtype">int</span> protocol, <span class="keywordtype">int</span> fds[2]);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#aea26b979a829a57c9551ea572b57d065">send_iovec_and_fds</a>(<span class="keywordtype">int</span> sock,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                       <span class="keyword">const</span> <span class="keyword">struct</span> iovec *iovs, <span class="keywordtype">size_t</span> n_iovs,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">int</span> fds[], <span class="keywordtype">size_t</span> n_fds);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a8381a0f09d4ce966fc9f74720e65186e">send_iovec_and_fds_fully</a>(<span class="keywordtype">int</span> sock,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                             <span class="keyword">const</span> <span class="keyword">struct</span> iovec *iovs, <span class="keywordtype">size_t</span> n_iovs,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                             <span class="keyword">const</span> <span class="keywordtype">int</span> fds[], <span class="keywordtype">size_t</span> n_fds,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                             <span class="keywordtype">size_t</span> skip_bytes, <span class="keywordtype">size_t</span> *bytes_sent);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#ae9a8db387ef252b11ef3dfc9a9a5c0d4">send_iovec_and_fds_fully_block</a>(<span class="keywordtype">int</span> sock,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                   <span class="keyword">const</span> <span class="keyword">struct</span> iovec *iovs, <span class="keywordtype">size_t</span> n_iovs,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                   <span class="keyword">const</span> <span class="keywordtype">int</span> fds[], <span class="keywordtype">size_t</span> n_fds);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a0b67c255ce1df1e1b7bd0f8ca8efdb0d">recv_data_and_fds</a>(<span class="keywordtype">int</span> sock,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                      <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> size,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                      <span class="keywordtype">int</span> fds[<a class="code" href="socket-util_8h.html#aaf4d7c1b92bc1d79df5c197946c3850d">SOUTIL_MAX_FDS</a>], <span class="keywordtype">size_t</span> *n_fdsp);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/* Helpers for calling ioctl() on an AF_INET socket. */</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">struct </span>ifreq;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#ac0739d9177a0040362d3916294bf0e8f">af_inet_ioctl</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> command, <span class="keyword">const</span> <span class="keywordtype">void</span> *arg);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">int</span> <a class="code" href="socket-util_8h.html#a8de3d6e4835f3ea669fc82105fb55deb">af_inet_ifreq_ioctl</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">struct</span> ifreq *,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> cmd, <span class="keyword">const</span> <span class="keywordtype">char</span> *cmd_name);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* socket-util.h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="types_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a94bddf8a03280ea0d413f7ac7965c90c"><div class="ttname"><a href="socket-util_8h.html#a94bddf8a03280ea0d413f7ac7965c90c">make_unix_socket</a></div><div class="ttdeci">int make_unix_socket(int style, bool nonblock, const char *bind_path, const char *connect_path)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00416">socket-util.c:416</a></div></div>
+<div class="ttc" id="socket-util_8h_html_af9df18154f4925518098fcc246617662"><div class="ttname"><a href="socket-util_8h.html#af9df18154f4925518098fcc246617662">lookup_ipv6</a></div><div class="ttdeci">int lookup_ipv6(const char *host_name, struct in6_addr *address)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00152">socket-util.c:152</a></div></div>
+<div class="ttc" id="structaddrinfo_html_a92528a848ebf34ab99687dd06a09cc93"><div class="ttname"><a href="structaddrinfo.html#a92528a848ebf34ab99687dd06a09cc93">addrinfo::ai_flags</a></div><div class="ttdeci">int ai_flags</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00015">socket-util.h:15</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a927d40663737d838fe31dde5a1862367"><div class="ttname"><a href="socket-util_8h.html#a927d40663737d838fe31dde5a1862367">write_fully</a></div><div class="ttdeci">int write_fully(int fd, const void *, size_t, size_t *bytes_written)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00776">socket-util.c:776</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a9ce6f8514dae4e7a11e37ee368acc529"><div class="ttname"><a href="socket-util_8h.html#a9ce6f8514dae4e7a11e37ee368acc529">xpipe_nonblocking</a></div><div class="ttdeci">void xpipe_nonblocking(int fds[2])</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00833">socket-util.c:833</a></div></div>
+<div class="ttc" id="socket-util_8h_html_ac484aeff74f1d05351b956fd565218ed"><div class="ttname"><a href="socket-util_8h.html#ac484aeff74f1d05351b956fd565218ed">lookup_ip</a></div><div class="ttdeci">int lookup_ip(const char *host_name, struct in_addr *address)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00138">socket-util.c:138</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a8de3d6e4835f3ea669fc82105fb55deb"><div class="ttname"><a href="socket-util_8h.html#a8de3d6e4835f3ea669fc82105fb55deb">af_inet_ifreq_ioctl</a></div><div class="ttdeci">int af_inet_ifreq_ioctl(const char *name, struct ifreq *, unsigned long int cmd, const char *cmd_name)</div></div>
+<div class="ttc" id="socket-util_8h_html_aa69812f356f494ce9762b24f64755962"><div class="ttname"><a href="socket-util_8h.html#aa69812f356f494ce9762b24f64755962">describe_fd</a></div><div class="ttdeci">char * describe_fd(int fd)</div></div>
+<div class="ttc" id="socket-util_8h_html_a35e18608cabbd77a1581c5fa8deb142c"><div class="ttname"><a href="socket-util_8h.html#a35e18608cabbd77a1581c5fa8deb142c">drain_fd</a></div><div class="ttdeci">void drain_fd(int fd, size_t n_packets)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00308">socket-util.c:308</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a2c2ca7f031b6501e7f7fabca9c5bc6e9"><div class="ttname"><a href="socket-util_8h.html#a2c2ca7f031b6501e7f7fabca9c5bc6e9">set_dscp</a></div><div class="ttdeci">int set_dscp(int fd, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00070">socket-util.c:70</a></div></div>
+<div class="ttc" id="socket-util_8h_html_acf5d521a61261304ed769bdf2cb8d1d9"><div class="ttname"><a href="socket-util_8h.html#acf5d521a61261304ed769bdf2cb8d1d9">inet_parse_passive</a></div><div class="ttdeci">bool inet_parse_passive(const char *target, int default_port, struct sockaddr_in *sinp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00635">socket-util.c:635</a></div></div>
+<div class="ttc" id="structaddrinfo_html_a4dc44d22f13bc5c59bff73e549e96a5c"><div class="ttname"><a href="structaddrinfo.html#a4dc44d22f13bc5c59bff73e549e96a5c">addrinfo::ai_family</a></div><div class="ttdeci">int ai_family</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00016">socket-util.h:16</a></div></div>
+<div class="ttc" id="socket-util_8h_html_ae25f45e80886c3aafde62fec90b08e14"><div class="ttname"><a href="socket-util_8h.html#ae25f45e80886c3aafde62fec90b08e14">inet_open_passive</a></div><div class="ttdeci">int inet_open_passive(int style, const char *target, int default_port, struct sockaddr_in *sinp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00675">socket-util.c:675</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a80bf82d5d6f9bd49ccf0e8b6e3d7fd29"><div class="ttname"><a href="socket-util_8h.html#a80bf82d5d6f9bd49ccf0e8b6e3d7fd29">check_connection_completion</a></div><div class="ttdeci">int check_connection_completion(int fd)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00227">socket-util.c:227</a></div></div>
+<div class="ttc" id="socket-util_8h_html_ab0fddfe8f270cd4fd2653dba97f6f8ac"><div class="ttname"><a href="socket-util_8h.html#ab0fddfe8f270cd4fd2653dba97f6f8ac">get_socket_rcvbuf</a></div><div class="ttdeci">int get_socket_rcvbuf(int sock)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00295">socket-util.c:295</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a23ea25c93d898a1b130533ed373477af"><div class="ttname"><a href="socket-util_8h.html#a23ea25c93d898a1b130533ed373477af">drain_rcvbuf</a></div><div class="ttdeci">int drain_rcvbuf(int fd)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00263">socket-util.c:263</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a450a9be7be692d8ac42f64acddbdaadd"><div class="ttname"><a href="socket-util_8h.html#a450a9be7be692d8ac42f64acddbdaadd">set_nonblocking</a></div><div class="ttdeci">int set_nonblocking(int fd)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00045">socket-util.c:45</a></div></div>
+<div class="ttc" id="socket-util_8h_html_ac6434c684a1d43e9d343ffc9efce8a74"><div class="ttname"><a href="socket-util_8h.html#ac6434c684a1d43e9d343ffc9efce8a74">xset_nonblocking</a></div><div class="ttdeci">void xset_nonblocking(int fd)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00062">socket-util.c:62</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a4de71c4b4b07d280f35544bab826cdb8"><div class="ttname"><a href="socket-util_8h.html#a4de71c4b4b07d280f35544bab826cdb8">get_null_fd</a></div><div class="ttdeci">int get_null_fd(void)</div></div>
+<div class="ttc" id="socket-util_8h_html_ad3f3a1a8f381f3e50331daba5973e063"><div class="ttname"><a href="socket-util_8h.html#ad3f3a1a8f381f3e50331daba5973e063">xsocketpair</a></div><div class="ttdeci">void xsocketpair(int domain, int type, int protocol, int fds[2])</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00841">socket-util.c:841</a></div></div>
+<div class="ttc" id="structaddrinfo_html_a9fcbdd64fcb9adcf195a78b10f1fe8f6"><div class="ttname"><a href="structaddrinfo.html#a9fcbdd64fcb9adcf195a78b10f1fe8f6">addrinfo::ai_canonname</a></div><div class="ttdeci">char * ai_canonname</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00021">socket-util.h:21</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a7c382a198e7b95592dd28cc763fb98e9"><div class="ttname"><a href="socket-util_8h.html#a7c382a198e7b95592dd28cc763fb98e9">lookup_hostname</a></div><div class="ttdeci">int lookup_hostname(const char *host_name, struct in_addr *)</div></div>
+<div class="ttc" id="socket-util_8h_html_a7c1f8c7f50cf2a25f023da58311f411e"><div class="ttname"><a href="socket-util_8h.html#a7c1f8c7f50cf2a25f023da58311f411e">inet_parse_active</a></div><div class="ttdeci">bool inet_parse_active(const char *target, uint16_t default_port, struct sockaddr_in *sinp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00520">socket-util.c:520</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a53233455542d87efe06a934cb2fb8f3f"><div class="ttname"><a href="socket-util_8h.html#a53233455542d87efe06a934cb2fb8f3f">get_unix_name_len</a></div><div class="ttdeci">int get_unix_name_len(socklen_t sun_len)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00495">socket-util.c:495</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a578b4d84412fa854d497bd4fb097294a"><div class="ttname"><a href="socket-util_8h.html#a578b4d84412fa854d497bd4fb097294a">fsync_parent_dir</a></div><div class="ttdeci">int fsync_parent_dir(const char *file_name)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00798">socket-util.c:798</a></div></div>
+<div class="ttc" id="socket-util_8h_html_aea26b979a829a57c9551ea572b57d065"><div class="ttname"><a href="socket-util_8h.html#aea26b979a829a57c9551ea572b57d065">send_iovec_and_fds</a></div><div class="ttdeci">int send_iovec_and_fds(int sock, const struct iovec *iovs, size_t n_iovs, const int fds[], size_t n_fds)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00893">socket-util.c:893</a></div></div>
+<div class="ttc" id="socket-util_8h_html_aaf4d7c1b92bc1d79df5c197946c3850d"><div class="ttname"><a href="socket-util_8h.html#aaf4d7c1b92bc1d79df5c197946c3850d">SOUTIL_MAX_FDS</a></div><div class="ttdeci">#define SOUTIL_MAX_FDS</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00073">socket-util.h:73</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a37e0e77842785b2dd335e995811afe41"><div class="ttname"><a href="socket-util_8h.html#a37e0e77842785b2dd335e995811afe41">get_max_fds</a></div><div class="ttdeci">int get_max_fds(void)</div></div>
+<div class="ttc" id="structaddrinfo_html_a6ade486587feaa03d492eb84cfc83451"><div class="ttname"><a href="structaddrinfo.html#a6ade486587feaa03d492eb84cfc83451">addrinfo::ai_protocol</a></div><div class="ttdeci">int ai_protocol</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00018">socket-util.h:18</a></div></div>
+<div class="ttc" id="structaddrinfo_html_a187d9f4b7621e44cae73ddd9dab76a61"><div class="ttname"><a href="structaddrinfo.html#a187d9f4b7621e44cae73ddd9dab76a61">addrinfo::ai_addrlen</a></div><div class="ttdeci">socklen_t ai_addrlen</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00019">socket-util.h:19</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a8381a0f09d4ce966fc9f74720e65186e"><div class="ttname"><a href="socket-util_8h.html#a8381a0f09d4ce966fc9f74720e65186e">send_iovec_and_fds_fully</a></div><div class="ttdeci">int send_iovec_and_fds_fully(int sock, const struct iovec *iovs, size_t n_iovs, const int fds[], size_t n_fds, size_t skip_bytes, size_t *bytes_sent)</div></div>
+<div class="ttc" id="socket-util_8h_html_aa35259cad745f684e95349ffca06f7b4"><div class="ttname"><a href="socket-util_8h.html#aa35259cad745f684e95349ffca06f7b4">inet_open_active</a></div><div class="ttdeci">int inet_open_active(int style, const char *target, uint16_t default_port, struct sockaddr_in *sinp, int *fdp, uint8_t dscp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00581">socket-util.c:581</a></div></div>
+<div class="ttc" id="socket-util_8h_html_a0b67c255ce1df1e1b7bd0f8ca8efdb0d"><div class="ttname"><a href="socket-util_8h.html#a0b67c255ce1df1e1b7bd0f8ca8efdb0d">recv_data_and_fds</a></div><div class="ttdeci">int recv_data_and_fds(int sock, void *data, size_t size, int fds[SOUTIL_MAX_FDS], size_t *n_fdsp)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l01003">socket-util.c:1003</a></div></div>
+<div class="ttc" id="socket-util_8h_html_aade80992ed37eabd7692d55afaea5b4d"><div class="ttname"><a href="socket-util_8h.html#aade80992ed37eabd7692d55afaea5b4d">xpipe</a></div><div class="ttdeci">void xpipe(int fds[2])</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00826">socket-util.c:826</a></div></div>
+<div class="ttc" id="structaddrinfo_html_a12798d0c9e56159c6e506eee1f7b9946"><div class="ttname"><a href="structaddrinfo.html#a12798d0c9e56159c6e506eee1f7b9946">addrinfo::ai_addr</a></div><div class="ttdeci">struct sockaddr * ai_addr</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00020">socket-util.h:20</a></div></div>
+<div class="ttc" id="socket-util_8h_html_ae9a8db387ef252b11ef3dfc9a9a5c0d4"><div class="ttname"><a href="socket-util_8h.html#ae9a8db387ef252b11ef3dfc9a9a5c0d4">send_iovec_and_fds_fully_block</a></div><div class="ttdeci">int send_iovec_and_fds_fully_block(int sock, const struct iovec *iovs, size_t n_iovs, const int fds[], size_t n_fds)</div></div>
+<div class="ttc" id="socket-util_8h_html_ad853140d1817bf424dc4175dcdcc1b9d"><div class="ttname"><a href="socket-util_8h.html#ad853140d1817bf424dc4175dcdcc1b9d">iovec_len</a></div><div class="ttdeci">size_t iovec_len(const struct iovec *iovs, size_t n_iovs)</div></div>
+<div class="ttc" id="socket-util_8h_html_ac0739d9177a0040362d3916294bf0e8f"><div class="ttname"><a href="socket-util_8h.html#ac0739d9177a0040362d3916294bf0e8f">af_inet_ioctl</a></div><div class="ttdeci">int af_inet_ioctl(unsigned long int command, const void *arg)</div></div>
+<div class="ttc" id="socket-util_8h_html_a27eea21912532cb572c7d0a2e3f69373"><div class="ttname"><a href="socket-util_8h.html#a27eea21912532cb572c7d0a2e3f69373">guess_netmask</a></div><div class="ttdeci">ovs_be32 guess_netmask(ovs_be32 ip)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00503">socket-util.c:503</a></div></div>
+<div class="ttc" id="structaddrinfo_html"><div class="ttname"><a href="structaddrinfo.html">addrinfo</a></div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00013">socket-util.h:13</a></div></div>
+<div class="ttc" id="socket-util_8h_html_adfccf8ae1f1244b36e6641c866f3f03a"><div class="ttname"><a href="socket-util_8h.html#adfccf8ae1f1244b36e6641c866f3f03a">iovec_is_empty</a></div><div class="ttdeci">bool iovec_is_empty(const struct iovec *iovs, size_t n_iovs)</div></div>
+<div class="ttc" id="socket-util_8h_html_a4160af1d9a77bc574269931b82d84ff7"><div class="ttname"><a href="socket-util_8h.html#a4160af1d9a77bc574269931b82d84ff7">read_fully</a></div><div class="ttdeci">int read_fully(int fd, void *, size_t, size_t *bytes_read)</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8c_source.html#l00755">socket-util.c:755</a></div></div>
+<div class="ttc" id="types_8h_html_a319297c2a7ffb2b0a82c346886b638b1"><div class="ttname"><a href="types_8h.html#a319297c2a7ffb2b0a82c346886b638b1">ovs_be32</a></div><div class="ttdeci">__be32 ovs_be32</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00039">types.h:39</a></div></div>
+<div class="ttc" id="structaddrinfo_html_a2109130e73586150c41fed16311e1af6"><div class="ttname"><a href="structaddrinfo.html#a2109130e73586150c41fed16311e1af6">addrinfo::ai_socktype</a></div><div class="ttdeci">int ai_socktype</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00017">socket-util.h:17</a></div></div>
+<div class="ttc" id="structaddrinfo_html_ab14efb2c3cdb16b4f765c1cbc29a5182"><div class="ttname"><a href="structaddrinfo.html#ab14efb2c3cdb16b4f765c1cbc29a5182">addrinfo::ai_next</a></div><div class="ttdeci">struct addrinfo * ai_next</div><div class="ttdef"><b>Definition:</b> <a href="socket-util_8h_source.html#l00022">socket-util.h:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6452c44390d2c89d0eb624a6a27a058b.html">stream-master</a></li><li class="navelem"><a class="el" href="dir_fa7fb7869eeec6843c02cdf31e3ab9ab.html">stream</a></li><li class="navelem"><a class="el" href="socket-util_8h.html">socket-util.h</a></li>
+    <li class="footer">生成于 2014年 一月 3日 星期五 10:42:08 , 为 Stream使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>
